@@ -1,0 +1,17 @@
+substitutions:
+  devicename: sb1
+  upper_devicename: SB1
+
+esphomeyaml: !include sonoff_basic/device.yaml
+wifi: !include connection/wifi.yaml
+mqtt: !include connection/mqtt.yaml
+# Enable logging
+logger:
+# Enable Home Assistant API
+api:
+ota:
+binary_sensor: !include sonoff_basic/binary_sensor.yaml
+switch: !include sonoff_basic/switch.yaml
+output: !include sonoff_basic/output.yaml
+light: !include sonoff_basic/light.yaml
+

@@ -1,0 +1,5 @@
+- platform: gpio
+  name: "${upper_devicename} Relay"
+  pin: GPIO12
+  id: relay
+

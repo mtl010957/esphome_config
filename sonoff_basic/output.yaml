@@ -1,0 +1,7 @@
+- platform: esp8266_pwm
+  id: basic_green_led
+  pin:
+    number: GPIO13
+    inverted: True
+
+
