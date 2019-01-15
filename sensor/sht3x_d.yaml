@@ -1,9 +1,17 @@
 - platform: sht3xd
   temperature:
     name: "${upper_devicename} Temperature"
+    unit_of_measurement: "°C"
+    filters:
+      - delta: 0.2
+      - heartbeat: 300s
   humidity:
     name: "${upper_devicename} Humidity"
+    unit_of_measurement: "%"
+    filters:
+      - delta: 0.5
+      - heartbeat: 300s
   address: 0x44
-  update_interval: 60s
+  update_interval: 10s
 
 
