@@ -1,0 +1,8 @@
+- platform: esp8266_pwm
+  pin: 0
+  frequency: 1000 Hz
+  id: huzzah_red_led
+- platform: esp8266_pwm
+  pin: 2
+  frequency: 1000 Hz
+  id: huzzah_blue_led

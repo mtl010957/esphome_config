@@ -1,0 +1,21 @@
+substitutions:
+  devicename: ah1_th
+  upper_devicename: AH1_TH
+
+esphomeyaml: !include adafruit_huzzah/device.yaml
+wifi: !include connection/wifi.yaml
+mqtt: !include connection/mqtt.yaml
+# Enable logging
+logger:
+# Enable Home Assistant API
+api:
+ota:
+# Need I2C bus for sensors (defaults are good)
+i2c:
+# SHT31-D Temperature and Humidity
+sensor: !include sensor/sht3x_d.yaml
+# Red and Blue LEDs
+output: !include adafruit_huzzah/output.yaml
+light: !include adafruit_huzzah/light.yaml
+# Flash Button
+binary_sensor: !include adafruit_huzzah/binary_sensor.yaml

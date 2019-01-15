@@ -1,0 +1,7 @@
+- platform: gpio
+  pin:
+    number: GPIO0
+    mode: INPUT_PULLUP
+    inverted: True
+  name: "${upper_devicename} Button"
+

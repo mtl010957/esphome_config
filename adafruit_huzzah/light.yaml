@@ -1,0 +1,6 @@
+- platform: monochromatic
+  name: "${upper_devicename} Red LED"
+  output: huzzah_red_led
+- platform: monochromatic
+  name: "${upper_devicename} Blue LED"
+  output: huzzah_blue_led

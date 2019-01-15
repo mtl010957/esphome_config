@@ -1,0 +1,4 @@
+name: ah1_th
+platform: ESP8266
+board: huzzah
+
