@@ -1,6 +1,6 @@
 substitutions:
-  devicename: sb1
-  upper_devicename: SB1
+  devicename: sb02
+  upper_devicename: SB02
 
 esphomeyaml: !include sonoff_basic/device.yaml
 wifi: !include connection/wifi.yaml
@@ -8,7 +8,7 @@ mqtt: !include connection/mqtt.yaml
 # Enable logging
 logger:
 # Enable Home Assistant API
-api:
+#api: (broken with MQTT for now)
 ota:
 binary_sensor: !include sonoff_basic/binary_sensor.yaml
 switch: !include sonoff_basic/switch.yaml

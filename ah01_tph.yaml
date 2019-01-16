@@ -1,6 +1,6 @@
 substitutions:
-  devicename: ah1_th
-  upper_devicename: AH1_TH
+  devicename: ah01_tph
+  upper_devicename: AH01_TPH
 
 esphomeyaml: !include adafruit_huzzah/device.yaml
 wifi: !include connection/wifi.yaml
@@ -8,12 +8,12 @@ mqtt: !include connection/mqtt.yaml
 # Enable logging
 logger:
 # Enable Home Assistant API
-api:
+#api: (broken with MQTT for now)
 ota:
 # Need I2C bus for sensors (defaults are good)
 i2c:
-# SHT31-D Temperature and Humidity
-sensor: !include sensor/sht3x_d.yaml
+# BME280 Temperature, Pressure and Humidity
+sensor: !include sensor/bme280.yaml
 # Red and Blue LEDs
 output: !include adafruit_huzzah/output.yaml
 light: !include adafruit_huzzah/light.yaml

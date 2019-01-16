@@ -1,4 +1,4 @@
-name: ah1_th
+name: ${devicename}
 platform: ESP8266
 board: huzzah
 
