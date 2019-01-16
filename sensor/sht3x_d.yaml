@@ -2,15 +2,21 @@
   temperature:
     name: "${upper_devicename} Temperature"
     unit_of_measurement: "°C"
+    accuracy_decimals: 1
+    expire_after: 600s
     filters:
-      - delta: 0.2
-      - heartbeat: 300s
+      - or:
+        - delta: 0.1
+        - heartbeat: 300s
   humidity:
     name: "${upper_devicename} Humidity"
     unit_of_measurement: "%"
+    accuracy_decimals: 1
+    expire_after: 600s
     filters:
-      - delta: 0.5
-      - heartbeat: 300s
+      - or:
+        - delta: 0.1
+        - heartbeat: 300s
   address: 0x44
   update_interval: 10s
 
