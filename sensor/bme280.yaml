@@ -12,7 +12,7 @@
   pressure:
     name: "${upper_devicename} Pressure"
     oversampling: 16x
-    unit_of_measurement: "Pa"
+    unit_of_measurement: "hPa"
     accuracy_decimals: 1
     expire_after: 600s
     filters:
