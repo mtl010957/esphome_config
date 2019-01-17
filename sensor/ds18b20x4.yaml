@@ -1,7 +1,8 @@
 - platform: dallas
-  address: 0x28ABB1E3080000DC
+  address: 0xDC000008E3B1AB28
   name: "Temperature Probe 1"
   unit_of_measurement: "ºC"
+  icon: mdi:thermometer
   accuracy_decimals: 1
   expire_after: 600s
   filters:
@@ -9,9 +10,10 @@
         - delta: 0.1
         - heartbeat: 300s
 - platform: dallas
-  address: 0x28AFB6E2080000DE
+  address: 0xDE000008E2B6AF28
   name: "Temperature Probe 2"
   unit_of_measurement: "ºC"
+  icon: mdi:thermometer
   accuracy_decimals: 1
   expire_after: 600s
   filters:
@@ -19,9 +21,10 @@
         - delta: 0.1
         - heartbeat: 300s
 - platform: dallas
-  address: 0x289729010A0000C4
+  address: 0xC400000A01299728
   name: "Temperature Probe 3"
   unit_of_measurement: "ºC"
+  icon: mdi:thermometer
   accuracy_decimals: 1
   expire_after: 600s
   filters:
@@ -29,13 +32,13 @@
         - delta: 0.1
         - heartbeat: 300s
 - platform: dallas
-  address: 0x28B1BB000A00007B
+  address: 0x7B00000A00BBB128
   name: "Temperature Probe 4"
   unit_of_measurement: "ºC"
+  icon: mdi:thermometer
   accuracy_decimals: 1
   expire_after: 600s
   filters:
     - or:
         - delta: 0.1
         - heartbeat: 300s
-
