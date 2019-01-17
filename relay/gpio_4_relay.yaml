@@ -1,0 +1,25 @@
+- platform: gpio
+  name: ah01_rly_1
+  restore_mode: RESTORE_DEFAULT_OFF
+  pin:
+    number: 13
+    inverted: yes
+- platform: gpio
+  name: ah01_rly_2
+  restore_mode: RESTORE_DEFAULT_OFF
+  pin:
+    number: 12
+    inverted: yes
+- platform: gpio
+  name: ah01_rly_3
+  restore_mode: RESTORE_DEFAULT_OFF
+  pin:
+    number: 14
+    inverted: yes
+- platform: gpio
+  name: ah01_rly_4
+  restore_mode: RESTORE_DEFAULT_OFF
+  pin:
+    number: 16
+    inverted: yes
+

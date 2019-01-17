@@ -1,0 +1,20 @@
+substitutions:
+  devicename: ah01_rly4
+  upper_devicename: AH01_RLY4
+
+esphomeyaml: !include adafruit_huzzah/device.yaml
+wifi: !include connection/wifi.yaml
+mqtt: !include connection/mqtt.yaml
+# Enable logging
+logger:
+#  level: DEBUG
+# Enable Home Assistant API
+#api: (broken with MQTT for now)
+ota:
+# Set of four relays on GPIO
+switch: !include relay/gpio_4_relay.yaml
+# Red and Blue LEDs
+output: !include adafruit_huzzah/output.yaml
+light: !include adafruit_huzzah/light.yaml
+# Flash Button
+binary_sensor: !include adafruit_huzzah/binary_sensor.yaml
