@@ -14,8 +14,9 @@ ota:
 i2c:
 # BME280 Temperature, Pressure and Humidity
 sensor: !include sensor/bme280.yaml
-# Red and Blue LEDs
+# Blue LED (either output+light or status_led, not both)
 output: !include adafruit_huzzah/output.yaml
 light: !include adafruit_huzzah/light.yaml
+#status_led: !include adafruit_huzzah/status_led.yaml
 # Flash Button
 binary_sensor: !include adafruit_huzzah/binary_sensor.yaml
