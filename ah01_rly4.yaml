@@ -6,8 +6,7 @@ esphomeyaml: !include adafruit_huzzah/device.yaml
 wifi: !include connection/wifi.yaml
 mqtt: !include connection/mqtt.yaml
 # Enable logging
-logger:
-#  level: DEBUG
+logger: !include base/logger.yaml
 # Enable Home Assistant API
 #api: (broken with MQTT for now)
 ota:
