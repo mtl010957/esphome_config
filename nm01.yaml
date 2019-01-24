@@ -1,0 +1,19 @@
+substitutions:
+  devicename: nm01
+  upper_devicename: NM01
+
+esphomeyaml: !include nodemcu/device.yaml
+wifi: !include connection/wifi.yaml
+mqtt: !include connection/mqtt.yaml
+# Enable logging
+logger: !include base/logger.yaml
+# Enable Home Assistant API
+#api: (broken with MQTT for now)
+ota:
+binary_sensor: !include nodemcu/binary_sensor.yaml
+#switch: !include nodemcu/switch.yaml
+# Blue LED (either output+light or status_led, not both)
+output: !include nodemcu/output.yaml
+light: !include nodemcu/light.yaml
+#status_led: !include nodemcu/status_led.yaml
+

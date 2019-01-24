@@ -1,0 +1,4 @@
+name: ${devicename}
+platform: ESP8266
+board: nodemcuv2
+
