@@ -7,7 +7,7 @@
   expire_after: 600s
   filters:
     - or:
-        - delta: 0.1
+        - delta: 0.5
         - heartbeat: 300s
 - platform: dallas
   address: 0xDE000008E2B6AF28
@@ -18,7 +18,7 @@
   expire_after: 600s
   filters:
     - or:
-        - delta: 0.1
+        - delta: 0.5
         - heartbeat: 300s
 - platform: dallas
   address: 0xC400000A01299728
@@ -29,7 +29,7 @@
   expire_after: 600s
   filters:
     - or:
-        - delta: 0.1
+        - delta: 0.5
         - heartbeat: 300s
 - platform: dallas
   address: 0x7B00000A00BBB128
@@ -40,5 +40,5 @@
   expire_after: 600s
   filters:
     - or:
-        - delta: 0.1
+        - delta: 0.5
         - heartbeat: 300s

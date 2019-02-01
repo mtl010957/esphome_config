@@ -6,7 +6,7 @@
     expire_after: 600s
     filters:
       - or:
-        - delta: 0.1
+        - delta: 0.5
         - heartbeat: 300s
   humidity:
     name: "${upper_devicename} Humidity"
@@ -15,7 +15,7 @@
     expire_after: 600s
     filters:
       - or:
-        - delta: 0.1
+        - delta: 0.5
         - heartbeat: 300s
   address: 0x44
   update_interval: 10s
