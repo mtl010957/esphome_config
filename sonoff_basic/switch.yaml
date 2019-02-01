@@ -2,4 +2,5 @@
   name: "${upper_devicename} Relay"
   pin: GPIO12
   id: relay
+  restore_mode: RESTORE_DEFAULT_OFF
 
