@@ -1,4 +1,5 @@
 name: ${devicename}
 platform: ESP8266
 board: huzzah
+esphomelib_version: dev
 

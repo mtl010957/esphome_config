@@ -1,4 +1,5 @@
 name: ${devicename}
 platform: ESP8266
 board: nodemcuv2
+esphomelib_version: dev
 
