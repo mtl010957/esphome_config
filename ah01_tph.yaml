@@ -2,7 +2,7 @@ substitutions:
   devicename: ah01_tph
   upper_devicename: AH01_TPH
 
-esphomeyaml: !include adafruit_huzzah/device.yaml
+esphome: !include adafruit_huzzah/device.yaml
 wifi: !include connection/wifi.yaml
 mqtt: !include connection/mqtt.yaml
 # Enable logging

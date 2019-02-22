@@ -2,7 +2,7 @@ substitutions:
   devicename: sb02
   upper_devicename: SB02
 
-esphomeyaml: !include sonoff_basic/device.yaml
+esphome: !include sonoff_basic/device.yaml
 wifi: !include connection/wifi.yaml
 mqtt: !include connection/mqtt.yaml
 # Enable logging
