@@ -1,5 +1,5 @@
 - platform: template
-  name: Blinds
+  name: "${upper_devicename} Cover"
   optimistic: True
   open_action:
     - output.set_level:
