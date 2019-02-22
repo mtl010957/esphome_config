@@ -1,0 +1,11 @@
+- platform: template
+  name: Blinds
+  optimistic: True
+  open_action:
+    - output.set_level:
+        id: nodemcu_servo
+        level: 50%
+  close_action:
+    - output.set_level:
+        id: nodemcu_servo
+        level: 0%

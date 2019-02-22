@@ -1,0 +1,8 @@
+- platform: monochromatic
+  name: "${upper_devicename} Blue LED"
+  output: nodemcu_blue_led
+- platform: monochromatic
+  name: "${upper_devicename} Servo"
+  output: nodemcu_servo
+  gamma_correct: 1.0
+  default_transition_length: 10s

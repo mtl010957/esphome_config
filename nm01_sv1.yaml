@@ -1,8 +1,8 @@
 substitutions:
-  devicename: nm01
-  upper_devicename: NM01
+  devicename: nm01_sv1
+  upper_devicename: NM01_SV1
 
-esphomeyaml: !include nodemcu/device.yaml
+esphome: !include nodemcu/device.yaml
 wifi: !include connection/wifi.yaml
 mqtt: !include connection/mqtt.yaml
 # Enable logging
@@ -15,5 +15,6 @@ binary_sensor: !include nodemcu/binary_sensor.yaml
 # Blue LED (either output+light or status_led, not both)
 output: !include nodemcu/output.yaml
 light: !include nodemcu/light.yaml
+cover: !include nodemcu/cover.yaml
 #status_led: !include nodemcu/status_led.yaml
 
