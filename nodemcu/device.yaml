@@ -1,5 +1,8 @@
 name: ${devicename}
 platform: ESP8266
 board: nodemcuv2
-esphomelib_version: dev
+esphome_core_version:
+  repository: "https://github.com/mtl010957/esphome-core.git"
+  branch: "min_power"
+#  tag: "v1.11.0b1"
 
