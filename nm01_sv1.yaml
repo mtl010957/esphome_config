@@ -13,8 +13,9 @@ ota:
 binary_sensor: !include nodemcu/binary_sensor.yaml
 #switch: !include nodemcu/switch.yaml
 # Blue LED (either output+light or status_led, not both)
+sensor: !include nodemcu/sensor.yaml
 output: !include nodemcu/output.yaml
 light: !include nodemcu/light.yaml
-cover: !include nodemcu/cover.yaml
+#cover: !include nodemcu/cover.yaml
 #status_led: !include nodemcu/status_led.yaml
 

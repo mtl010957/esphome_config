@@ -1,0 +1,16 @@
+- platform: mqtt_subscribe
+  name: "${upper_devicename} Cover Tilt"
+  id: mqtt_cover_tilt
+  topic: "${devicename}/cover/${devicename}_cover/tilt"
+  qos: 0
+  on_value:
+    then:
+      - output.set_level:
+          id: nodemcu_servo
+          level: !lambda "return x/100.0;"
+      - mqtt.publish:
+          topic: "${devicename}/cover/${devicename}_cover/tilt-state"
+          payload: !lambda "return to_string(x);"
+          qos: 0
+          retain: True
+
