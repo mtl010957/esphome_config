@@ -10,7 +10,34 @@
           level: !lambda "return x/100.0;"
       - mqtt.publish:
           topic: "${devicename}/cover/${devicename}_cover/tilt-state"
-          payload: !lambda "return to_string(x);"
+          payload: !lambda "return to_string(int(x));"
           qos: 0
           retain: True
+      - logger.log:
+          format: "Setting cover tilt commanded value"
+          tag: "sensor.mqtt_subscribe.cover.tilt"
+- platform: adc
+  pin: A0
+  name: "${upper_devicename} Cover Tilt Sensor"
+  update_interval: 1s
+  filters:
+    - delta: 0.01
+  on_value:
+    then:
+      - output.set_level:
+          id: nodemcu_servo
+          level: !lambda "return x;"
+      - mqtt.publish:
+          topic: "${devicename}/cover/${devicename}_cover/tilt-state"
+          payload: !lambda "return to_string(int(x*100.0));"
+          qos: 0
+          retain: True
+      - mqtt.publish:
+          topic: "${devicename}/cover/${devicename}_cover/tilt"
+          payload: !lambda "return to_string(int(x*100.0));"
+          qos: 0
+          retain: True
+      - logger.log:
+          format: "Setting cover tilt manual value"
+          tag: "sensor.mqtt_subscribe.cover.tilt"
 
