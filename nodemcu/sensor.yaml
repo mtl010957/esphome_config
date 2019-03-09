@@ -21,7 +21,8 @@
   name: "${upper_devicename} Cover Tilt Sensor"
   update_interval: 1s
   filters:
-    - delta: 0.01
+    - debounce: 0.5s
+    - delta: 0.03
   on_value:
     then:
       - output.set_level:
