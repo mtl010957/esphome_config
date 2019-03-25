@@ -1,6 +1,6 @@
 substitutions:
-  devicename: nm01_sv1
-  upper_devicename: NM01_SV1
+  devicename: nm03_sv1
+  upper_devicename: NM03_SV1
 
 esphome: !include nodemcu/dev_device.yaml
 wifi: !include connection/wifi.yaml
