@@ -1,11 +1,27 @@
 - platform: template
   name: "${upper_devicename} Cover"
+  id: ${devicename}
   optimistic: True
-  open_action:
+#  command_topic: ${devicename}/cover/${devicename}_cover/command
+#  state_topic: ${devicename}/cover/${devicename}_cover/state
+#  lambda: |-
+#    return cover::COVER_OPEN;
+#  set_position_topic: ${devicename}/cover/${devicename}_cover/position/command
+#  position_topic: ${devicename}/cover/${devicename}_cover/position/state
+#  position_closed: 10.0
+#  position_open: 70.0
+  tilt_command_topic: ${devicename}/cover/${devicename}_cover/tilt/command
+  tilt_status_topic: ${devicename}/cover/${devicename}_cover/tilt/state
+  tilt_min: 0.0
+  tilt_max: 100.0
+  tilt_closed_value: 10.0
+  tilt_opened_value: 60.0
+  tilt_invert_state: false
+  tilt_action:
     - output.set_level:
         id: nodemcu_servo
-        level: 50%
-  close_action:
-    - output.set_level:
-        id: nodemcu_servo
-        level: 0%
+#        level: 85%
+        level: !lambda "return id(${devicename})->tilt_value/100.0;"
+#  tilt_state_lambda: |-
+#      return 42.0;
+
