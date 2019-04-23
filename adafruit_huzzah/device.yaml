@@ -1,7 +1,7 @@
 name: ${devicename}
 platform: ESP8266
 board: huzzah
-esphome_core_version: dev
+#esphome_core_version: dev
 #  repository: "https://github.com/mtl010957/esphome-core.git"
 #  branch: "min_power"
 #  tag: "v1.11.0b1"

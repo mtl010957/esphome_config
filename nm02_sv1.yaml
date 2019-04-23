@@ -10,8 +10,9 @@ logger: !include base/logger.yaml
 # Enable Home Assistant API
 #api: (broken with MQTT for now)
 ota:
+# Enable remote restart from HA
+switch: !include nodemcu/switch.yaml
 binary_sensor: !include nodemcu/binary_sensor.yaml
-#switch: !include nodemcu/switch.yaml
 # Blue LED (either output+light or status_led, not both)
 cover: !include nodemcu/cover.yaml
 sensor: !include sensor/adc_cover_position.yaml

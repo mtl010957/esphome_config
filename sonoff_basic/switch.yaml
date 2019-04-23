@@ -1,3 +1,5 @@
+- platform: restart
+  name: "${upper_devicename} Restart"
 - platform: gpio
   name: "${upper_devicename} Relay"
   pin: GPIO12
