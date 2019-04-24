@@ -4,6 +4,15 @@
   mqtt_id: ${devicename}_cover
   optimistic: True
   device_class: blind
+  open_action:
+    - output.set_level:
+        id: nodemcu_servo
+        level: 50%
+  close_action:
+    - output.set_level:
+        id: nodemcu_servo
+        level: 10%
+#  stop_action:
 #  command_topic: ${devicename}/cover/${devicename}_cover/command
 #  state_topic: ${devicename}/cover/${devicename}_cover/state
 #  lambda: |-
