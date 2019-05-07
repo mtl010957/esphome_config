@@ -8,7 +8,7 @@ mqtt: !include connection/mqtt.yaml
 # Enable logging
 logger: !include base/logger.yaml
 # Enable Home Assistant API
-#api: (broken with MQTT for now)
+#api:
 ota:
 # Enable remote restart from HA
 switch: !include adafruit_huzzah/switch.yaml

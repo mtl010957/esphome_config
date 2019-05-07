@@ -8,8 +8,10 @@ mqtt: !include connection/mqtt.yaml
 # Enable logging
 logger: !include base/logger.yaml
 # Enable Home Assistant API
-#api: (broken with MQTT for now)
+#api:
 ota:
+# Enable remote restart from HA
+switch: !include adafruit_huzzah/switch.yaml
 # Need I2C bus for sensors
 i2c: !include connection/i2c.yaml
 # SHT31-D Temperature and Humidity

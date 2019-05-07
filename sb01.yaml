@@ -8,7 +8,7 @@ mqtt: !include connection/mqtt.yaml
 # Enable logging
 logger: !include base/logger.yaml
 # Enable Home Assistant API
-#api: (broken with MQTT for now)
+#api:
 ota:
 binary_sensor: !include sonoff_basic/binary_sensor.yaml
 switch: !include sonoff_basic/switch.yaml
