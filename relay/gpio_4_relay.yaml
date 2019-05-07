@@ -1,23 +1,25 @@
+- platform: restart
+  name: "${upper_devicename} Restart"
 - platform: gpio
-  name: ah01_rly_1
+  name: "${devicename}_1"
   restore_mode: RESTORE_DEFAULT_OFF
   pin:
     number: 13
     inverted: yes
 - platform: gpio
-  name: ah01_rly_2
+  name: "${devicename}_2"
   restore_mode: RESTORE_DEFAULT_OFF
   pin:
     number: 12
     inverted: yes
 - platform: gpio
-  name: ah01_rly_3
+  name: "${devicename}_3"
   restore_mode: RESTORE_DEFAULT_OFF
   pin:
     number: 14
     inverted: yes
 - platform: gpio
-  name: ah01_rly_4
+  name: "${devicename}_4"
   restore_mode: RESTORE_DEFAULT_OFF
   pin:
     number: 16

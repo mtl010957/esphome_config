@@ -10,8 +10,6 @@ logger: !include base/logger.yaml
 # Enable Home Assistant API
 #api:
 ota:
-# Enable remote restart from HA
-switch: !include adafruit_huzzah/switch.yaml
 # Set of four relays on GPIO
 switch: !include relay/gpio_4_relay.yaml
 # Blue LED (either output+light or status_led, not both)
