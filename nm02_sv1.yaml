@@ -2,7 +2,7 @@ substitutions:
   devicename: nm02_sv1
   upper_devicename: NM02_SV1
 
-esphome: !include nodemcu/dev_device.yaml
+esphome: !include nodemcu/device.yaml
 wifi: !include connection/wifi.yaml
 mqtt: !include connection/mqtt.yaml
 # Enable logging
