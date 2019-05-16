@@ -1,8 +1,5 @@
 name: ${devicename}
 platform: ESP8266
 board: nodemcuv2
-#esphome_core_version:
-#  repository: "https://github.com/mtl010957/esphome-core.git"
-#  branch: "tilt_cover"
-#  tag: "v1.11.0b1"
+
 
