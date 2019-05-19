@@ -17,7 +17,7 @@ binary_sensor: !include nodemcu/binary_sensor.yaml
 cover: !include nodemcu/cover.yaml
 sensor: !include sensor/adc_cover_position.yaml
 #sensor: !include nodemcu/sensor.yaml
-output: !include nodemcu/output.yaml
+output: !include nodemcu/mg90_output.yaml
 light: !include nodemcu/light.yaml
 #status_led: !include nodemcu/status_led.yaml
 

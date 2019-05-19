@@ -1,0 +1,14 @@
+- platform: esp8266_pwm
+  pin:
+    number: D4
+    inverted: True
+  frequency: 1000 Hz
+  id: nodemcu_blue_led
+- platform: esp8266_pwm
+  pin:
+    number: D5
+    inverted: False
+  frequency: 50 Hz
+  max_power: 0.125
+  min_power: 0.040
+  id: nodemcu_servo
