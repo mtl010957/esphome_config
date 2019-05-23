@@ -5,9 +5,10 @@
   device_class: blind
   tilt_closed_value: 5%
   tilt_opened_value: 45%
+  tilt_close_speed: 20
+  tilt_open_speed: 20
   tilt_action:
     - output.set_level:
         id: nodemcu_servo
-        level: !lambda |-
-          return id(${devicename})->tilt;
+        level: !lambda "return id(${devicename})->tilt;"
 
