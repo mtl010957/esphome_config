@@ -1,0 +1,29 @@
+- platform: mqtt_subscribe
+  name: "${upper_devicename} Cover Tilt"
+  id: mqtt_cover_tilt
+  topic: "${devicename}/cover/${devicename}_cover/tilt/command"
+  qos: 0
+  discovery: False
+  on_value:
+    then:
+      - output.set_level:
+          id: nodemcu_servo
+          level: !lambda "return x/100.0;"
+      - mqtt.publish:
+          topic: "${devicename}/cover/${devicename}_cover/tilt/state"
+          payload: !lambda "return to_string(int(x));"
+          qos: 0
+          retain: True
+      - mqtt.publish:
+          topic: "${devicename}/cover/${devicename}_cover/state"
+          payload: !lambda |-
+            if (x > 5) {
+              return "open";
+            } else {
+              return "closed";
+            }
+          qos: 0
+          retain: True
+      - logger.log:
+          format: "Setting cover tilt commanded value"
+          tag: "sensor.mqtt_subscribe.cover.tilt"

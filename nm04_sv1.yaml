@@ -1,0 +1,23 @@
+substitutions:
+  devicename: nm04_sv1
+  upper_devicename: NM04_SV1
+
+esphome: !include nodemcu/mqtt_discovery_device.yaml
+wifi: !include connection/wifi.yaml
+mqtt: !include connection/mqtt.yaml
+# Enable logging
+logger: !include base/logger.yaml
+# Enable Home Assistant API
+#api: (broken with MQTT for now)
+ota:
+# Enable remote restart from HA
+switch: !include nodemcu/switch.yaml
+binary_sensor: !include nodemcu/binary_sensor.yaml
+# Blue LED (either output+light or status_led, not both)
+#cover: !include nodemcu/tilt_cover.yaml
+#sensor: !include sensor/adc_cover_position.yaml
+sensor: !include nodemcu/mqtt_cover_sensor.yaml
+output: !include nodemcu/mg90_output.yaml
+light: !include nodemcu/light.yaml
+#status_led: !include nodemcu/status_led.yaml
+

@@ -1,0 +1,21 @@
+name: ${devicename}
+platform: ESP8266
+board: nodemcuv2
+on_boot:
+  priority: -60
+  then:
+    - logger.log:
+        format: "Sending MQTT Discovery Message"
+        tag: "esphome"
+    - mqtt.publish_json:
+        topic: "homeassistant/cover/${devicename}/${devicename}_cover/config"
+        retain: True
+        payload: |-
+          root["name"] = "${upper_devicename} Cover Tilt";
+          root["state_topic"] = "${devicename}/cover/${devicename}_cover/state";
+          root["availability_topic"] = "nm04_sv1/status";
+          root["unique_id"] = "ESPsensor${devicename}_cover_tilt";
+          root["tilt_status_topic"] = "${devicename}/cover/${devicename}_cover/tilt/state";
+          root["tilt_command_topic"] = "${devicename}/cover/${devicename}_cover/tilt/command";
+          root["tilt_closed_value"] = 5;
+          root["tilt_opened_value"] = 45;
