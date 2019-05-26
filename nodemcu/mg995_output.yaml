@@ -9,6 +9,6 @@
     number: D5
     inverted: False
   frequency: 50 Hz
-  max_power: 0.125
-  min_power: 0.040
+  max_power: 0.135
+  min_power: 0.035
   id: nodemcu_servo
