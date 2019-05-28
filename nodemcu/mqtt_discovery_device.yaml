@@ -2,8 +2,9 @@ name: ${devicename}
 platform: ESP8266
 board: nodemcuv2
 on_boot:
-  priority: -60
+  priority: -80
   then:
+    - delay: 2s
     - logger.log:
         format: "Sending MQTT Discovery Message"
         tag: "esphome"
@@ -13,9 +14,15 @@ on_boot:
         payload: |-
           root["name"] = "${upper_devicename} Cover Tilt";
           root["state_topic"] = "${devicename}/cover/${devicename}_cover/state";
-          root["availability_topic"] = "nm04_sv1/status";
-          root["unique_id"] = "ESPsensor${devicename}_cover_tilt";
+          root["availability_topic"] = "${devicename}/status";
+          root["unique_id"] = "ESPcover${devicename}_cover_tilt";
           root["tilt_status_topic"] = "${devicename}/cover/${devicename}_cover/tilt/state";
           root["tilt_command_topic"] = "${devicename}/cover/${devicename}_cover/tilt/command";
           root["tilt_closed_value"] = 5;
           root["tilt_opened_value"] = 45;
+          JsonObject& device = root.createNestedObject("device");
+          device["identifiers"] = get_mac_address();
+          device["name"] = "${devicename}";
+          device["sw_version"] = "esphome v" ESPHOME_VERSION " " + App.get_compilation_time();
+          device["model"] = ARDUINO_BOARD;
+          device["manufacturer"] = "espressif";

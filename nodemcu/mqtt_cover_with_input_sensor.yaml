@@ -3,16 +3,33 @@
   id: mqtt_cover_tilt
   topic: "${devicename}/cover/${devicename}_cover/tilt/command"
   qos: 0
+  discovery: False
   on_value:
     then:
-      - output.set_level:
-          id: nodemcu_servo
-          level: !lambda "return x/100.0;"
-      - mqtt.publish:
-          topic: "${devicename}/cover/${devicename}_cover/tilt/state"
-          payload: !lambda "return to_string(int(x));"
-          qos: 0
-          retain: True
+      - logger.log:
+          format: "Setting cover tilt commanded value"
+          tag: "sensor.mqtt_subscribe.cover.tilt"
+      - while:
+          condition:
+            lambda: |-
+              return (int(x) != id(tilt));
+          then:
+            - lambda: |-
+                if (int(x) > id(tilt)) {
+                  id(tilt) += 1;
+                } else if (int(x) < id(tilt)) {
+                  id(tilt) -= 1;
+                }
+            - delay: 100ms
+            - output.set_level:
+                id: nodemcu_servo
+                level: !lambda |-
+                  return id(tilt)/100.0f;
+            - mqtt.publish:
+                topic: "${devicename}/cover/${devicename}_cover/tilt/state"
+                payload: !lambda "return to_string(id(tilt));"
+                qos: 0
+                retain: True
       - mqtt.publish:
           topic: "${devicename}/cover/${devicename}_cover/state"
           payload: !lambda |-
@@ -23,9 +40,6 @@
             }
           qos: 0
           retain: True
-      - logger.log:
-          format: "Setting cover tilt commanded value"
-          tag: "sensor.mqtt_subscribe.cover.tilt"
 - platform: adc
   pin: A0
   name: "${upper_devicename} Cover Tilt Sensor"
@@ -35,9 +49,6 @@
     - delta: 0.03
   on_value:
     then:
-      - output.set_level:
-          id: nodemcu_servo
-          level: !lambda "return x;"
       - mqtt.publish:
           topic: "${devicename}/cover/${devicename}_cover/tilt/command"
           payload: !lambda "return to_string(int(x*100.0));"
