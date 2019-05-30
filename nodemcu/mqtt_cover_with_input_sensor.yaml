@@ -12,22 +12,22 @@
       - while:
           condition:
             lambda: |-
-              return (int(x) != id(tilt));
+              return (int(x) != id(tilt_out));
           then:
             - lambda: |-
-                if (int(x) > id(tilt)) {
-                  id(tilt)++;
-                } else if (int(x) < id(tilt)) {
-                  id(tilt)--;
+                if (int(x) > id(tilt_out)) {
+                  id(tilt_out)++;
+                } else if (int(x) < id(tilt_out)) {
+                  id(tilt_out)--;
                 }
             - delay: 100ms
             - output.set_level:
                 id: nodemcu_servo
                 level: !lambda |-
-                  return id(tilt)/100.0f;
+                  return id(tilt_out)/100.0f;
             - mqtt.publish:
                 topic: "${devicename}/cover/${devicename}_cover/tilt/state"
-                payload: !lambda "return to_string(id(tilt));"
+                payload: !lambda "return to_string(id(tilt_out));"
                 qos: 0
                 retain: True
       - mqtt.publish:

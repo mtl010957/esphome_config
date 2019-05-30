@@ -15,7 +15,7 @@ on_boot:
           root["name"] = "${upper_devicename} Cover";
           root["state_topic"] = "${devicename}/cover/${devicename}_cover/state";
           root["availability_topic"] = "${devicename}/status";
-          root["unique_id"] = "ESPcover${devicename}_cover_tilt";
+          root["unique_id"] = "ESPcover${devicename}_cover";
           root["tilt_status_topic"] = "${devicename}/cover/${devicename}_cover/tilt/state";
           root["tilt_command_topic"] = "${devicename}/cover/${devicename}_cover/tilt/command";
           root["tilt_closed_value"] = 5;
