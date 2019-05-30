@@ -1,5 +1,5 @@
 - platform: mqtt_subscribe
-  name: "${upper_devicename} Cover Tilt"
+  name: "${upper_devicename} Cover"
   id: mqtt_cover_tilt
   topic: "${devicename}/cover/${devicename}_cover/tilt/command"
   qos: 0
