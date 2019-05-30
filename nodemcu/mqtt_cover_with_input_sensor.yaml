@@ -16,9 +16,9 @@
           then:
             - lambda: |-
                 if (int(x) > id(tilt)) {
-                  id(tilt) += 1;
+                  id(tilt)++;
                 } else if (int(x) < id(tilt)) {
-                  id(tilt) -= 1;
+                  id(tilt)--;
                 }
             - delay: 100ms
             - output.set_level:
