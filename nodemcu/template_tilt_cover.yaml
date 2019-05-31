@@ -6,7 +6,7 @@
   optimistic: False
   discovery: False
   lambda: |-
-    if (id(${devicename}).tilt * 100 > 5) {
+    if (int(id(${devicename}).tilt * 100) > 5) {
       return COVER_OPEN;
     } else {
       return COVER_CLOSED;
