@@ -4,8 +4,7 @@
   update_interval: 1s
   expire_after: 60s
   filters:
-    - debounce: 0.5s
-    - delta: 0.02
+    - delta: 0.03
   on_value:
     then:
       - cover.control:
