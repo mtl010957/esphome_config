@@ -15,7 +15,7 @@ switch: !include nodemcu/switch.yaml
 binary_sensor: !include nodemcu/rf_remote_binary_sensor.yaml
 # Blue LED (either output+light or status_led, not both)
 output: !include nodemcu/output.yaml
-#light: !include nodemcu/light.yaml
+light: !include nodemcu/light.yaml
 #status_led: !include nodemcu/status_led.yaml
 remote_receiver: !include nodemcu/remote_receiver.yaml
 #remote_transmitter: !include nodemcu/remote_transmitter.yaml
