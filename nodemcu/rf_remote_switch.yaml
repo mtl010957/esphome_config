@@ -1,0 +1,83 @@
+- platform: restart
+  name: "${upper_devicename} Restart"
+- platform: template
+  name: "${upper_devicename} Fan Remote Stop"
+  turn_on_action:
+    - remote_transmitter.transmit_rc_switch_raw:
+        code: "01001011110101011010011000000001"
+        protocol: 1
+        repeat:
+          times: 6
+          wait_time: 0.5s
+- platform: template
+  name: "${upper_devicename} Fan Remote Hi"
+  turn_on_action:
+    - remote_transmitter.transmit_rc_switch_raw:
+        code: "01001011110101011010100101101000"
+        protocol: 1
+        repeat:
+          times: 6
+          wait_time: 0.5s
+- platform: template
+  name: "${upper_devicename} Fan Remote Med"
+  turn_on_action:
+    - remote_transmitter.transmit_rc_switch_raw:
+        code: "01001011110101011010001101110011"
+        protocol: 1
+        repeat:
+          times: 6
+          wait_time: 0.5s
+- platform: template
+  name: "${upper_devicename} Fan Remote Low"
+  turn_on_action:
+    - remote_transmitter.transmit_rc_switch_raw:
+        code: "01001011110101011010001000000101"
+        protocol: 1
+        repeat:
+          times: 6
+          wait_time: 0.5s
+- platform: template
+  name: "${upper_devicename} Fan Remote Light"
+  turn_on_action:
+    - remote_transmitter.transmit_rc_switch_raw:
+        code: "01001011110101011010100000011110"
+        protocol: 1
+        repeat:
+          times: 6
+          wait_time: 0.5s
+- platform: template
+  name: "${upper_devicename} Fan Remote 1H"
+  turn_on_action:
+    - remote_transmitter.transmit_rc_switch_raw:
+        code: "01001011110101011010000100110101"
+        protocol: 1
+        repeat:
+          times: 6
+          wait_time: 0.5s
+- platform: template
+  name: "${upper_devicename} Fan Remote 2H"
+  turn_on_action:
+    - remote_transmitter.transmit_rc_switch_raw:
+        code: "01001011110101011010011100100010"
+        protocol: 1
+        repeat:
+          times: 6
+          wait_time: 0.5s
+- platform: template
+  name: "${upper_devicename} Fan Remote 4H"
+  turn_on_action:
+    - remote_transmitter.transmit_rc_switch_raw:
+        code: "01001011110101011010010101000110"
+        protocol: 1
+        repeat:
+          times: 6
+          wait_time: 0.5s
+- platform: template
+  name: "${upper_devicename} Fan Remote 8H"
+  turn_on_action:
+    - remote_transmitter.transmit_rc_switch_raw:
+        code: "01001011110101011010101001011000"
+        protocol: 1
+        repeat:
+          times: 6
+          wait_time: 0.5s
