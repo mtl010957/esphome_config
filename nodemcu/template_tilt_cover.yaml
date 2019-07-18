@@ -24,10 +24,11 @@
                 id(tilt_out)--;
               }
           - delay: 100ms
-          - output.set_level:
-              id: nodemcu_servo
+          - servo.write:
+              id: cover_servo
               level: !lambda |-
                 return id(tilt_out)/100.0f;
+    - servo.detach: cover_servo
   tilt_lambda: |-
     return id(tilt_out)/100.0f;
 

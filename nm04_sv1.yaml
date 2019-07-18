@@ -18,7 +18,8 @@ cover: !include nodemcu/template_tilt_cover.yaml
 sensor: !include sensor/adc_cover_position.yaml
 globals: !include nodemcu/globals.yaml
 #sensor: !include nodemcu/mqtt_cover_with_input_sensor.yaml
-output: !include nodemcu/mg90_output.yaml
+output: !include nodemcu/cover_servo_output.yaml
 light: !include nodemcu/light.yaml
 #status_led: !include nodemcu/status_led.yaml
+servo: !include nodemcu/mg90_cover_servo.yaml
 

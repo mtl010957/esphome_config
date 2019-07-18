@@ -1,0 +1,6 @@
+- platform: restart
+  name: "${upper_devicename} Restart"
+- platform: gpio
+  pin: D6
+  name: "${upper_devicename} Servo Enable"
+  id: gpio_d6
