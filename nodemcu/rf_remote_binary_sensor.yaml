@@ -1,7 +1,7 @@
 - platform: gpio
   pin:
     number: D3
-#    inverted: True
+    inverted: True
   name: "${upper_devicename} Button"
 - platform: remote_receiver
   name: "${upper_devicename} Fan Remote Stop"
