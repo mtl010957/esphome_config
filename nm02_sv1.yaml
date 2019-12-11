@@ -1,6 +1,8 @@
 substitutions:
   devicename: nm02_sv1
   upper_devicename: NM02_SV1
+  tilt_closed_value: "5"
+  tilt_opened_value: "70"
 
 esphome: !include nodemcu/mqtt_discovery_device.yaml
 wifi: !include connection/wifi.yaml

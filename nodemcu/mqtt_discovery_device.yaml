@@ -18,8 +18,8 @@ on_boot:
           root["unique_id"] = "ESPcover${devicename}_cover";
           root["tilt_status_topic"] = "${devicename}/cover/${devicename}_cover/tilt/state";
           root["tilt_command_topic"] = "${devicename}/cover/${devicename}_cover/tilt/command";
-          root["tilt_closed_value"] = 5;
-          root["tilt_opened_value"] = 45;
+          root["tilt_closed_value"] = ${tilt_closed_value};
+          root["tilt_opened_value"] = ${tilt_opened_value};
           JsonObject& device = root.createNestedObject("device");
           device["identifiers"] = get_mac_address();
           device["name"] = "${devicename}";
