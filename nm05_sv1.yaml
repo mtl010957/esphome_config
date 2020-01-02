@@ -9,11 +9,13 @@ wifi: !include connection/wifi.yaml
 mqtt: !include connection/mqtt.yaml
 # Enable logging
 logger: !include base/logger.yaml
+# Expose some info to HA
+text_sensor: !include base/text_sensor.yaml
 # Enable Home Assistant API
 #api: (broken with MQTT for now)
 ota:
 # Enable remote restart from HA
-switch: !include nodemcu/servo_enable_switch.yaml
+switch: !include nodemcu/switch.yaml
 binary_sensor: !include nodemcu/binary_sensor.yaml
 # Blue LED (either output+light or status_led, not both)
 cover: !include nodemcu/template_tilt_cover.yaml

@@ -9,6 +9,8 @@ wifi: !include connection/wifi.yaml
 mqtt: !include connection/mqtt.yaml
 # Enable logging
 logger: !include base/logger.yaml
+# Expose some info to HA
+text_sensor: !include base/text_sensor.yaml
 # Enable Home Assistant API
 #api: (broken with MQTT for now)
 ota:

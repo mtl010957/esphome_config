@@ -26,3 +26,5 @@ on_boot:
           device["sw_version"] = "esphome v" ESPHOME_VERSION " " + App.get_compilation_time();
           device["model"] = ARDUINO_BOARD;
           device["manufacturer"] = "espressif";
+    - lambda: id(${devicename}_wifi_info_ip).publish_state(WiFi.localIP().toString().c_str());
+

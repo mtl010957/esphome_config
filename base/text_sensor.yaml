@@ -1,0 +1,4 @@
+- platform: wifi_info
+  ip_address:
+    id: "${devicename}_wifi_info_ip"
+    name: "${upper_devicename} IP"
