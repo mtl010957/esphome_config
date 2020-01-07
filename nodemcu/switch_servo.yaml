@@ -1,0 +1,15 @@
+- platform: restart
+  name: "${upper_devicename} Restart"
+- platform: template
+  name: "${upper_devicename} Latch Servo"
+  optimistic: true
+  turn_on_action:
+    - servo.write:
+        id: switch_servo
+        level: 50%
+  turn_off_action:
+    - servo.write:
+        id: switch_servo
+        level: 0%
+    - delay: 2s
+    - servo.detach: switch_servo

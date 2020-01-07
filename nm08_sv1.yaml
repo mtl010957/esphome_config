@@ -1,0 +1,24 @@
+substitutions:
+  devicename: nm08_sv1
+  upper_devicename: NM08_SV1
+  
+esphome: !include nodemcu/device.yaml
+wifi: !include connection/wifi.yaml
+mqtt: !include connection/mqtt.yaml
+# Enable logging
+logger: !include base/logger.yaml
+# Expose some info to HA
+text_sensor: !include base/text_sensor.yaml
+# Enable Home Assistant API
+#api: (broken with MQTT for now)
+ota:
+# Enable remote restart from HA
+switch: !include nodemcu/switch_servo.yaml
+binary_sensor: !include nodemcu/binary_sensor.yaml
+# Blue LED (either output+light or status_led, not both)
+#globals: !include nodemcu/globals.yaml
+output: !include nodemcu/switch_servo_output.yaml
+light: !include nodemcu/light.yaml
+#status_led: !include nodemcu/status_led.yaml
+servo: !include nodemcu/mg995_switch_servo.yaml
+
