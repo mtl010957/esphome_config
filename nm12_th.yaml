@@ -1,0 +1,25 @@
+substitutions:
+  devicename: nm12_th
+  upper_devicename: NM12_TH
+
+esphome: !include nodemcu/device.yaml
+wifi: !include connection/wifi.yaml
+mqtt: !include connection/mqtt.yaml
+# Enable logging
+logger: !include base/logger.yaml
+# Expose some info to HA
+text_sensor: !include base/text_sensor.yaml
+# Enable Home Assistant API
+#api: (broken with MQTT for now)
+ota:
+# Enable remote restart from HA
+switch: !include nodemcu/switch.yaml
+binary_sensor: !include nodemcu/binary_sensor.yaml
+light: !include nodemcu/light.yaml
+output: !include nodemcu/output.yaml
+#status_led: !include nodemcu/status_led.yaml
+# Need I2C bus for sensors
+i2c: !include connection/i2c.yaml
+# SHT31-D Temperature and Humidity
+sensor: !include sensor/sht3x_d.yaml
+
