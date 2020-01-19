@@ -1,0 +1,19 @@
+substitutions:
+  devicename: nm14_rly4
+  upper_devicename: NM14_RLY4
+
+esphome: !include nodemcu/device.yaml
+wifi: !include connection/wifi.yaml
+mqtt: !include connection/mqtt.yaml
+# Enable logging
+logger: !include base/logger.yaml
+# Expose some info to HA
+text_sensor: !include base/text_sensor.yaml
+# Enable Home Assistant API
+#api:
+ota:
+# Set of four relays on GPIO
+switch: !include relay/gpio_4_relay.yaml
+binary_sensor: !include nodemcu/binary_sensor.yaml
+light: !include nodemcu/light.yaml
+output: !include nodemcu/output.yaml

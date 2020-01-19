@@ -4,24 +4,24 @@
   name: "${devicename}_1"
   restore_mode: RESTORE_DEFAULT_OFF
   pin:
-    number: 13
+    number: D5
     inverted: yes
 - platform: gpio
   name: "${devicename}_2"
   restore_mode: RESTORE_DEFAULT_OFF
   pin:
-    number: 12
+    number: D6
     inverted: yes
 - platform: gpio
   name: "${devicename}_3"
   restore_mode: RESTORE_DEFAULT_OFF
   pin:
-    number: 14
+    number: D7
     inverted: yes
 - platform: gpio
   name: "${devicename}_4"
   restore_mode: RESTORE_DEFAULT_OFF
   pin:
-    number: 16
+    number: D8
     inverted: yes
 
