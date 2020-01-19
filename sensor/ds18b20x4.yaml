@@ -1,6 +1,6 @@
 - platform: dallas
-  address: 0xDC000008E3B1AB28
-  name: "Temperature Probe 1"
+  address: ${probe_1_addr}
+  name: "${upper_devicename} ${probe_1_addr}"
   unit_of_measurement: "ºC"
   icon: mdi:thermometer
   accuracy_decimals: 1
@@ -10,8 +10,8 @@
         - delta: 0.5
         - heartbeat: 300s
 - platform: dallas
-  address: 0xDE000008E2B6AF28
-  name: "Temperature Probe 2"
+  address: ${probe_2_addr}
+  name: "${upper_devicename} ${probe_2_addr}"
   unit_of_measurement: "ºC"
   icon: mdi:thermometer
   accuracy_decimals: 1
@@ -21,8 +21,8 @@
         - delta: 0.5
         - heartbeat: 300s
 - platform: dallas
-  address: 0xC400000A01299728
-  name: "Temperature Probe 3"
+  address: ${probe_3_addr}
+  name: "${upper_devicename} ${probe_3_addr}"
   unit_of_measurement: "ºC"
   icon: mdi:thermometer
   accuracy_decimals: 1
@@ -32,8 +32,8 @@
         - delta: 0.5
         - heartbeat: 300s
 - platform: dallas
-  address: 0x7B00000A00BBB128
-  name: "Temperature Probe 4"
+  address: ${probe_4_addr}
+  name: "${upper_devicename} ${probe_4_addr}"
   unit_of_measurement: "ºC"
   icon: mdi:thermometer
   accuracy_decimals: 1
