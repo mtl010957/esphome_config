@@ -2,7 +2,7 @@
   name: "${upper_devicename} Cover"
   id: ${devicename}
   mqtt_id: ${devicename}_cover
-  device_class: blind
+  device_class: shutter
   optimistic: False
   discovery: False
   lambda: |-
