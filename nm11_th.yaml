@@ -18,8 +18,6 @@ binary_sensor: !include nodemcu/binary_sensor.yaml
 light: !include nodemcu/light.yaml
 output: !include nodemcu/output.yaml
 #status_led: !include nodemcu/status_led.yaml
-# Need I2C bus for sensors
-i2c: !include connection/i2c.yaml
-# SHT31-D Temperature and Humidity
-sensor: !include sensor/sht3x_d.yaml
+# DHT22 Temperature and Humidity
+sensor: !include sensor/dht22.yaml
 
