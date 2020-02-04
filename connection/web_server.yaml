@@ -1,0 +1,5 @@
+port: !secret web_server_port
+auth:
+  username: !secret web_server_username
+  password: !secret web_server_password
+

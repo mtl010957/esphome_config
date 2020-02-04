@@ -3,7 +3,7 @@ substitutions:
   upper_devicename: NM13_TH
 
 esphome: !include nodemcu/device.yaml
-wifi: !include connection/wifi.yaml
+wifi: !include connection/wifi_ap.yaml
 mqtt: !include connection/mqtt.yaml
 # Enable logging
 logger: !include base/logger.yaml
@@ -20,4 +20,6 @@ output: !include nodemcu/output.yaml
 #status_led: !include nodemcu/status_led.yaml
 # DHT22 Temperature and Humidity
 sensor: !include sensor/dht22.yaml
-
+# Web Server
+web_server: !include connection/web_server.yaml
+captive_portal:
