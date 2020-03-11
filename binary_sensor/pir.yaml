@@ -1,0 +1,4 @@
+- platform: gpio
+  pin: D8
+  name: "${upper_devicename} PIR Sensor"
+  device_class: motion
