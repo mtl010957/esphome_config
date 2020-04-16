@@ -5,7 +5,7 @@ substitutions:
   tilt_opened_value: "70"
   device_class: shutter
 
-esphome: !include d1mini/device.yaml
+esphome: !include d1mini/mqtt_discovery_device.yaml
 wifi: !include connection/wifi.yaml
 mqtt: !include connection/mqtt.yaml
 # Enable logging
@@ -19,13 +19,12 @@ ota:
 switch: !include d1mini/switch.yaml
 #binary_sensor: !include nodemcu/binary_sensor.yaml
 # Blue LED (either output+light or status_led, not both)
-#cover: !include nodemcu/template_tilt_cover.yaml
-#sensor: !include sensor/adc_cover_position.yaml
-#globals: !include nodemcu/globals.yaml
+cover: !include d1mini/template_tilt_cover.yaml
+sensor: !include sensor/adc_cover_position.yaml
+globals: !include d1mini/globals.yaml
 #sensor: !include nodemcu/mqtt_cover_with_input_sensor.yaml
-#output: !include nodemcu/cover_servo_output.yaml
-output: !include nodemcu/output.yaml
-light: !include nodemcu/light.yaml
+output: !include d1mini/cover_servo_output.yaml
+light: !include d1mini/light.yaml
 #status_led: !include nodemcu/status_led.yaml
-#servo: !include nodemcu/mg995_cover_servo.yaml
+servo: !include d1mini/mg90_cover_servo.yaml
 
