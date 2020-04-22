@@ -1,0 +1,21 @@
+substitutions:
+  devicename: sb07
+  upper_devicename: SB07
+
+esphome: !include sonoff_basic/device.yaml
+wifi: !include connection/wifi.yaml
+mqtt: !include connection/mqtt.yaml
+# Enable logging
+logger: !include base/logger.yaml
+# Expose some info to HA
+text_sensor: !include base/text_sensor.yaml
+# Enable Home Assistant API
+#api:
+ota:
+binary_sensor: !include sonoff_basic/binary_sensor.yaml
+switch: !include sonoff_basic/switch.yaml
+# Green LED (either output+light or status_led, not both)
+output: !include sonoff_basic/output.yaml
+light: !include sonoff_basic/light.yaml
+#status_led: !include adafruit_huzzah/status_led.yaml
+
