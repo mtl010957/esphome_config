@@ -27,4 +27,7 @@ output: !include nodemcu/cover_servo_output.yaml
 light: !include nodemcu/light.yaml
 #status_led: !include nodemcu/status_led.yaml
 servo: !include nodemcu/mg995_cover_servo.yaml
+# Web Server
+web_server: !include connection/web_server.yaml
+captive_portal:
 
