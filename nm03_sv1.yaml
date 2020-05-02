@@ -2,7 +2,7 @@ substitutions:
   devicename: nm03_sv1
   upper_devicename: NM03_SV1
   tilt_closed_value: "5"
-  tilt_opened_value: "70"
+  tilt_opened_value: "60"
   device_class: shutter
 
 esphome: !include nodemcu/mqtt_discovery_device.yaml
