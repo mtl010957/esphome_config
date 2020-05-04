@@ -1,0 +1,9 @@
+- platform: gpio
+  pin:
+    number: ${button_pin}
+    mode: INPUT_PULLUP
+    inverted: True
+  name: "${upper_devicename} Button"
+  on_press:
+    - switch.toggle: relay
+

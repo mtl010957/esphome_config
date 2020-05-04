@@ -1,4 +1,4 @@
 - platform: monochromatic
   name: "${upper_devicename} Green LED"
-  output: basic_green_led
+  output: green_led
 

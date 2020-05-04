@@ -1,5 +1,0 @@
-- id: cover_servo
-  output: nodemcu_servo
-  min_level: 3%
-  max_level: 13%
-  idle_level: 3%

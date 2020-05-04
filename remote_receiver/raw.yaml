@@ -1,8 +1,8 @@
 pin:
-  number: D1
+  number: ${rf_receive_pin}
 #  mode: INPUT_PULLUP
 #  inverted: True
-dump: rc_switch
+dump: raw
 # Settings to optimize recognition of RF devices
 tolerance: 40%
 filter: 200us

@@ -1,6 +1,6 @@
 name: ${devicename}
 platform: ESP8266
-board: nodemcuv2
+board: d1_mini
 on_boot:
   priority: -80
   then:

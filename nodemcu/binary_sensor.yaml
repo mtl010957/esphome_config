@@ -1,6 +1,0 @@
-- platform: gpio
-  pin:
-    number: D3
-    inverted: True
-  name: "${upper_devicename} Button"
-

@@ -1,6 +1,6 @@
 - platform: gpio
   pin:
-    number: D3
+    number: ${button_pin}
     inverted: True
   name: "${upper_devicename} Button"
 - platform: remote_receiver

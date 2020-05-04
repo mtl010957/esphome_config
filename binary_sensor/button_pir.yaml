@@ -1,10 +1,10 @@
 - platform: gpio
   pin:
-    number: D3
+    number: ${button_pin}
     inverted: True
   name: "${upper_devicename} Button"
 - platform: gpio
   pin:
-    number: D7
+    number: ${pir_pin}
   name: "${upper_devicename} PIR Sensor"
   device_class: motion

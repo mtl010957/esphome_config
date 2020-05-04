@@ -17,7 +17,7 @@
       - or:
         - delta: 0.5
         - heartbeat: 300s
-  pin: D1
+  pin: ${sensor_pin}
   model: DHT22
   update_interval: 10s
 

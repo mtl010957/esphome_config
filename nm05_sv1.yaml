@@ -4,29 +4,28 @@ substitutions:
   tilt_closed_value: "5"
   tilt_opened_value: "60"
   device_class: shutter
+  button_pin: D2
+  led_pin: D4
+  servo_pin: D5
+  delay_ms: "100"
 
 esphome: !include nodemcu/mqtt_discovery_device.yaml
 wifi: !include connection/wifi.yaml
 mqtt: !include connection/mqtt.yaml
 # Enable logging
-logger: !include base/logger.yaml
+logger: !include logger/debug.yaml
 # Expose some info to HA
-text_sensor: !include base/text_sensor.yaml
-# Enable Home Assistant API
-#api: (broken with MQTT for now)
+text_sensor: !include text_sensor/wifi_info.yaml
 ota:
 # Enable remote restart from HA
-switch: !include nodemcu/switch.yaml
-binary_sensor: !include nodemcu/binary_sensor.yaml
-# Blue LED (either output+light or status_led, not both)
-cover: !include nodemcu/template_tilt_cover.yaml
+switch: !include switch/restart.yaml
+cover: !include cover/template_rt_tilt.yaml
 sensor: !include sensor/adc_cover_position.yaml
-globals: !include nodemcu/globals.yaml
-#sensor: !include nodemcu/mqtt_cover_with_input_sensor.yaml
-output: !include nodemcu/cover_servo_output.yaml
-light: !include nodemcu/light.yaml
-#status_led: !include nodemcu/status_led.yaml
-servo: !include nodemcu/mg995_cover_servo.yaml
+globals: !include globals/cover.yaml
+output: !include output/blue_led_servo.yaml
+light: !include light/blue_led.yaml
+binary_sensor: !include binary_sensor/button.yaml
+servo: !include servo/mg995_cover.yaml
 # Web Server
 web_server: !include connection/web_server.yaml
 captive_portal:

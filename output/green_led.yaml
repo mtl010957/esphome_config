@@ -1,7 +1,7 @@
 - platform: esp8266_pwm
-  id: basic_green_led
+  id: green_led
   pin:
-    number: GPIO13
+    number: ${led_pin}
     inverted: True
 
 

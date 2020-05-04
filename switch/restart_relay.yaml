@@ -2,7 +2,7 @@
   name: "${upper_devicename} Restart"
 - platform: gpio
   name: "${upper_devicename} Relay"
-  pin: GPIO12
+  pin: ${relay_pin}
   id: relay
   restore_mode: RESTORE_DEFAULT_OFF
 

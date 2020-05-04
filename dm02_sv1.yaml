@@ -1,15 +1,14 @@
 substitutions:
-  devicename: nm03_sv1
-  upper_devicename: NM03_SV1
+  devicename: dm02_sv1
+  upper_devicename: DM02_SV1
   tilt_closed_value: "5"
   tilt_opened_value: "60"
   device_class: shutter
-  button_pin: D2
   led_pin: D4
   servo_pin: D5
-  delay_ms: "100"
+  delay_ms: "5"
 
-esphome: !include nodemcu/mqtt_discovery_device.yaml
+esphome: !include d1mini/mqtt_discovery_device.yaml
 wifi: !include connection/wifi.yaml
 mqtt: !include connection/mqtt.yaml
 # Enable logging
@@ -19,11 +18,10 @@ text_sensor: !include text_sensor/wifi_info.yaml
 ota:
 # Enable remote restart from HA
 switch: !include switch/restart.yaml
-cover: !include cover/template_rt_tilt.yaml
-sensor: !include sensor/adc_cover_position.yaml
+cover: !include cover/template_lt_tilt.yaml
+#sensor: !include cover/adc_cover_position_sensor.yaml
 globals: !include globals/cover.yaml
 output: !include output/blue_led_servo.yaml
 light: !include light/blue_led.yaml
-binary_sensor: !include binary_sensor/button.yaml
-servo: !include servo/mg995_cover.yaml
+servo: !include servo/mg90_cover.yaml
 

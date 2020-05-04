@@ -23,11 +23,11 @@
               } else if (int(tilt*100) < id(tilt_out)) {
                 id(tilt_out)--;
               }
-          - delay: 100ms
           - servo.write:
               id: cover_servo
               level: !lambda |-
-                return id(tilt_out)/100.0f;
+                return (100.0-id(tilt_out))/100.0f;
+          - delay: ${delay_ms}ms
     - servo.detach: cover_servo
   tilt_lambda: |-
     return id(tilt_out)/100.0f;

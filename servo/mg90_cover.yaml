@@ -1,0 +1,6 @@
+- id: cover_servo
+  output: servo_output
+  min_level: 2%
+  max_level: 13%
+  idle_level: 2%
+  restore: true

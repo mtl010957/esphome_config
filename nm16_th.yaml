@@ -1,23 +1,23 @@
 substitutions:
   devicename: nm16_th
   upper_devicename: NM16_TH
+  button_pin: D2
+  led_pin: D4
+  sensor_pin: D1
 
 esphome: !include nodemcu/device.yaml
-wifi: !include connection/wifi_ap.yaml
+wifi: !include connection/wifi.yaml
 mqtt: !include connection/mqtt.yaml
 # Enable logging
-logger: !include base/logger.yaml
+logger: !include logger/debug.yaml
 # Expose some info to HA
-text_sensor: !include base/text_sensor.yaml
-# Enable Home Assistant API
-#api: (broken with MQTT for now)
+text_sensor: !include text_sensor/wifi_info.yaml
 ota:
 # Enable remote restart from HA
-switch: !include nodemcu/switch.yaml
-binary_sensor: !include nodemcu/binary_sensor.yaml
-light: !include nodemcu/light.yaml
-output: !include nodemcu/output.yaml
-#status_led: !include nodemcu/status_led.yaml
+switch: !include switch/restart.yaml
+binary_sensor: !include binary_sensor/button.yaml
+light: !include light/blue_led.yaml
+output: !include output/blue_led.yaml
 # DHT22 Temperature and Humidity
 sensor: !include sensor/dht22.yaml
 # Web Server
