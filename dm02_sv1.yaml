@@ -7,6 +7,7 @@ substitutions:
   led_pin: D4
   servo_pin: D5
   delay_ms: "5"
+  final_delay_ms: "100"
 
 esphome: !include d1mini/mqtt_discovery_device.yaml
 wifi: !include connection/wifi.yaml
