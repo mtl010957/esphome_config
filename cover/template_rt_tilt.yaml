@@ -27,7 +27,7 @@
               id: cover_servo
               level: !lambda |-
                 return id(tilt_out)/100.0f;
-          - delay: ${delay_ms}ms
+          - delay: ${loop_delay_ms}ms
     - delay: ${final_delay_ms}ms
     - servo.detach: cover_servo
   tilt_lambda: |-
