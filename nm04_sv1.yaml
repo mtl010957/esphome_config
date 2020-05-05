@@ -26,5 +26,5 @@ globals: !include globals/cover.yaml
 output: !include output/blue_led_servo.yaml
 light: !include light/blue_led.yaml
 binary_sensor: !include binary_sensor/button.yaml
-servo: !include servo/mg90_cover.yaml
+servo: !include servo/mg995_cover.yaml
 
