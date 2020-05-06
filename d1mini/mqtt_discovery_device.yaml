@@ -20,6 +20,7 @@ on_boot:
           root["tilt_command_topic"] = "${devicename}/cover/${devicename}_cover/tilt/command";
           root["tilt_closed_value"] = ${tilt_closed_value};
           root["tilt_opened_value"] = ${tilt_opened_value};
+          root["tilt_invert_state"] = ${tilt_invert_state};
           root["device_class"] = "${device_class}";
           JsonObject& device = root.createNestedObject("device");
           device["identifiers"] = get_mac_address();

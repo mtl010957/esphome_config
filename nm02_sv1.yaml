@@ -1,8 +1,9 @@
 substitutions:
   devicename: nm02_sv1
   upper_devicename: NM02_SV1
-  tilt_closed_value: "5"
-  tilt_opened_value: "60"
+  tilt_closed_value: "95"
+  tilt_opened_value: "40"
+  tilt_invert_state: "true"
   device_class: shutter
   button_pin: D2
   led_pin: D4
@@ -20,7 +21,7 @@ text_sensor: !include text_sensor/wifi_info.yaml
 ota:
 # Enable remote restart from HA
 switch: !include switch/restart.yaml
-cover: !include cover/template_lt_tilt.yaml
+cover: !include cover/template_tilt.yaml
 sensor: !include sensor/adc_cover_position.yaml
 globals: !include globals/cover.yaml
 output: !include output/blue_led_servo.yaml
