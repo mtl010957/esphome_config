@@ -29,10 +29,6 @@
                 return (100.0-id(tilt_out))/100.0f;
           - delay: ${loop_delay_ms}ms
     - delay: ${final_delay_ms}ms
-    - servo.write:
-        id: cover_servo
-        level: !lambda |-
-          return (100.0-id(tilt_out))/100.0f;
     - servo.detach: cover_servo
   tilt_lambda: |-
     return id(tilt_out)/100.0f;
