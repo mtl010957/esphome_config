@@ -6,7 +6,7 @@ substitutions:
   device_class: shutter
   led_pin: D4
   servo_pin: D5
-  loop_delay_ms: "5"
+  loop_delay_ms: "10"
   final_delay_ms: "100"
 
 esphome: !include d1mini/mqtt_discovery_device.yaml
