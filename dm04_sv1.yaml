@@ -1,0 +1,29 @@
+substitutions:
+  devicename: dm04_sv1
+  upper_devicename: DM04_SV1
+  tilt_closed_value: "5"
+  tilt_opened_value: "60"
+  tilt_invert_state: "false"
+  device_class: shutter
+  led_pin: D4
+  servo_pin: D5
+  loop_delay_ms: "0"
+  final_delay_ms: "100"
+
+esphome: !include d1mini/mqtt_discovery_device.yaml
+wifi: !include connection/wifi.yaml
+mqtt: !include connection/mqtt.yaml
+# Enable logging
+logger: !include logger/debug.yaml
+# Expose some info to HA
+text_sensor: !include text_sensor/wifi_info.yaml
+ota:
+# Enable remote restart from HA
+switch: !include switch/restart.yaml
+cover: !include cover/template_tilt.yaml
+#sensor: !include cover/adc_cover_position_sensor.yaml
+globals: !include globals/cover.yaml
+output: !include output/blue_led_servo.yaml
+light: !include light/blue_led.yaml
+servo: !include servo/mg90_cover.yaml
+
