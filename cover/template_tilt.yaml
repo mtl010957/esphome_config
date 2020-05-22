@@ -7,13 +7,13 @@
   discovery: False
   lambda: |-
     if (${tilt_invert_state}) {
-      if (id(tilt_out) < 95) {
+      if (id(tilt_out) < (100 - ${open_above_tilt})) {
         return COVER_OPEN;
       } else {
         return COVER_CLOSED;
       }
     } else {
-      if (id(tilt_out) > 5) {
+      if (id(tilt_out) > ${open_above_tilt}) {
         return COVER_OPEN;
       } else {
         return COVER_CLOSED;

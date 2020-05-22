@@ -2,5 +2,6 @@
   pin:
     number: ${button_pin}
     inverted: True
+    mode: INPUT_PULLUP
   name: "${upper_devicename} Button"
 

@@ -4,6 +4,7 @@ substitutions:
   tilt_closed_value: "95"
   tilt_opened_value: "40"
   tilt_invert_state: "true"
+  open_above_tilt: "5"
   device_class: shutter
   button_pin: D2
   led_pin: D4
