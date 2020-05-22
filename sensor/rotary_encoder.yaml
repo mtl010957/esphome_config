@@ -1,0 +1,10 @@
+- platform: rotary_encoder
+  name: "${upper_devicename} Rotary Encoder"
+  pin_a:
+    number: ${encoder_pin_a}
+    mode: INPUT_PULLUP
+  pin_b:
+    number: ${encoder_pin_b}
+    mode: INPUT_PULLUP
+  min_value: ${encoder_min_value}
+  max_value: ${encoder_max_value}

@@ -1,0 +1,19 @@
+- platform: rotary_encoder
+  name: "${upper_devicename} Rotary Encoder"
+  id: encoder
+  pin_a:
+    number: ${encoder_pin_a}
+    mode: INPUT_PULLUP
+  pin_b:
+    number: ${encoder_pin_b}
+    mode: INPUT_PULLUP
+  min_value: ${encoder_min_value}
+  max_value: ${encoder_max_value}
+  on_value:
+    then:
+      - cover.control:
+          id: ${devicename}
+          tilt: !lambda "return id(encoder).state/100.0f;"
+      - logger.log:
+          format: "Setting cover tilt manual value"
+          tag: "sensor.cover.tilt"

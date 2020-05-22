@@ -1,0 +1,59 @@
+- platform: template
+  name: "${upper_devicename} Cover"
+  id: ${devicename}
+  mqtt_id: ${devicename}_cover
+  device_class: ${device_class}
+  optimistic: False
+  discovery: False
+  lambda: |-
+    if (${tilt_invert_state}) {
+      if (id(tilt_out) < (100 - ${open_above_tilt})) {
+        return COVER_OPEN;
+      } else {
+        return COVER_CLOSED;
+      }
+    } else {
+      if (id(tilt_out) > ${open_above_tilt}) {
+        return COVER_OPEN;
+      } else {
+        return COVER_CLOSED;
+      }
+    }
+  tilt_action:
+    - if:
+        condition:
+          lambda: |-
+            return (int(${loop_delay_ms}) > 0);
+        then:
+          - while:
+              condition:
+                lambda: |-
+                  return (int(tilt*100) != id(tilt_out));
+              then:
+                - lambda: |-
+                    if (int(tilt*100) > id(tilt_out)) {
+                      id(tilt_out)++;
+                    } else if (int(tilt*100) < id(tilt_out)) {
+                      id(tilt_out)--;
+                    }
+                - servo.write:
+                    id: cover_servo
+                    level: !lambda |-
+                      return id(tilt_out)/100.0f;
+                - delay: ${loop_delay_ms}ms
+        else:
+          - lambda:
+              id(tilt_out) = int(tilt*100);
+          - servo.write:
+              id: cover_servo
+              level: !lambda |-
+                return id(tilt_out)/100.0f;
+    - sensor.rotary_encoder.set_value:
+        id: encoder
+        value: !lambda |-
+          return id(tilt_out);
+    - delay: ${final_delay_ms}ms
+    - servo.detach: cover_servo
+  tilt_lambda: |-
+    return id(tilt_out)/100.0f;
+
