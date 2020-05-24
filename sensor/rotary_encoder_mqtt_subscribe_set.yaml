@@ -9,6 +9,8 @@
     mode: INPUT_PULLUP
   min_value: ${encoder_min_value}
   max_value: ${encoder_max_value}
+  filters:
+    - throttle: 1s
   on_value:
     then:
       - mqtt.publish:
