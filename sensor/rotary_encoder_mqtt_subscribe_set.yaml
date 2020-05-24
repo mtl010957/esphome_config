@@ -25,12 +25,7 @@
     - delta: 1.0
   on_value:
     then:
-      - if:
-          condition:
-            lambda: |-
-              return id(encoder).state != x;
-          then:
-            - sensor.rotary_encoder.set_value:
-                id: encoder
-                value: !lambda |-
-                  return x;
+      - sensor.rotary_encoder.set_value:
+          id: encoder
+          value: !lambda |-
+            return x;
