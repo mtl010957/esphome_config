@@ -7,7 +7,7 @@ substitutions:
   encoder_pin_b: D7
   encoder_min_value: "0"
   encoder_max_value: "100"
-  set_rotary_encoder_topic: "nm05_sv1/cover/nm05_sv1_cover/tilt/state"
+  set_rotary_encoder_topic: "nm05_sv1/cover/nm05_sv1_cover/tilt/command"
   rotary_encoder_out_topic: "nm05_sv1/cover/nm05_sv1_cover/tilt/command"
   
 esphome: !include d1mini/device.yaml

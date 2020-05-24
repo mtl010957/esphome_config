@@ -9,14 +9,14 @@
     mode: INPUT_PULLUP
   min_value: ${encoder_min_value}
   max_value: ${encoder_max_value}
-#  on_value:
-#    then:
-#      - mqtt.publish:
-#          topic: ${rotary_encoder_out_topic}
-#          payload: !lambda |-
-#            char result[5];
-#            dtostrf(id(encoder).state,1,0,result);
-#            return result;
+  on_value:
+    then:
+      - mqtt.publish:
+          topic: ${rotary_encoder_out_topic}
+          payload: !lambda |-
+            char result[5];
+            dtostrf(id(encoder).state,1,0,result);
+            return result;
 - platform: mqtt_subscribe
   name: "${upper_devicename} Set Rotary Encoder"
   topic: ${set_rotary_encoder_topic}
@@ -25,7 +25,12 @@
     - delta: 1.0
   on_value:
     then:
-      - sensor.rotary_encoder.set_value:
-          id: encoder
-          value: !lambda |-
-            return x;
+      - if:
+          condition:
+            lambda: |-
+              return id(encoder).state != x;
+          then:
+            - sensor.rotary_encoder.set_value:
+                id: encoder
+                value: !lambda |-
+                  return x;
