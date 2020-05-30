@@ -29,7 +29,4 @@ output: !include output/blue_led_servo.yaml
 light: !include light/blue_led.yaml
 binary_sensor: !include binary_sensor/button.yaml
 servo: !include servo/mg995_cover.yaml
-# Web Server
-web_server: !include connection/web_server.yaml
-captive_portal:
 
