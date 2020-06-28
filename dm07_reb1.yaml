@@ -1,0 +1,28 @@
+substitutions:
+  devicename: dm07_reb1
+  upper_devicename: DM07_REB1
+  led_pin: D4
+  button_pin: D1
+  encoder_pin_a: D6
+  encoder_pin_b: D7
+  encoder_min_value: "0"
+  encoder_max_value: "100"
+  set_rotary_encoder_topic: "${devicename}/sensor/${devicename}_set_rotary_encoder/command"
+  rotary_encoder_out_topic: "nm04_sv1/cover/nm04_sv1_cover/tilt/command"
+  
+esphome: !include d1mini/device.yaml
+wifi: !include connection/wifi.yaml
+mqtt: !include connection/mqtt.yaml
+# Enable logging
+logger: !include logger/debug.yaml
+# Expose some info to HA
+text_sensor: !include text_sensor/wifi_info.yaml
+ota:
+# Enable remote restart from HA
+switch: !include switch/restart.yaml
+output: !include output/blue_led.yaml
+light: !include light/blue_led.yaml
+# Rotary encoder with button
+binary_sensor: !include binary_sensor/button.yaml
+sensor: !include sensor/rotary_encoder_mqtt_subscribe_set.yaml
+
