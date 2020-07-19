@@ -23,6 +23,7 @@ ota:
 switch: !include switch/restart.yaml
 cover: !include cover/template_tilt.yaml
 #sensor: !include cover/adc_cover_position_sensor.yaml
+sensor: !include sensor/wifi_signal.yaml
 globals: !include globals/cover.yaml
 output: !include output/blue_led_servo.yaml
 light: !include light/blue_led.yaml
