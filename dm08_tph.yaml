@@ -1,0 +1,24 @@
+substitutions:
+  devicename: dm08_tph
+  upper_devicename: DM08_TPH
+  led_pin: D4
+  button_pin: D1
+
+esphome: !include d1mini/device.yaml
+wifi: !include connection/wifi_desert.yaml
+mqtt: !include connection/mqtt_desert.yaml
+# Enable logging
+logger: !include logger/debug.yaml
+# Expose some info to HA
+text_sensor: !include text_sensor/wifi_info.yaml
+ota:
+# Enable remote restart from HA
+switch: !include switch/restart.yaml
+binary_sensor: !include binary_sensor/button.yaml
+light: !include light/blue_led.yaml
+output: !include output/blue_led.yaml
+# Need I2C bus for sensors
+i2c: !include connection/i2c.yaml
+# BME280 Temperature, Pressure and Humidity
+sensor: !include sensor/bmp280.yaml
+

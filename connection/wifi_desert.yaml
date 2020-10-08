@@ -1,0 +1,3 @@
+ssid: !secret wifi_desert_ssid
+password: !secret wifi_desert_password
+
