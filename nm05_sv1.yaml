@@ -22,11 +22,12 @@ text_sensor: !include text_sensor/wifi_info.yaml
 ota:
 # Enable remote restart from HA
 switch: !include switch/restart.yaml
-cover: !include cover/template_tilt.yaml
-sensor: !include sensor/adc_cover_position.yaml
-globals: !include globals/cover.yaml
-output: !include output/blue_led_servo.yaml
 light: !include light/blue_led.yaml
 binary_sensor: !include binary_sensor/button.yaml
+# Cover
+globals: !include globals/cover.yaml
+cover: !include cover/template_tilt.yaml
+#sensor: !include sensor/adc_cover_position.yaml
 servo: !include servo/mg995_cover.yaml
+output: !include output/blue_led_servo.yaml
 

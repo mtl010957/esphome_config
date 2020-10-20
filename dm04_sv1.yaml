@@ -18,14 +18,15 @@ mqtt: !include connection/mqtt.yaml
 logger: !include logger/debug.yaml
 # Expose some info to HA
 text_sensor: !include text_sensor/wifi_info.yaml
+sensor: !include sensor/wifi_signal.yaml
 ota:
 # Enable remote restart from HA
 switch: !include switch/restart.yaml
+light: !include light/blue_led.yaml
+# Cover
+globals: !include globals/cover.yaml
 cover: !include cover/template_tilt.yaml
 #sensor: !include cover/adc_cover_position_sensor.yaml
-sensor: !include sensor/wifi_signal.yaml
-globals: !include globals/cover.yaml
-output: !include output/blue_led_servo.yaml
-light: !include light/blue_led.yaml
 servo: !include servo/mg90_cover.yaml
+output: !include output/blue_led_servo.yaml
 
