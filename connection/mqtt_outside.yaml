@@ -1,0 +1,4 @@
+broker: !secret mqtt_broker_outside
+username: !secret mqtt_username
+password: !secret mqtt_password
+
