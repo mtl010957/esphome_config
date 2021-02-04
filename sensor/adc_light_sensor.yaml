@@ -1,0 +1,10 @@
+- platform: adc
+  pin: A0
+  name: "${upper_devicename} Light Sensor"
+  update_interval: 10s
+  expire_after: 60s
+  filters:
+    - median:
+        window_size: 5
+        send_every: 5
+        send_first_at: 1
