@@ -16,9 +16,13 @@ text_sensor: !include text_sensor/wifi_info.yaml
 #api: (broken with MQTT for now)
 ota:
 # Enable remote restart from HA
-switch: !include switch/restart_servo.yaml
-output: !include output/blue_led_servo.yaml
+switch:
+  - <<: !include switch/restart.yaml
+  - <<: !include switch/servo.yaml
 light: !include light/blue_led.yaml
 binary_sensor: !include binary_sensor/button.yaml
 servo: !include servo/mg995_switch.yaml
+output:
+  - <<: !include output/blue_led.yaml
+  - <<: !include output/servo.yaml
 

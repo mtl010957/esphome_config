@@ -1,11 +1,5 @@
 - platform: esp8266_pwm
   pin:
-    number: ${led_pin}
-    inverted: True
-  frequency: 1000 Hz
-  id: blue_led
-- platform: esp8266_pwm
-  pin:
     number: ${servo_pin}
     inverted: False
   frequency: 50 Hz

@@ -14,7 +14,9 @@ logger: !include logger/debug.yaml
 text_sensor: !include text_sensor/wifi_info.yaml
 ota:
 binary_sensor: !include binary_sensor/button_toggle_relay.yaml
-switch: !include switch/restart_relay.yaml
+switch:
+  - <<: !include switch/restart.yaml
+  - <<: !include switch/relay.yaml
 output: !include output/green_led.yaml
 light: !include light/green_led.yaml
 

@@ -29,5 +29,7 @@ globals: !include globals/cover.yaml
 cover: !include cover/template_tilt.yaml
 sensor: !include sensor/adc_light_sensor.yaml
 servo: !include servo/mg995_cover.yaml
-output: !include output/blue_led_servo.yaml
+output:
+  - <<: !include output/blue_led.yaml
+  - <<: !include output/servo.yaml
 

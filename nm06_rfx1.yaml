@@ -15,7 +15,9 @@ text_sensor: !include text_sensor/wifi_info.yaml
 ota:
 # Enable remote restart from HA
 switch: !include switch/restart.yaml
-binary_sensor: !include binary_sensor/button_remote_receiver.yaml
+binary_sensor:
+  - <<: !include binary_sensor/button.yaml
+  - <<: !include binary_sensor/remote_receiver.yaml
 output: !include output/blue_led.yaml
 light: !include light/blue_led.yaml
 remote_receiver: !include remote_receiver/rc_switch.yaml

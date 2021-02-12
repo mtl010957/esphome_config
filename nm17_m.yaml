@@ -18,7 +18,9 @@ switch: !include switch/restart.yaml
 light: !include light/blue_led.yaml
 output: !include output/blue_led.yaml
 # NodemMCU Switch and PIR Motion Sensor
-binary_sensor: !include binary_sensor/button_pir.yaml
+binary_sensor:
+  - <<: !include binary_sensor/button.yaml
+  - <<: !include binary_sensor/pir.yaml
 # Web Server
 web_server: !include connection/web_server.yaml
 captive_portal:

@@ -1,5 +1,3 @@
-- platform: restart
-  name: "${upper_devicename} Restart"
 - platform: gpio
   name: "${devicename}_1"
   restore_mode: RESTORE_DEFAULT_OFF

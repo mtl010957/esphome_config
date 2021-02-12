@@ -1,8 +1,3 @@
-- platform: gpio
-  pin:
-    number: ${button_pin}
-    inverted: True
-  name: "${upper_devicename} Button"
 - platform: remote_receiver
   name: "${upper_devicename} Fan Remote Stop"
   rc_switch_raw:

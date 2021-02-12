@@ -13,7 +13,9 @@ logger: !include logger/debug.yaml
 text_sensor: !include text_sensor/wifi_info.yaml
 ota:
 # Set of four relays on GPIO
-switch: !include switch/restart_gpio_4_relay.yaml
+switch:
+  - <<: !include switch/restart.yaml
+  - <<: !include switch/gpio_4_relay.yaml
 binary_sensor: !include binary_sensor/button.yaml
 light: !include light/blue_led.yaml
 output: !include output/blue_led.yaml
