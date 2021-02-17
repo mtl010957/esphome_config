@@ -29,5 +29,7 @@ sensor:
   - <<: !include sensor/adc_light_sensor.yaml
   - <<: !include sensor/wifi_signal.yaml
 servo: !include servo/mg90_cover.yaml
-output: !include output/blue_led_servo.yaml
+output:
+  - <<: !include output/blue_led.yaml
+  - <<: !include output/servo.yaml
 
