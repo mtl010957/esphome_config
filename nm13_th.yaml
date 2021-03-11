@@ -20,6 +20,3 @@ light: !include light/blue_led.yaml
 output: !include output/blue_led.yaml
 # DHT22 Temperature and Humidity
 sensor: !include sensor/dht22.yaml
-# Web Server
-web_server: !include connection/web_server.yaml
-captive_portal:
