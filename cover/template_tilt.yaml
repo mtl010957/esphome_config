@@ -6,7 +6,7 @@
   optimistic: False
   discovery: False
   lambda: |-
-    if (${tilt_invert_state}) {
+    if (${tilt_max} < ${tilt_min}) {
       if (id(tilt_out) < (100 - ${open_above_tilt})) {
         return COVER_OPEN;
       } else {
