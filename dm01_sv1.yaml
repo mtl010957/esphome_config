@@ -3,7 +3,6 @@ substitutions:
   upper_devicename: DM01_SV1
   tilt_closed_value: "95"
   tilt_opened_value: "40"
-  tilt_invert_state: "true"
   tilt_min: "100"
   tilt_max: "0"
   open_above_tilt: "5"

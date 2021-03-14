@@ -3,7 +3,6 @@ substitutions:
   upper_devicename: NM05_SV1
   tilt_closed_value: "5"
   tilt_opened_value: "60"
-  tilt_invert_state: "false"
   tilt_min: "0"
   tilt_max: "100"
   open_above_tilt: "5"
