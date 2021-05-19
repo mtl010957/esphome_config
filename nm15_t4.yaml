@@ -3,6 +3,7 @@ substitutions:
   upper_devicename: NM15_T4
   button_pin: D2
   led_pin: D4
+  dallas_pin: D6
   probe_1_addr: "0xDC000008E3B1AB28"
   probe_2_addr: "0xDE000008E2B6AF28"
   probe_3_addr: "0xC400000A01299728"

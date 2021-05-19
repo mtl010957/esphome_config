@@ -1,2 +1,2 @@
-- pin: 12
+- pin: ${dallas_pin}
   update_interval: 10s
