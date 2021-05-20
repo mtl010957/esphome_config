@@ -1,0 +1,29 @@
+substitutions:
+  devicename: dm10_tr1
+  upper_devicename: DM10_TR1
+  button_pin: D2
+  led_pin: D4
+  dallas_pin: D6
+  relay_pin: D5
+  probe_1_addr: "0xED01204BF4F92028"
+
+esphome: !include d1mini/device.yaml
+wifi: !include connection/wifi.yaml
+mqtt: !include connection/mqtt.yaml
+# Enable logging
+logger: !include logger/debug.yaml
+# Expose some info to HA
+text_sensor: !include text_sensor/wifi_info.yaml
+ota:
+# Enable remote restart from HA
+switch: 
+  - <<: !include switch/restart.yaml
+  - <<: !include switch/gpio_1_relay.yaml
+binary_sensor: !include binary_sensor/button.yaml
+light: !include light/blue_led.yaml
+output: !include output/blue_led.yaml
+# Need Dallas for one wire sensors
+dallas: !include sensor/dallas.yaml
+# Single DS18B20 Temperature probe
+sensor: !include sensor/ds18b20x1.yaml
+

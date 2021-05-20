@@ -1,0 +1,11 @@
+- platform: dallas
+  address: ${probe_1_addr}
+  name: "${upper_devicename} ${probe_1_addr}"
+  unit_of_measurement: "ºC"
+  icon: mdi:thermometer
+  accuracy_decimals: 1
+  expire_after: 600s
+  filters:
+    - or:
+        - delta: 0.5
+        - heartbeat: 300s
