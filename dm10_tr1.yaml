@@ -1,7 +1,6 @@
 substitutions:
   devicename: dm10_tr1
   upper_devicename: DM10_TR1
-  button_pin: D2
   led_pin: D4
   dallas_pin: D6
   relay_pin: D5
@@ -19,7 +18,6 @@ ota:
 switch: 
   - <<: !include switch/restart.yaml
   - <<: !include switch/gpio_1_relay.yaml
-binary_sensor: !include binary_sensor/button.yaml
 light: !include light/blue_led.yaml
 output: !include output/blue_led.yaml
 # Need Dallas for one wire sensors

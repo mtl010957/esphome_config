@@ -2,7 +2,6 @@ substitutions:
   devicename: dm09_qmc1
   upper_devicename: DM09_QMC1
   led_pin: D4
-  button_pin: D1
   
 esphome: !include d1mini/device.yaml
 wifi: !include connection/wifi.yaml
