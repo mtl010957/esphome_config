@@ -1,8 +1,10 @@
 - platform: dallas
+  id: "probe_1"
   address: ${probe_1_addr}
   name: "${upper_devicename} ${probe_1_addr}"
-  unit_of_measurement: "ºC"
+  unit_of_measurement: °C
   icon: mdi:thermometer
+  device_class: temperature
   accuracy_decimals: 1
   expire_after: 600s
   filters:

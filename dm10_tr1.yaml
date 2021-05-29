@@ -26,4 +26,6 @@ output: !include output/blue_led.yaml
 dallas: !include sensor/dallas.yaml
 # Single DS18B20 Temperature probe
 sensor: !include sensor/ds18b20x1.yaml
+# Bang Bang Control for hot water recirc
+climate: !include climate/bang_bang_hot_water_recirc.yaml
 
