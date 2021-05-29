@@ -8,7 +8,6 @@ substitutions:
   encoder_min_value: "0"
   encoder_max_value: "100"
   set_rotary_encoder_topic: "${devicename}/sensor/${devicename}_set_rotary_encoder/command"
-  rotary_encoder_out_topic: "nm05_sv1/cover/nm05_sv1_cover/tilt/command"
   
 esphome: !include d1mini/device.yaml
 wifi: !include connection/wifi.yaml
@@ -24,5 +23,5 @@ output: !include output/blue_led.yaml
 light: !include light/blue_led.yaml
 # Rotary encoder with button
 binary_sensor: !include binary_sensor/button.yaml
-sensor: !include sensor/rotary_encoder_mqtt_subscribe_set.yaml
+sensor: !include sensor/rotary_encoder_settable.yaml
 
