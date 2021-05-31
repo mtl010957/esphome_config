@@ -3,8 +3,10 @@ substitutions:
   upper_devicename: DM10_TR1
   led_pin: D4
   dallas_pin: D6
+  probe_number: "1"
+  relay_number: "1"
   relay_pin: D5
-  probe_1_addr: "0xED01204BF4F92028"
+  probe_addr: "0xED01204BF4F92028"
 
 esphome: !include d1mini/device.yaml
 wifi: !include connection/wifi.yaml
@@ -17,7 +19,7 @@ ota:
 # Enable remote restart from HA
 switch: 
   - <<: !include switch/restart.yaml
-  - <<: !include switch/gpio_1_relay.yaml
+  - <<: !include switch/gpio_relay.yaml
 light: !include light/blue_led.yaml
 output: !include output/blue_led.yaml
 # Need Dallas for one wire sensors

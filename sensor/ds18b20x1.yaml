@@ -1,7 +1,7 @@
 - platform: dallas
-  id: "probe_1"
-  address: ${probe_1_addr}
-  name: "${upper_devicename} ${probe_1_addr}"
+  id: "probe_${probe_number}"
+  address: ${probe_addr}
+  name: "${upper_devicename} ${probe_addr}"
   unit_of_measurement: °C
   icon: mdi:thermometer
   device_class: temperature

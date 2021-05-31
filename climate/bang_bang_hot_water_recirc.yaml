@@ -1,6 +1,6 @@
 - platform: bang_bang
   name: "${upper_devicename} Hot Water Recirc Control"
-  sensor: probe_1
+  sensor: probe_${probe_number}
   default_target_temperature_low: 38°C
   default_target_temperature_high: 44°C
   visual:
@@ -8,6 +8,6 @@
     max_temperature: 50°C
 
   heat_action:
-    - switch.turn_on: relay_1
+    - switch.turn_on: relay_${relay_number}
   idle_action:
-    - switch.turn_off: relay_1
+    - switch.turn_off: relay_${relay_number}
