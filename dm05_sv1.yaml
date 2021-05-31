@@ -27,7 +27,7 @@ light: !include light/blue_led.yaml
 globals: !include globals/cover.yaml
 cover: !include cover/template_tilt.yaml
 sensor: 
-  - <<: !include sensor/adc_light_sensor.yaml
+  - <<: !include sensor/adc_temt6000.yaml
   - <<: !include sensor/wifi_signal.yaml
 servo: !include servo/mg90_cover.yaml
 output:
