@@ -15,7 +15,10 @@ ota:
 # Set of four relays on GPIO
 switch:
   - <<: !include switch/restart.yaml
-  - <<: !include switch/gpio_4_relay.yaml
+  - <<: !include switch/gpio_relay_1.yaml
+  - <<: !include switch/gpio_relay_2.yaml
+  - <<: !include switch/gpio_relay_3.yaml
+  - <<: !include switch/gpio_relay_4.yaml
 binary_sensor: !include binary_sensor/button.yaml
 light: !include light/blue_led.yaml
 output: !include output/blue_led.yaml

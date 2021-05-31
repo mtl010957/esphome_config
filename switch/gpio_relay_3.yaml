@@ -1,0 +1,6 @@
+- platform: gpio
+  name: "${devicename}_3"
+  restore_mode: RESTORE_DEFAULT_OFF
+  pin:
+    number: D7
+    inverted: yes
