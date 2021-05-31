@@ -1,0 +1,13 @@
+- platform: adc
+  pin: A0
+  name: "${upper_devicename} TEMT6000 Light Sensor"
+  update_interval: 10s
+  expire_after: 60s
+  unit_of_measurement: lx
+  filters:
+    - lambda: |-
+        return (x / 10000.0) * 2000000.0;
+    - median:
+        window_size: 7
+        send_every: 3
+        send_first_at: 1
