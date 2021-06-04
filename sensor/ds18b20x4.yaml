@@ -2,6 +2,7 @@
   address: ${probe_1_addr}
   name: "${upper_devicename} ${probe_1_addr}"
   unit_of_measurement: "ºC"
+  device_class: temperature
   icon: mdi:thermometer
   accuracy_decimals: 1
   expire_after: 600s
@@ -13,6 +14,7 @@
   address: ${probe_2_addr}
   name: "${upper_devicename} ${probe_2_addr}"
   unit_of_measurement: "ºC"
+  device_class: temperature
   icon: mdi:thermometer
   accuracy_decimals: 1
   expire_after: 600s
@@ -24,6 +26,7 @@
   address: ${probe_3_addr}
   name: "${upper_devicename} ${probe_3_addr}"
   unit_of_measurement: "ºC"
+  device_class: temperature
   icon: mdi:thermometer
   accuracy_decimals: 1
   expire_after: 600s
@@ -35,6 +38,7 @@
   address: ${probe_4_addr}
   name: "${upper_devicename} ${probe_4_addr}"
   unit_of_measurement: "ºC"
+  device_class: temperature
   icon: mdi:thermometer
   accuracy_decimals: 1
   expire_after: 600s

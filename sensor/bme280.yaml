@@ -3,6 +3,8 @@
     name: "${upper_devicename} Temperature"
     oversampling: 16x
     unit_of_measurement: "°C"
+    device_class: temperature
+    icon: mdi:thermometer
     accuracy_decimals: 1
     expire_after: 600s
     filters:
@@ -13,6 +15,8 @@
     name: "${upper_devicename} Pressure"
     oversampling: 16x
     unit_of_measurement: "hPa"
+    device_class: pressure
+    icon: mdi:gauge
     accuracy_decimals: 1
     expire_after: 600s
     filters:
@@ -23,6 +27,8 @@
     name: "${upper_devicename} Humidity"
     oversampling: 16x
     unit_of_measurement: "%"
+    device_class: humidity
+    icon: mdi:water-percent
     accuracy_decimals: 1
     expire_after: 600s
     filters:

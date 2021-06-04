@@ -3,6 +3,7 @@
     name: "${upper_devicename} Temperature"
     oversampling: 16x
     unit_of_measurement: "°C"
+    device_class: temperature
     accuracy_decimals: 1
     expire_after: 600s
     filters:
@@ -13,6 +14,7 @@
     name: "${upper_devicename} Pressure"
     oversampling: 16x
     unit_of_measurement: "hPa"
+    device_class: pressure
     accuracy_decimals: 1
     expire_after: 600s
     filters:
