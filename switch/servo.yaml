@@ -5,10 +5,10 @@
   turn_on_action:
     - servo.write:
         id: switch_servo
-        level: 50%
+        level: ${on_level}
   turn_off_action:
     - servo.write:
         id: switch_servo
-        level: 0%
-    - delay: 2s
+        level: ${off_level}
+    - delay: ${off_delay}
     - servo.detach: switch_servo
