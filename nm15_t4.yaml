@@ -8,6 +8,7 @@ substitutions:
   probe_2_addr: "0xDE000008E2B6AF28"
   probe_3_addr: "0xC400000A01299728"
   probe_4_addr: "0x7B00000A00BBB128"
+  update_interval: "10s"
 
 esphome: !include nodemcu/device.yaml
 wifi: !include connection/wifi.yaml

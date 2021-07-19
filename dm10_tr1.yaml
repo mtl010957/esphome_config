@@ -7,6 +7,7 @@ substitutions:
   relay_number: "1"
   relay_pin: D5
   probe_addr: "0xED01204BF4F92028"
+  update_interval: "5s"
 
 esphome: !include d1mini/device.yaml
 wifi: !include connection/wifi.yaml

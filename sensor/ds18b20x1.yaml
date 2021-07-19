@@ -9,5 +9,5 @@
   expire_after: 600s
   filters:
     - or:
-        - delta: 0.5
+        - delta: 0.1
         - heartbeat: 300s
