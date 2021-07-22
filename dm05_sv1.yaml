@@ -6,7 +6,7 @@ substitutions:
   tilt_min: "0"
   tilt_max: "100"
   open_above_tilt: "5"
-  device_class: shutter
+  device_class: blind
   led_pin: D4
   servo_pin: D5
   loop_delay_ms: "0"
