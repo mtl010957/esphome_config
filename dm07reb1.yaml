@@ -1,6 +1,6 @@
 substitutions:
-  devicename: dm06_reb1
-  upper_devicename: DM06_REB1
+  devicename: dm07reb1
+  upper_devicename: DM07REB1
   led_pin: D4
   button_pin: D1
   encoder_pin_a: D6

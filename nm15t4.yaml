@@ -1,9 +1,14 @@
 substitutions:
-  devicename: nm12_th
-  upper_devicename: NM12_TH
+  devicename: nm15t4
+  upper_devicename: NM15T4
   button_pin: D2
   led_pin: D4
-  sensor_pin: D1
+  dallas_pin: D6
+  probe_1_addr: "0xDC000008E3B1AB28"
+  probe_2_addr: "0xDE000008E2B6AF28"
+  probe_3_addr: "0xC400000A01299728"
+  probe_4_addr: "0x7B00000A00BBB128"
+  update_interval: "10s"
 
 esphome: !include nodemcu/device.yaml
 wifi: !include connection/wifi.yaml
@@ -18,6 +23,8 @@ switch: !include switch/restart.yaml
 binary_sensor: !include binary_sensor/button.yaml
 light: !include light/blue_led.yaml
 output: !include output/blue_led.yaml
-# DHT22 Temperature and Humidity
-sensor: !include sensor/dht22.yaml
+# Need Dallas for one wire sensors
+dallas: !include sensor/dallas.yaml
+# Set of four DS18B20 Temperature probes
+sensor: !include sensor/ds18b20x4.yaml
 

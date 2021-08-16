@@ -1,9 +1,8 @@
 substitutions:
-  devicename: nm11_th
-  upper_devicename: NM11_TH
+  devicename: nm10tph
+  upper_devicename: NM10TPH
   button_pin: D2
   led_pin: D4
-  sensor_pin: D1
 
 esphome: !include nodemcu/device.yaml
 wifi: !include connection/wifi.yaml
@@ -18,6 +17,8 @@ switch: !include switch/restart.yaml
 binary_sensor: !include binary_sensor/button.yaml
 light: !include light/blue_led.yaml
 output: !include output/blue_led.yaml
-# DHT22 Temperature and Humidity
-sensor: !include sensor/dht22.yaml
+# Need I2C bus for sensors
+i2c: !include connection/i2c.yaml
+# BME280 Temperature, Pressure and Humidity
+sensor: !include sensor/bme280.yaml
 

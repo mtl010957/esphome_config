@@ -1,9 +1,8 @@
 substitutions:
-  devicename: nm09_th
-  upper_devicename: NM09_TH
+  devicename: nm14rly4
+  upper_devicename: NM14RLY4
   button_pin: D2
   led_pin: D4
-  sensor_pin: D1
 
 esphome: !include nodemcu/device.yaml
 wifi: !include connection/wifi.yaml
@@ -13,11 +12,13 @@ logger: !include logger/debug.yaml
 # Expose some info to HA
 text_sensor: !include text_sensor/wifi_info.yaml
 ota:
-# Enable remote restart from HA
-switch: !include switch/restart.yaml
+# Set of four relays on GPIO
+switch:
+  - <<: !include switch/restart.yaml
+  - <<: !include switch/gpio_relay_1.yaml
+  - <<: !include switch/gpio_relay_2.yaml
+  - <<: !include switch/gpio_relay_3.yaml
+  - <<: !include switch/gpio_relay_4.yaml
 binary_sensor: !include binary_sensor/button.yaml
 light: !include light/blue_led.yaml
 output: !include output/blue_led.yaml
-# DHT22 Temperature and Humidity
-sensor: !include sensor/dht22.yaml
-

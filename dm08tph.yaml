@@ -1,12 +1,11 @@
 substitutions:
-  devicename: nm10_tph
-  upper_devicename: NM10_TPH
-  button_pin: D2
+  devicename: dm08tph
+  upper_devicename: DM08TPH
   led_pin: D4
 
-esphome: !include nodemcu/device.yaml
-wifi: !include connection/wifi.yaml
-mqtt: !include connection/mqtt.yaml
+esphome: !include d1mini/device.yaml
+wifi: !include connection/wifi_desert.yaml
+mqtt: !include connection/mqtt_desert.yaml
 # Enable logging
 logger: !include logger/debug.yaml
 # Expose some info to HA
@@ -14,7 +13,6 @@ text_sensor: !include text_sensor/wifi_info.yaml
 ota:
 # Enable remote restart from HA
 switch: !include switch/restart.yaml
-binary_sensor: !include binary_sensor/button.yaml
 light: !include light/blue_led.yaml
 output: !include output/blue_led.yaml
 # Need I2C bus for sensors

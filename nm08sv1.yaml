@@ -1,6 +1,6 @@
 substitutions:
-  devicename: nm08_sv1
-  upper_devicename: NM08_SV1
+  devicename: nm08sv1
+  upper_devicename: NM08SV1
   button_pin: D2
   led_pin: D4
   servo_pin: D5

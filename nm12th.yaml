@@ -1,12 +1,12 @@
 substitutions:
-  devicename: nm17_m
-  upper_devicename: NM17_M
+  devicename: nm12th
+  upper_devicename: NM12TH
   button_pin: D2
   led_pin: D4
-  pir_pin: D7
+  sensor_pin: D1
 
 esphome: !include nodemcu/device.yaml
-wifi: !include connection/wifi_ap.yaml
+wifi: !include connection/wifi.yaml
 mqtt: !include connection/mqtt.yaml
 # Enable logging
 logger: !include logger/debug.yaml
@@ -15,12 +15,9 @@ text_sensor: !include text_sensor/wifi_info.yaml
 ota:
 # Enable remote restart from HA
 switch: !include switch/restart.yaml
+binary_sensor: !include binary_sensor/button.yaml
 light: !include light/blue_led.yaml
 output: !include output/blue_led.yaml
-# NodemMCU Switch and PIR Motion Sensor
-binary_sensor:
-  - <<: !include binary_sensor/button.yaml
-  - <<: !include binary_sensor/pir.yaml
-# Web Server
-web_server: !include connection/web_server.yaml
-captive_portal:
+# DHT22 Temperature and Humidity
+sensor: !include sensor/dht22.yaml
+

@@ -1,0 +1,22 @@
+substitutions:
+  devicename: nm13th
+  upper_devicename: NM13TH
+  button_pin: D2
+  led_pin: D4
+  sensor_pin: D1
+
+esphome: !include nodemcu/device.yaml
+wifi: !include connection/wifi.yaml
+mqtt: !include connection/mqtt.yaml
+# Enable logging
+logger: !include logger/debug.yaml
+# Expose some info to HA
+text_sensor: !include text_sensor/wifi_info.yaml
+ota:
+# Enable remote restart from HA
+switch: !include switch/restart.yaml
+binary_sensor: !include binary_sensor/button.yaml
+light: !include light/blue_led.yaml
+output: !include output/blue_led.yaml
+# DHT22 Temperature and Humidity
+sensor: !include sensor/dht22.yaml

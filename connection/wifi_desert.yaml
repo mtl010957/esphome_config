@@ -1,3 +1,4 @@
 ssid: !secret wifi_desert_ssid
 password: !secret wifi_desert_password
+use_address: dm08_tph.local
 

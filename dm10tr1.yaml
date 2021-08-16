@@ -1,6 +1,6 @@
 substitutions:
-  devicename: dm10_tr1
-  upper_devicename: DM10_TR1
+  devicename: dm10tr1
+  upper_devicename: DM10TR1
   led_pin: D4
   dallas_pin: D6
   probe_number: "1"

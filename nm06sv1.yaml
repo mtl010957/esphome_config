@@ -1,10 +1,10 @@
 substitutions:
-  devicename: nm05_sv1
-  upper_devicename: NM05_SV1
-  tilt_closed_value: "5"
-  tilt_opened_value: "60"
-  tilt_min: "0"
-  tilt_max: "100"
+  devicename: nm06sv1
+  upper_devicename: NM06SV1
+  tilt_closed_value: "95"
+  tilt_opened_value: "40"
+  tilt_min: "100"
+  tilt_max: "0"
   open_above_tilt: "5"
   device_class: blind
   button_pin: D2
