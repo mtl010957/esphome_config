@@ -8,7 +8,7 @@
     max_temperature: 54.444°C
     
   away_config:
-    default_target_temperature_low: 15.556°C
+    default_target_temperature_low: 12.778°C
     default_target_temperature_high: 26.667°C
 
   heat_action:
