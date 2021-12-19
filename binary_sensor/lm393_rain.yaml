@@ -1,0 +1,8 @@
+- platform: gpio
+  pin:
+    number: ${moisture_pin}
+    inverted: True
+    mode: INPUT_PULLUP
+  name: "${upper_devicename} LM393 Rain"
+  device_class: moisture
+
