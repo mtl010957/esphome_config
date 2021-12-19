@@ -1,0 +1,3 @@
+    tx_pin: TX
+    rx_pin: RX
+    baud_rate: 9600
