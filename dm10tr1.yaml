@@ -18,13 +18,15 @@ logger: !include logger/debug.yaml
 text_sensor: !include text_sensor/wifi_info.yaml
 ota:
 # Enable remote restart from HA
-switch: 
-  - <<: !include switch/restart.yaml
-  - <<: !include switch/gpio_relay.yaml
+button: 
+  - <<: !include button/restart.yaml
 light: !include light/blue_led.yaml
 output: !include output/blue_led.yaml
 # Need Dallas for one wire sensors
 dallas: !include sensor/dallas.yaml
+# Single relay to run the pump and valve
+switch:
+  - <<: !include switch/gpio_relay.yaml
 # Single DS18B20 Temperature probe
 sensor: !include sensor/ds18b20x1.yaml
 # Bang Bang Control for hot water recirc

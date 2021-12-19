@@ -12,9 +12,11 @@ logger: !include logger/debug.yaml
 # Expose some info to HA
 text_sensor: !include text_sensor/wifi_info.yaml
 ota:
+# Enable remote restart from HA
+button:
+  - <<: !include button/restart.yaml
 # Set of four relays on GPIO
 switch:
-  - <<: !include switch/restart.yaml
   - <<: !include switch/gpio_relay_1.yaml
   - <<: !include switch/gpio_relay_2.yaml
   - <<: !include switch/gpio_relay_3.yaml

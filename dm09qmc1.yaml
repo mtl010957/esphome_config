@@ -12,7 +12,7 @@ logger: !include logger/debug.yaml
 text_sensor: !include text_sensor/wifi_info.yaml
 ota:
 # Enable remote restart from HA
-switch: !include switch/restart.yaml
+button: !include button/restart.yaml
 output: !include output/blue_led.yaml
 light: !include light/blue_led.yaml
 # Need I2C bus for sensors
