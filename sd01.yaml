@@ -1,7 +1,6 @@
 substitutions:
   devicename: sd01
   upper_devicename: SD01
-  button_pin: GPIO0
   led_pin: GPIO13
 
 external_components: !include external_components/sonoff_d1.yaml
@@ -14,11 +13,10 @@ logger: !include logger/debug_no_uart.yaml
 # Expose some info to HA
 text_sensor: !include text_sensor/wifi_info.yaml
 ota:
-binary_sensor: !include binary_sensor/button.yaml
 uart: !include uart/default_9600baud.yaml
 button: !include button/restart.yaml
-output: !include output/green_led.yaml
+output: !include output/blue_led.yaml
 light:
-  - <<: !include light/green_led.yaml
+  - <<: !include light/blue_led.yaml
   - <<: !include light/sonoff_d1.yaml
 
