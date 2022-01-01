@@ -2,6 +2,9 @@ substitutions:
   devicename: sd01
   upper_devicename: SD01
   led_pin: GPIO13
+  min_value: '0'
+  max_value: '90'
+  gamma_correct: '0.0'
 
 external_components: !include external_components/sonoff_d1.yaml
 esphome: !include sonoff_d1/device.yaml
