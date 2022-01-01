@@ -1,7 +1,7 @@
 - platform: sonoff_d1
   use_rm433_remote: False
   min_value: 0
-  max_value: 100
+  max_value: 90
   name: ${upper_devicename}
   id: dimmer
   restore_mode: RESTORE_DEFAULT_OFF
