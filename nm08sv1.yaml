@@ -7,7 +7,7 @@ substitutions:
   on_level: 70%
   off_level: 0%
   transition_length: 0s
-  auto_detach_time: 1s
+  auto_detach_time: 100ms
   
 esphome: !include nodemcu/device.yaml
 wifi: !include connection/wifi.yaml

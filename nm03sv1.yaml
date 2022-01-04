@@ -11,7 +11,7 @@ substitutions:
   led_pin: D4
   servo_pin: D5
   transition_length: 10s
-  auto_detach_time: 1s
+  auto_detach_time: 100ms
 
 esphome: !include nodemcu/mqtt_discovery_device.yaml
 wifi: !include connection/wifi.yaml
