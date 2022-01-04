@@ -6,7 +6,8 @@ substitutions:
   servo_pin: D5
   on_level: 70%
   off_level: 0%
-  off_delay: 2s
+  transition_length: 0s
+  auto_detach_time: 1s
   
 esphome: !include nodemcu/device.yaml
 wifi: !include connection/wifi.yaml

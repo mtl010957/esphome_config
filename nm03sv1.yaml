@@ -10,8 +10,8 @@ substitutions:
   button_pin: D2
   led_pin: D4
   servo_pin: D5
-  loop_delay_ms: "100"
-  final_delay_ms: "100"
+  transition_length: 10s
+  auto_detach_time: 1s
 
 esphome: !include nodemcu/mqtt_discovery_device.yaml
 wifi: !include connection/wifi.yaml

@@ -9,8 +9,8 @@ substitutions:
   device_class: blind
   led_pin: D4
   servo_pin: D5
-  loop_delay_ms: "0"
-  final_delay_ms: "100"
+  transition_length: 0s
+  auto_detach_time: 1s
 
 esphome: !include d1mini/mqtt_discovery_device.yaml
 wifi: !include connection/wifi.yaml

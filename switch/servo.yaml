@@ -10,5 +10,3 @@
     - servo.write:
         id: switch_servo
         level: ${off_level}
-    - delay: ${off_delay}
-    - servo.detach: switch_servo
