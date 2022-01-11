@@ -23,7 +23,7 @@ on_boot:
           root["tilt_min"] = ${tilt_min};
           root["tilt_max"] = ${tilt_max};
           root["device_class"] = "${device_class}";
-          JsonObject& device = root.createNestedObject("device");
+          JsonObject device = root.createNestedObject("device");
           device["identifiers"] = get_mac_address();
           device["name"] = "${devicename}";
           device["sw_version"] = "esphome v" ESPHOME_VERSION " " + App.get_compilation_time();
