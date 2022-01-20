@@ -2,7 +2,7 @@ substitutions:
   devicename: dm11th
   upper_devicename: DM11TH
   led_pin: D4
-  sensor_pin: D5
+  sensor_pin: D2
 
 esphome: !include d1mini/device.yaml
 wifi: !include connection/wifi.yaml
