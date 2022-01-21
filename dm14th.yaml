@@ -1,11 +1,10 @@
 substitutions:
-  devicename: nm16th
-  upper_devicename: NM16TH
-  button_pin: D2
+  devicename: dm14th
+  upper_devicename: DM14TH
   led_pin: D4
-  sensor_pin: D1
+  sensor_pin: D2
 
-esphome: !include nodemcu/device.yaml
+esphome: !include d1mini/device.yaml
 wifi: !include connection/wifi.yaml
 mqtt: !include connection/mqtt.yaml
 # Enable logging
@@ -15,11 +14,8 @@ text_sensor: !include text_sensor/wifi_info.yaml
 ota:
 # Enable remote restart from HA
 button: !include button/restart.yaml
-binary_sensor: !include binary_sensor/button.yaml
 light: !include light/blue_led.yaml
 output: !include output/blue_led.yaml
 # DHT22 Temperature and Humidity
 sensor: !include sensor/dht22.yaml
-# Web Server
-web_server: !include connection/web_server.yaml
-captive_portal:
+
