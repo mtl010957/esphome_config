@@ -28,7 +28,7 @@ binary_sensor: !include binary_sensor/button.yaml
 # Cover
 globals: !include globals/cover.yaml
 cover: !include cover/template_tilt.yaml
-sensor: !include sensor/adc_temt6000.yaml
+#sensor: !include sensor/adc_temt6000.yaml
 servo: !include servo/mg995_cover.yaml
 output:
   - <<: !include output/blue_led.yaml
