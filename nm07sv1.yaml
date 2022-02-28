@@ -1,6 +1,6 @@
 substitutions:
-  devicename: nm05sv1
-  upper_devicename: NM05SV1
+  devicename: nm07sv1
+  upper_devicename: NM07SV1
   tilt_closed_value: "95"
   tilt_opened_value: "40"
   tilt_min: "100"

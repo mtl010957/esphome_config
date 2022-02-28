@@ -1,10 +1,10 @@
 substitutions:
   devicename: nm04sv1
   upper_devicename: NM04SV1
-  tilt_closed_value: "95"
-  tilt_opened_value: "40"
-  tilt_min: "100"
-  tilt_max: "0"
+  tilt_closed_value: "5"
+  tilt_opened_value: "60"
+  tilt_min: "0"
+  tilt_max: "100"
   open_above_tilt: "5"
   device_class: blind
   button_pin: D2
@@ -28,7 +28,7 @@ binary_sensor: !include binary_sensor/button.yaml
 # Cover
 globals: !include globals/cover.yaml
 cover: !include cover/template_tilt.yaml
-#sensor: !include sensor/adc_temt6000.yaml
+sensor: !include sensor/adc_temt6000.yaml
 servo: !include servo/mg995_cover.yaml
 output:
   - <<: !include output/blue_led.yaml
