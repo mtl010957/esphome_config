@@ -10,6 +10,9 @@ substitutions:
   button_pin: D2
   led_pin: D4
   servo_pin: D5
+  min_level: 1%
+  max_level: 13%
+  idle_level: 1%
   transition_length: 5s
   auto_detach_time: 100ms
 

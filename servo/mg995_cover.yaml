@@ -1,7 +1,7 @@
 - id: cover_servo
   output: servo_output
-  min_level: 3%
-  max_level: 14%
-  idle_level: 3%
+  min_level: ${min_level}
+  max_level: ${max_level}
+  idle_level: ${idle_level}
   transition_length: ${transition_length}
   auto_detach_time: ${auto_detach_time}
