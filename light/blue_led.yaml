@@ -1,3 +1,4 @@
 - platform: monochromatic
   name: "${upper_devicename} Blue LED"
   output: blue_led
+  entity_category: config
