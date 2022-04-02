@@ -20,7 +20,7 @@
       }
     }
   tilt_action:
-    - lambda:
+    - lambda: |-
         id(tilt_out) = int(tilt*100);
     - servo.write:
         id: cover_servo
