@@ -3,7 +3,6 @@
   address: ${probe_addr}
   name: "${upper_devicename} ${probe_addr}"
   unit_of_measurement: °C
-  icon: mdi:thermometer
   device_class: temperature
   accuracy_decimals: 1
   expire_after: 600s
