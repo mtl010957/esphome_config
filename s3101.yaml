@@ -11,7 +11,7 @@ mqtt: !include connection/mqtt_desert.yaml
 # Enable logging
 logger: !include logger/debug_no_uart.yaml
 uart: !include uart/uart_s31.yaml
-time: !include time/sntp.yaml
+time: !include time/sntp_desert.yaml
 # Expose some info to HA
 text_sensor: !include text_sensor/wifi_info.yaml
 ota:
