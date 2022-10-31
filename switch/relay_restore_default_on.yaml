@@ -1,0 +1,6 @@
+- platform: gpio
+  name: "${upper_devicename} Relay"
+  pin: ${relay_pin}
+  id: relay
+  restore_mode: RESTORE_DEFAULT_ON
+

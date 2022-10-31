@@ -1,0 +1,31 @@
+  - platform: cse7766
+    current:
+      name: "${upper_devicename}: Current"
+      state_class: measurement
+      device_class: current
+      unit_of_measurement: A
+      accuracy_decimals: 1    
+    voltage:
+      name: "${upper_devicename}: Voltage"
+      state_class: measurement
+      device_class: voltage
+      unit_of_measurement: V
+      accuracy_decimals: 1
+    power:
+      name: "${upper_devicename}: Power"
+      id: "${devicename}_power"
+      state_class: measurement
+      device_class: energy
+      unit_of_measurement: W
+      accuracy_decimals: 1
+  - platform: total_daily_energy
+    name: "${upper_devicename}: Daily Energy"
+    power_id: "${devicename}_power"
+    filters:
+      # Multiplication factor from W to kW is 0.001
+      - multiply: 0.001
+    unit_of_measurement: kWh
+    state_class: total_increasing
+    device_class: energy
+    # 3 shows each W consumed, 2 every 10W, 1 every 100W
+    accuracy_decimals: 1
