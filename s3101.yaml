@@ -18,6 +18,6 @@ ota:
 binary_sensor: !include binary_sensor/button_toggle_relay.yaml
 switch: !include switch/relay_restore_default_on.yaml
 button: !include button/restart.yaml
-output: !include output/green_led.yaml
-light: !include light/green_led.yaml
+output: !include output/blue_led.yaml
+light: !include light/blue_led.yaml
 sensor: !include sensor/cse7766_total_daily_energy.yaml
