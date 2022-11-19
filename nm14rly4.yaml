@@ -1,7 +1,7 @@
 substitutions:
   devicename: nm14rly4
   upper_devicename: NM14RLY4
-  button_pin: D2
+  button_pin: D3
   led_pin: D4
 
 esphome: !include nodemcu/device.yaml

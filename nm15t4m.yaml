@@ -1,7 +1,7 @@
 substitutions:
   devicename: nm15t4m
   upper_devicename: NM15T4M
-  button_pin: D2
+  button_pin: D3
   led_pin: D4
   dallas_pin: D6
   probe_1_addr: "0xDC000008E3B1AB28"
