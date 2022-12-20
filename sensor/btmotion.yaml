@@ -2,6 +2,7 @@
   mac_address: 30:0A:60:20:B4:33
   name: "BTMotion RSSI"
 - platform: ble_client
+  type: characteristic
   ble_client_id: btmotion
   name: test
   service_uuid: '71DC0001-9247-11E7-ABC4-CEC278B6B50A'
@@ -9,11 +10,13 @@
   lambda: |-
     return *((float*)(&x[3]));
 - platform: ble_client
+  type: characteristic
   ble_client_id: btmotion
   name: test2
   service_uuid: '02060001-50E1-405F-BAB0-6BB582B4D96E'
   characteristic_uuid: '02060002-50E1-405F-BAB0-6BB582B4D96E'
 - platform: ble_client
+  type: characteristic
   ble_client_id: btmotion
   name: test3
   service_uuid: '02060001-50E1-405F-BAB0-6BB582B4D96E'
