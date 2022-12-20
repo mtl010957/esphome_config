@@ -1,0 +1,34 @@
+substitutions:
+  devicename: dm10tr1
+  upper_devicename: DM10TR1
+  led_pin: D4
+  dallas_pin: D6
+  probe_number: "1"
+  relay_number: "1"
+  relay_pin: D5
+  probe_addr: "0xED01204BF4F92028"
+  update_interval: "5s"
+
+esphome: !include ../d1mini/device.yaml
+wifi: !include ../connection/wifi.yaml
+mqtt: !include ../connection/mqtt.yaml
+# Enable logging
+logger: !include ../logger/debug.yaml
+# Expose some info to HA
+text_sensor: !include ../text_sensor/wifi_info.yaml
+ota:
+# Enable remote restart from HA
+button: 
+  - <<: !include ../button/restart.yaml
+light: !include ../light/blue_led.yaml
+output: !include ../output/blue_led.yaml
+# Need Dallas for one wire sensors
+dallas: !include ../sensor/dallas.yaml
+# Single relay to run the pump and valve
+switch:
+  - <<: !include ../switch/gpio_relay.yaml
+# Single DS18B20 Temperature probe
+sensor: !include ../sensor/ds18b20x1.yaml
+# Bang Bang Control for hot water recirc
+climate: !include ../climate/bang_bang_hot_water_recirc.yaml
+

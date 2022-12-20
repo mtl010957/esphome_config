@@ -1,0 +1,26 @@
+substitutions:
+  devicename: nm17m
+  upper_devicename: NM17M
+  button_pin: D3
+  led_pin: D4
+  pir_pin: D7
+
+esphome: !include ../nodemcu/device.yaml
+wifi: !include ../connection/wifi_ap.yaml
+mqtt: !include ../connection/mqtt.yaml
+# Enable logging
+logger: !include ../logger/debug.yaml
+# Expose some info to HA
+text_sensor: !include ../text_sensor/wifi_info.yaml
+ota:
+# Enable remote restart from HA
+button: !include ../button/restart.yaml
+light: !include ../light/blue_led.yaml
+output: !include ../output/blue_led.yaml
+# NodemMCU Switch and PIR Motion Sensor
+binary_sensor:
+  - <<: !include ../binary_sensor/button.yaml
+  - <<: !include ../binary_sensor/pir.yaml
+# Web Server
+web_server: !include ../connection/web_server.yaml
+captive_portal:

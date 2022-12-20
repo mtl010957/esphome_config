@@ -1,0 +1,23 @@
+substitutions:
+  devicename: s3103
+  upper_devicename: S3103
+  button_pin: GPIO0
+  led_pin: GPIO13
+  relay_pin: GPIO12
+
+esphome: !include ../sonoff_s31/device.yaml
+wifi: !include ../connection/wifi.yaml
+mqtt: !include ../connection/mqtt.yaml
+# Enable logging
+logger: !include ../logger/debug_no_uart.yaml
+uart: !include ../uart/uart_s31.yaml
+time: !include ../time/sntp.yaml
+# Expose some info to HA
+text_sensor: !include ../text_sensor/wifi_info.yaml
+ota:
+binary_sensor: !include ../binary_sensor/button_toggle_relay.yaml
+switch: !include ../switch/relay_restore_default_on.yaml
+button: !include ../button/restart.yaml
+output: !include ../output/blue_led.yaml
+light: !include ../light/blue_led.yaml
+sensor: !include ../sensor/cse7766_total_daily_energy.yaml

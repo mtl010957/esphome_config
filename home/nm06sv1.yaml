@@ -1,0 +1,39 @@
+substitutions:
+  devicename: nm06sv1
+  upper_devicename: NM06SV1
+  tilt_closed_value: "5"
+  tilt_opened_value: "60"
+  tilt_min: "0"
+  tilt_max: "100"
+  open_above_tilt: "5"
+  device_class: blind
+  button_pin: D3
+  led_pin: D4
+  servo_pin: D5
+  min_level: 3%
+  max_level: 14%
+  idle_level: 3%
+  transition_length: 5s
+  auto_detach_time: 100ms
+
+esphome: !include ../nodemcu/mqtt_discovery_device.yaml
+wifi: !include ../connection/wifi.yaml
+mqtt: !include ../connection/mqtt.yaml
+# Enable logging
+logger: !include ../logger/debug.yaml
+# Expose some info to HA
+text_sensor: !include ../text_sensor/wifi_info.yaml
+ota:
+# Enable remote restart from HA
+button: !include ../button/restart.yaml
+light: !include ../light/blue_led.yaml
+binary_sensor: !include ../binary_sensor/button.yaml
+# Cover
+globals: !include ../globals/cover.yaml
+cover: !include ../cover/template_tilt.yaml
+#sensor: !include ../sensor/adc_temt6000.yaml
+servo: !include ../servo/mg995_cover.yaml
+output:
+  - <<: !include ../output/blue_led.yaml
+  - <<: !include ../output/servo.yaml
+

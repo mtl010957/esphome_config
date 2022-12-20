@@ -1,0 +1,21 @@
+substitutions:
+  devicename: dm15th
+  upper_devicename: DM15TH
+  led_pin: D4
+  sensor_pin: D2
+
+esphome: !include ../d1mini/device.yaml
+wifi: !include ../connection/wifi.yaml
+mqtt: !include ../connection/mqtt.yaml
+# Enable logging
+logger: !include ../logger/debug.yaml
+# Expose some info to HA
+text_sensor: !include ../text_sensor/wifi_info.yaml
+ota:
+# Enable remote restart from HA
+button: !include ../button/restart.yaml
+light: !include ../light/blue_led.yaml
+output: !include ../output/blue_led.yaml
+# DHT22 Temperature and Humidity
+sensor: !include ../sensor/dht22.yaml
+
