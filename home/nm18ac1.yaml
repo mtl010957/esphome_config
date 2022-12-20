@@ -4,22 +4,22 @@ substitutions:
   button_pin: GPIO0
   led_pin: GPIO2
 
-esphome: !include ../../base/name.yaml
-esp32: !include ../../board/nodemcu-32s.yaml
-wifi: !include ../../connection/wifi_ap.yaml
-mqtt: !include ../../connection/mqtt.yaml
+esphome: !include ../base/name.yaml
+esp32: !include ../board/nodemcu-32s.yaml
+wifi: !include ../connection/wifi_ap.yaml
+mqtt: !include ../connection/mqtt.yaml
 # Enable logging
-logger: !include ../../logger/debug.yaml
+logger: !include ../logger/debug.yaml
 # Expose some info to HA
-text_sensor: !include ../../text_sensor/wifi_info.yaml
+text_sensor: !include ../text_sensor/wifi_info.yaml
 ota:
 # Enable remote restart from HA
-button: !include ../../button/restart.yaml
-light: !include ../../light/blue_led.yaml
-output: !include ../../output/blue_ledc.yaml
+button: !include ../button/restart.yaml
+light: !include ../light/blue_led.yaml
+output: !include ../output/blue_ledc.yaml
 # Enable Bluetooth Low Energy
 esp32_ble_tracker:
-ble_client: !include ../../connection/btmotion.yaml
-sensor: !include ../../sensor/btmotion.yaml
+ble_client: !include ../connection/btmotion.yaml
+sensor: !include ../sensor/btmotion.yaml
 
     
