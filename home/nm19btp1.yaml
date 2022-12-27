@@ -5,7 +5,7 @@ substitutions:
   led_pin: GPIO2
 
 esphome: !include ../base/name.yaml
-esp32: !include ../esp32/esp32dev_idf.yaml
+esp32: !include ../esp32/nodemcu-32s_idf.yaml
 wifi: !include ../connection/wifi.yaml
 #mqtt: !include ../connection/mqtt.yaml
 api:

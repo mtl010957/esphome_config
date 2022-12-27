@@ -1,0 +1,3 @@
+  board: nodemcu-32s
+  framework:
+    type: esp-idf
