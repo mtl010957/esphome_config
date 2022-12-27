@@ -1,13 +1,14 @@
 substitutions:
-  devicename: nm18ac1
-  upper_devicename: NM18AC1
+  devicename: nm19btp1
+  upper_devicename: NM19BTP1
   button_pin: GPIO0
   led_pin: GPIO2
 
 esphome: !include ../base/name.yaml
-esp32: !include ../esp32/nodemcu-32s.yaml
-wifi: !include ../connection/wifi_ap.yaml
-mqtt: !include ../connection/mqtt.yaml
+esp32: !include ../esp32/esp32dev_idf.yaml
+wifi: !include ../connection/wifi.yaml
+#mqtt: !include ../connection/mqtt.yaml
+api:
 # Enable logging
 logger: !include ../logger/debug.yaml
 # Expose some info to HA
@@ -17,9 +18,6 @@ ota:
 button: !include ../button/restart.yaml
 light: !include ../light/blue_led.yaml
 output: !include ../output/blue_ledc.yaml
-# Enable Bluetooth Low Energy
-esp32_ble_tracker:
-ble_client: !include ../connection/btmotion.yaml
-sensor: !include ../sensor/btmotion.yaml
-
-    
+# BLE
+esp32_ble_tracker: !include ../bluetooth/proxy_scan.yaml
+bluetooth_proxy: !include ../bluetooth/proxy_active.yaml
