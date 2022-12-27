@@ -10,7 +10,7 @@ wifi: !include ../connection/wifi.yaml
 #mqtt: !include ../connection/mqtt.yaml
 api:
 # Enable logging
-logger: !include ../logger/debug.yaml
+logger: !include ../logger/verbose.yaml
 # Expose some info to HA
 text_sensor: !include ../text_sensor/wifi_info.yaml
 ota:
