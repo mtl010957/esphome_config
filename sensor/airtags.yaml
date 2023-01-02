@@ -1,0 +1,7 @@
+- platform: ble_rssi
+  mac_address: D0:9F:2A:1B:AA:08
+  name: "Huey AirTag RSSI"
+- platform: ble_rssi
+  mac_address: F7:FB:D8:65:1C:6C
+  name: "Otis AirTag RSSI"
+  

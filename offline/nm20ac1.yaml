@@ -1,6 +1,6 @@
 substitutions:
-  devicename: nm18ac1
-  upper_devicename: NM18AC1
+  devicename: nm20ac1
+  upper_devicename: NM20AC1
   button_pin: GPIO0
   led_pin: GPIO2
 
@@ -19,7 +19,6 @@ light: !include ../light/blue_led.yaml
 output: !include ../output/blue_ledc.yaml
 # Enable Bluetooth Low Energy
 esp32_ble_tracker:
-ble_client: !include ../connection/btmotion.yaml
-sensor: !include ../sensor/btmotion.yaml
+sensor: !include ../sensor/airtags.yaml
 
     
