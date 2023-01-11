@@ -4,6 +4,7 @@
   update_interval: 10s
   expire_after: 60s
   unit_of_measurement: lx
+  device_class: illuminance
   filters:
     - lambda: |-
         return (x / 10000.0) * 2000000.0;
