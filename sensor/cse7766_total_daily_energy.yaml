@@ -28,4 +28,4 @@
     state_class: total_increasing
     device_class: energy
     # 3 shows each W consumed, 2 every 10W, 1 every 100W
-    accuracy_decimals: 1
+    accuracy_decimals: 3
