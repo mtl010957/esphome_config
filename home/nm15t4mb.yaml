@@ -1,15 +1,20 @@
 substitutions:
-  devicename: nm15t4m
-  upper_devicename: NM15T4M
+  devicename: nm15t4mb
+  upper_devicename: NM15T4MB
   button_pin: D3
   led_pin: D4
   dallas_pin: D6
   probe_1_addr: "0xDC000008E3B1AB28"
+  # NW
   probe_2_addr: "0xDE000008E2B6AF28"
+  # SE
   probe_3_addr: "0xC400000A01299728"
+  # Supply
   probe_4_addr: "0x7B00000A00BBB128"
+  # Flue
   update_interval: "5s"
   moisture_pin: D5
+  burner_valve_pin: D7
 
 esphome: !include ../nodemcu/device.yaml
 wifi: !include ../connection/wifi.yaml
@@ -25,6 +30,7 @@ button: !include ../button/restart.yaml
 binary_sensor:
   - <<: !include ../binary_sensor/button.yaml
   - <<: !include ../binary_sensor/lm393_rain.yaml
+  - <<: !include ../binary_sensor/burner_valve.yaml
 light: !include ../light/blue_led.yaml
 output: !include ../output/blue_led.yaml
 # Need Dallas for one wire sensors
