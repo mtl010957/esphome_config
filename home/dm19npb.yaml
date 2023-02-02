@@ -1,0 +1,26 @@
+substitutions:
+  devicename: dm19npb
+  upper_devicename: DM19NPB
+  led_pin: D4
+  neopixel_pin: GPIO3
+  num_leds: "3"
+  neopixel_internal: "true"
+
+esphome: !include ../d1mini/device.yaml
+wifi: !include ../connection/wifi.yaml
+mqtt: !include ../connection/mqtt.yaml
+# Enable logging
+logger: !include ../logger/debug.yaml
+# Expose some info to HA
+text_sensor: !include ../text_sensor/wifi_info.yaml
+ota:
+# Enable remote restart from HA
+button: !include ../button/restart.yaml
+light:
+  - <<: !include ../light/blue_led.yaml
+  - <<: !include ../light/ws2812x_neopixelbus.yaml
+  - <<: !include ../light/partition_1.yaml
+  - <<: !include ../light/partition_2.yaml
+  - <<: !include ../light/partition_3.yaml
+output: !include ../output/blue_led.yaml
+

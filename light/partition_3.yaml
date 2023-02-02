@@ -1,0 +1,7 @@
+- platform: partition
+  id: part3
+  name: "${upper_devicename} Part 3"
+  segments:
+    - id: light1
+      from: 2
+      to: 2

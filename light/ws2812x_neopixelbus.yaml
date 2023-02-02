@@ -1,0 +1,8 @@
+- platform: neopixelbus
+  id: light1
+  internal: "${neopixel_internal}"
+  name: "${upper_devicename} NeoPixel Light"
+  type: GRB
+  variant: WS2812X
+  pin: "${neopixel_pin}"
+  num_leds: "${num_leds}"
