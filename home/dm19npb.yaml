@@ -3,7 +3,7 @@ substitutions:
   upper_devicename: DM19NPB
   led_pin: D4
   neopixel_pin: GPIO3
-  num_leds: "3"
+  num_leds: "63"
   neopixel_internal: "true"
 
 esphome: !include ../d1mini/device.yaml
