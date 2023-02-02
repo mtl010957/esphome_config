@@ -22,5 +22,8 @@ light:
   - <<: !include ../light/partition_1.yaml
   - <<: !include ../light/partition_2.yaml
   - <<: !include ../light/partition_3.yaml
+  - <<: !include ../light/partition_4.yaml
+  - <<: !include ../light/partition_5.yaml
+  - <<: !include ../light/partition_6.yaml
 output: !include ../output/blue_led.yaml
 
