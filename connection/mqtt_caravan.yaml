@@ -1,0 +1,4 @@
+broker: !secret mqtt_caravan_broker
+username: !secret mqtt_caravan_username
+password: !secret mqtt_caravan_password
+
