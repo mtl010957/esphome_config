@@ -7,8 +7,8 @@ substitutions:
   neopixel_internal: "true"
 
 esphome: !include ../d1mini/device.yaml
-wifi: !include ../connection/wifi.yaml
-mqtt: !include ../connection/mqtt.yaml
+wifi: !include ../connection/wifi_caravan.yaml
+mqtt: !include ../connection/mqtt_caravan.yaml
 # Enable logging
 logger: !include ../logger/debug.yaml
 # Expose some info to HA

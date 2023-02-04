@@ -1,10 +1,8 @@
 substitutions:
-  devicename: dm18mpu
-  upper_devicename: DM18MPU
+  devicename: dm15th
+  upper_devicename: DM15TH
   led_pin: D4
-  update_interval: "500ms"
-  window_size: "10"
-  send_every: "5"
+  sensor_pin: D2
 
 esphome: !include ../d1mini/device.yaml
 wifi: !include ../connection/wifi_caravan.yaml
@@ -18,8 +16,6 @@ ota:
 button: !include ../button/restart.yaml
 light: !include ../light/blue_led.yaml
 output: !include ../output/blue_led.yaml
-# Need I2C bus for sensors
-i2c: !include ../connection/i2c.yaml
-# MPU6050 sensor for acceleration and gyro
-sensor: !include ../sensor/mpu6050_pitch_roll.yaml
+# DHT22 Temperature and Humidity
+sensor: !include ../sensor/dht22.yaml
 
