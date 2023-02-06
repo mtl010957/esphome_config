@@ -5,6 +5,7 @@ substitutions:
   neopixel_pin: GPIO3
   num_leds: "63"
   neopixel_internal: "true"
+  button_pin: D5
 
 esphome: !include ../d1mini/device.yaml
 wifi: !include ../connection/wifi_caravan.yaml
@@ -26,4 +27,4 @@ light:
   - <<: !include ../light/partition_5.yaml
   - <<: !include ../light/partition_6.yaml
 output: !include ../output/blue_led.yaml
-
+binary_sensor: !include ../binary_sensor/button.yaml
