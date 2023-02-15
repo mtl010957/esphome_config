@@ -12,7 +12,8 @@ substitutions:
   transition_length: 0s
   auto_detach_time: 100ms
 
-esphome: !include ../d1mini/mqtt_discovery_device.yaml
+esphome: !include ../base/name_mqtt_discovery.yaml
+esp8266: !include ../esp8266/d1mini.yaml
 wifi: !include ../connection/wifi.yaml
 mqtt: !include ../connection/mqtt.yaml
 # Enable logging
