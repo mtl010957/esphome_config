@@ -6,7 +6,8 @@ substitutions:
   window_size: "10"
   send_every: "5"
 
-esphome: !include ../d1mini/device.yaml
+esphome: !include ../base/name_onboot.yaml
+esp8266: !include ../esp8266/d1mini_restore.yaml
 wifi: !include ../connection/wifi_caravan.yaml
 mqtt: !include ../connection/mqtt_caravan.yaml
 # Enable logging
