@@ -7,7 +7,8 @@ substitutions:
   neopixel_internal: "true"
   button_pin: D5
 
-esphome: !include ../d1mini/device.yaml
+esphome: !include ../base/name_onboot.yaml
+esp8266: !include ../esp8266/d1mini.yaml
 wifi: !include ../connection/wifi_caravan.yaml
 mqtt: !include ../connection/mqtt_caravan.yaml
 # Enable logging
