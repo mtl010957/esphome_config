@@ -1,6 +1,0 @@
-name: ${devicename}
-on_boot:
-  then:
-    - wait_until: mqtt.connected
-    - delay: 2s
-    - lambda: id(${devicename}_wifi_info_ip).publish_state(WiFi.localIP().toString().c_str());

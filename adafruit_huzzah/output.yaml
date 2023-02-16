@@ -1,6 +1,0 @@
-- platform: esp8266_pwm
-  pin:
-    number: 2
-    inverted: True
-  frequency: 1000 Hz
-  id: huzzah_blue_led
