@@ -7,7 +7,7 @@ substitutions:
   gamma_correct: '0.0'
 
 #external_components: !include ../external_components/sonoff_d1.yaml
-esphome: !include ../sonoff_d1/device.yaml
+esphome: !include ../base/name_onboot.yaml
 esp8266: !include ../esp8266/esp8285_restore.yaml
 wifi: !include ../connection/wifi.yaml
 mqtt: !include ../connection/mqtt.yaml
