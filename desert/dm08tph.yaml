@@ -3,7 +3,8 @@ substitutions:
   upper_devicename: DM08TPH
   led_pin: D4
 
-esphome: !include ../d1mini/device.yaml
+esphome: !include ../base/name_onboot.yaml
+esp8266: !include ../esp8266/d1mini.yaml
 wifi: !include ../connection/wifi_desert.yaml
 mqtt: !include ../connection/mqtt_desert.yaml
 # Enable logging

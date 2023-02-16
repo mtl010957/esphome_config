@@ -5,7 +5,8 @@ substitutions:
   led_pin: GPIO13
   relay_pin: GPIO12
 
-esphome: !include sonoff_s31/device.yaml
+esphome: !include ../base/name_onboot.yaml
+esp8266: !include ../esp8266/esp01_1m.yaml
 wifi: !include connection/wifi_desert.yaml
 mqtt: !include connection/mqtt_desert.yaml
 # Enable logging
