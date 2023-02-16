@@ -16,7 +16,8 @@ substitutions:
   transition_length: 5s
   auto_detach_time: 100ms
 
-esphome: !include ../nodemcu/mqtt_discovery_device.yaml
+esphome: !include ../base/name_mqtt_discovery.yaml
+esp8266: !include ../esp8266/nodemcuv2.yaml
 wifi: !include ../connection/wifi.yaml
 mqtt: !include ../connection/mqtt.yaml
 # Enable logging
