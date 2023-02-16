@@ -9,7 +9,8 @@ substitutions:
   probe_addr: "0xED01204BF4F92028"
   update_interval: "5s"
 
-esphome: !include ../d1mini/device.yaml
+esphome: !include ../base/name_onboot.yaml
+esp8266: !include ../esp8266/d1mini.yaml
 wifi: !include ../connection/wifi.yaml
 mqtt: !include ../connection/mqtt.yaml
 # Enable logging
