@@ -1,0 +1,20 @@
+  - id: water_use_total
+    type: float
+    restore_value: true
+    initial_value: '0.0'
+  - id: water_use
+    type: float
+    restore_value: false
+    initial_value: '0.0'
+  - id: field_change
+    type: float
+    restore_value: false
+    initial_value: '0.0'
+  - id: field_last_value
+    type: float
+    restore_value: false
+    initial_value: '0.0'
+  - id: field_increasing
+    type: bool
+    restore_value: false
+    initial_value: 'false'

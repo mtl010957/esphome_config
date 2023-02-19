@@ -1,0 +1,11 @@
+  - platform: template
+    name: "${upper_devicename} Water Used"
+    unit_of_measurement: 'gal'
+    icon: "mdi:water"
+    device_class: water
+    state_class: total_increasing
+    lambda: |-
+      return id(water_use_total);
+    update_interval: 10s
+    accuracy_decimals: 2
+    

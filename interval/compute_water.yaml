@@ -1,0 +1,14 @@
+  - interval: "${update_interval}"
+    then:
+    - lambda: |-
+         id(field_change) = id(field_strength_z).state - id(field_last_value);
+         if (abs(id(field_change)) > 0.0) {
+           if (id(field_change) > 0.0 && !id(field_increasing)) {
+             id(field_increasing) = true;
+             id(water_use_total) = id(water_use_total) + ${gal_per_pulse};
+             id(water_use) = id(water_use) + ${gal_per_pulse};
+           } else if (id(field_change) < 0.0 && id(field_increasing)) {
+           	 id(field_increasing) = false;
+           }
+         }
+         id(field_last_value) = id(field_strength_z).state;

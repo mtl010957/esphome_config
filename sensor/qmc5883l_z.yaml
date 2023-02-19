@@ -1,0 +1,16 @@
+- platform: qmc5883l
+#   field_strength_x:
+#     name: "${upper_devicename} Field Strength X"
+#   field_strength_y:
+#     name: "${upper_devicename} Field Strength Y"
+  field_strength_z:
+    id: field_strength_z
+    internal: true
+    filters:
+      delta: 5.0
+#    name: "${upper_devicename} Field Strength Z"
+#   heading:
+#     name: "${upper_devicename} Heading"
+  range: 200uT
+  oversampling: 64x
+  update_interval: "${update_interval}"

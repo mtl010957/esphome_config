@@ -1,0 +1,8 @@
+  - platform: analog_threshold
+    id: field_strength_pulse
+    name: "Field Strength Z Switch"
+    sensor_id: field_strength_z
+    threshold:
+      upper: -80
+      lower: -90
+    

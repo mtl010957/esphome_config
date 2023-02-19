@@ -2,13 +2,15 @@ substitutions:
   devicename: dm09qmc1
   upper_devicename: DM09QMC1
   led_pin: D4
+  gal_per_pulse: "0.01"
+  update_interval: "100ms"
   
 esphome: !include ../base/name_onboot.yaml
 esp8266: !include ../esp8266/d1mini.yaml
 wifi: !include ../connection/wifi.yaml
 mqtt: !include ../connection/mqtt.yaml
 # Enable logging
-logger: !include ../logger/debug.yaml
+logger: !include ../logger/debug_info_qmc5883l.yaml
 # Expose some info to HA
 text_sensor: !include ../text_sensor/wifi_info.yaml
 ota:
@@ -18,4 +20,9 @@ output: !include ../output/blue_led.yaml
 light: !include ../light/blue_led.yaml
 # Need I2C bus for sensors
 i2c: !include ../connection/i2c.yaml
-sensor: !include ../sensor/qmc5883l.yaml
+globals: !include ../globals/water.yaml
+interval: !include ../interval/compute_water.yaml
+sensor:
+  - <<: !include ../sensor/qmc5883l_z.yaml
+  - <<: !include ../sensor/pulse_count_water.yaml
+  - <<: !include ../sensor/pulse_count_water_total.yaml

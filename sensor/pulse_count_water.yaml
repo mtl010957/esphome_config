@@ -1,0 +1,10 @@
+  - platform: template
+    unit_of_measurement: 'gpm'
+    icon: "mdi:water"
+    name: "${upper_devicename} Water Flow"
+    lambda: |-
+      float temp = id(water_use);
+      id(water_use) -= temp;
+      return temp * 6.0;
+    update_interval: 10s
+    accuracy_decimals: 2
