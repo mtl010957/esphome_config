@@ -20,3 +20,5 @@ light: !include ../light/blue_led.yaml
 output: !include ../output/blue_led.yaml
 # Binary GPIO sensor
 binary_sensor: !include ../binary_sensor/proximity.yaml
+# Pulse counter to scale to water flow
+sensor: !include ../sensor/proximity_pulse_meter.yaml
