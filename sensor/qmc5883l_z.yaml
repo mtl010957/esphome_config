@@ -12,5 +12,5 @@
 #   heading:
 #     name: "${upper_devicename} Heading"
   range: 200uT
-  oversampling: 64x
+  oversampling: 512x
   update_interval: "${update_interval}"
