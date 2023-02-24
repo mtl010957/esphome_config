@@ -3,7 +3,7 @@ substitutions:
   upper_devicename: DM09QMC1
   led_pin: D4
   gal_per_pulse: "0.01"
-  update_interval: "20ms"
+  update_interval: "30ms"
   
 esphome: !include ../base/name_onboot.yaml
 esp8266: !include ../esp8266/d1mini.yaml
