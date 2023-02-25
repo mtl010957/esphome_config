@@ -7,10 +7,10 @@
     id: field_strength_z
     internal: true
     filters:
-      delta: 5.0
+      delta: ${delta}
 #    name: "${upper_devicename} Field Strength Z"
 #   heading:
 #     name: "${upper_devicename} Heading"
   range: 200uT
-  oversampling: 512x
+  oversampling: ${oversampling}
   update_interval: "${update_interval}"
