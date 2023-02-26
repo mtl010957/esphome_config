@@ -6,6 +6,8 @@ substitutions:
   update_interval: "50ms"
   oversampling: "64x"
   delta: "5.0"
+  output_update_interval_sec: "1"
+  output_delta: "0.1"
   
 esphome: !include ../base/name_onboot.yaml
 esp8266: !include ../esp8266/d1mini.yaml

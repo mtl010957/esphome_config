@@ -6,6 +6,8 @@
     state_class: total_increasing
     lambda: |-
       return id(water_use_total);
-    update_interval: 10s
+    update_interval: "${output_update_interval_sec}s"
     accuracy_decimals: 2
+    filters:
+      - delta: "${output_delta}"
     

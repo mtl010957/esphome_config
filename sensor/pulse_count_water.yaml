@@ -5,6 +5,8 @@
     lambda: |-
       float temp = id(water_use);
       id(water_use) -= temp;
-      return temp * 6.0;
-    update_interval: 10s
+      return temp * 60.0/${output_update_interval_sec};
+    update_interval: "${output_update_interval_sec}s"
     accuracy_decimals: 2
+    filters:
+      - delta: "${output_delta}"
