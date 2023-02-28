@@ -6,7 +6,7 @@ substitutions:
   update_interval: "40ms"
   oversampling: "64x"
   delta: "5.0"
-  output_update_interval_sec: "1.0"
+  output_update_interval_sec: "5.0"
   output_delta: "0.01"
   
 esphome: !include ../base/name_onboot.yaml
