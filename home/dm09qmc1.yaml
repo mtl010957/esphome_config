@@ -8,7 +8,7 @@ substitutions:
   delta: "5.0"
   output_update_interval_sec: "5.0"
   output_delta: "0.01"
-  x_throttle: "10s"
+  x_throttle: "60s"
   
 esphome: !include ../base/name_onboot.yaml
 esp8266: !include ../esp8266/d1mini.yaml
