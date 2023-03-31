@@ -2,4 +2,4 @@
   id: relay
   pin:
     number: ${relay_pin}
-    inverted: True
+    inverted: False
