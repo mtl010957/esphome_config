@@ -1,0 +1,19 @@
+- platform: gpio
+  pin:
+    number: ${liquid_level_1_pin}
+    inverted: True
+    mode: INPUT_PULLUP
+  name: "${upper_devicename} Liquid Level Sensor 1"
+- platform: gpio
+  pin:
+    number: ${liquid_level_2_pin}
+    inverted: True
+    mode: INPUT_PULLUP
+  name: "${upper_devicename} Liquid Level Sensor 2"
+- platform: gpio
+  pin:
+    number: ${liquid_level_3_pin}
+    inverted: True
+    mode: INPUT_PULLUP
+  name: "${upper_devicename} Liquid Level Sensor 3"
+

@@ -1,0 +1,7 @@
+- platform: gpio
+  pin:
+    number: ${sensor_pin}
+    inverted: True
+    mode: INPUT_PULLUP
+  name: "${upper_devicename} Liquid Level Sensor"
+

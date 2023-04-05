@@ -1,0 +1,14 @@
+- platform: adc
+  pin: A0
+  name: "${upper_devicename} Pressure Sensor"
+  unit_of_measurement: psi
+  device_class: pressure
+  update_interval: ${update_interval}
+  expire_after: 60s
+  filters:
+    - offset: ${offset}
+    - multiply: ${multiplier}
+    - median:
+        window_size: 7
+        send_every: 3
+        send_first_at: 1
