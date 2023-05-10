@@ -1,0 +1,11 @@
+- platform: vl53l0x
+  name: "${upper_devicename} Fresh Tank Level Sensor"
+  update_interval: "${distance_update_interval}"
+  unit_of_measurement: "%"
+  accuracy_decimals: 1
+  filters:
+    - exponential_moving_average:
+        alpha: 0.1
+        send_every: 15
+    - lambda: !lambda |-
+        return ((${tank_height} - x) / (${tank_height} - ${height_offset}) * 100.0);
