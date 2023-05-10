@@ -1,4 +1,4 @@
 ssid: !secret wifi_caravan_ssid
 password: !secret wifi_caravan_password
-#use_address: dm08_tph.local
+#use_address: dm12thll3.local
 

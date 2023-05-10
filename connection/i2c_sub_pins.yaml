@@ -1,0 +1,2 @@
+  sda: "${sda_pin}"
+  scl: "${scl_pin}"
