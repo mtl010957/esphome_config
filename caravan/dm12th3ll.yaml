@@ -20,8 +20,6 @@ ota:
 button: !include ../button/restart.yaml
 light: !include ../light/blue_led.yaml
 output: !include ../output/blue_led.yaml
-# I2C with non-standard pins
-i2c: !include ../connection/i2c_sub_pins.yaml
 # DHT22 Temperature and Humidity
 sensor:
   - <<: !include ../sensor/dht22.yaml
