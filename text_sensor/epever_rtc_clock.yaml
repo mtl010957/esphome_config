@@ -1,0 +1,10 @@
+- name: "${upper_devicename} Real Time Clock"
+  platform: modbus_controller
+  modbus_controller_id: epever
+  id: rtc_clock
+  internal: true
+  register_type: holding
+  address: 0x9013
+  register_count: 3
+  raw_encode: HEXBYTES
+  response_size: 6

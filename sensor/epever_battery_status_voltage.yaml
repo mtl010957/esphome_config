@@ -1,0 +1,9 @@
+- platform: modbus_controller
+  modbus_controller_id: epever
+  id: battery_status_voltage
+  name: "${upper_devicename} Battery Status Voltage"
+  address: 0x3200
+  register_type: read
+  value_type: U_WORD
+  bitmask: 7  #(Bits 0-3)
+  accuracy_decimals: 0

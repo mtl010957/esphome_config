@@ -1,0 +1,9 @@
+- platform: modbus_controller
+  modbus_controller_id: epever
+  name: "${upper_devicename} Battery Capacity"
+  id: battery_capacity
+  register_type: holding
+  address: 0x9001
+  unit_of_measurement: "AH"
+  value_type: U_WORD
+

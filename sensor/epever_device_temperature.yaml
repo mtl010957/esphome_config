@@ -1,0 +1,11 @@
+- platform: modbus_controller
+  modbus_controller_id: epever
+  id: device_temperature
+  name: "${upper_devicename} Device Temperature"
+  address: 0x3111
+  unit_of_measurement: °C
+  register_type: read
+  value_type: S_WORD
+  accuracy_decimals: 1
+  filters:
+    - multiply: 0.01

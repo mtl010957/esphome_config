@@ -1,0 +1,5 @@
+id: mod_bus
+tx_pin: ${tx_pin}
+rx_pin: ${rx_pin}
+baud_rate: ${baud_rate}
+stop_bits: ${stop_bits}

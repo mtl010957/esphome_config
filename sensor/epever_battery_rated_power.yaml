@@ -1,0 +1,11 @@
+- platform: modbus_controller
+  modbus_controller_id: epever
+  id: battery_rated_power
+  name: "${upper_devicename} Battery Rated Power"
+  address: 0x3006
+  unit_of_measurement: "W"
+  register_type: read
+  value_type: U_DWORD_R
+  accuracy_decimals: 1
+  filters:
+    - multiply: 0.01

@@ -1,0 +1,9 @@
+- platform: modbus_controller
+  modbus_controller_id: epever
+  id: battery_soc
+  name: "${upper_devicename} Battery SOC"
+  address: 0x311A
+  unit_of_measurement: "%"
+  register_type: read
+  value_type: U_WORD
+  accuracy_decimals: 0

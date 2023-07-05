@@ -1,0 +1,7 @@
+- platform: modbus_controller
+  modbus_controller_id: epever
+  id: charging_input_volt_failure
+  name: "${upper_devicename} Charging Input Volt Failure"
+  register_type: read
+  address: 0x3201
+  bitmask: 0xC000

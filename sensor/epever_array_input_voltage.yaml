@@ -1,0 +1,11 @@
+- platform: modbus_controller
+  modbus_controller_id: epever
+  id: array_input_voltage
+  name: "${upper_devicename} Array Input Voltage"
+  address: 0x3100
+  unit_of_measurement: "V" ## for any other unit the value is returned in minutes
+  register_type: read
+  value_type: U_WORD
+  accuracy_decimals: 1
+  filters:
+    - multiply: 0.01

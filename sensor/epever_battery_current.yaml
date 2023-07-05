@@ -1,0 +1,12 @@
+- platform: modbus_controller
+  modbus_controller_id: epever
+  id: battery_current
+  name: "${upper_devicename} Battery Current"
+  address: 0x331B
+  register_type: read
+  value_type: S_DWORD_R
+  register_count: 2
+  accuracy_decimals: 2
+  unit_of_measurement: "A"
+  filters:
+    - multiply: 0.01
