@@ -5,4 +5,5 @@
   address: 0x3201
   register_type: read
   value_type: U_WORD
+  bitmask: 0x00C0  #(Bits 3-4)
   accuracy_decimals: 0
