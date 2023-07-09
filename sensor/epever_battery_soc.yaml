@@ -4,6 +4,14 @@
   name: "${upper_devicename} Battery SOC"
   address: 0x311A
   unit_of_measurement: "%"
+  icon: "mdi:car-battery"
   register_type: read
   value_type: U_WORD
   accuracy_decimals: 0
+  state_class: measurement
+  device_class: battery
+  skip_updates: ${skip_updates}
+  filters:
+    - lambda: !lambda |-
+        if (x > 100) return {};
+        return x;

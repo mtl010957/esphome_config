@@ -7,5 +7,10 @@
   register_type: read
   value_type: U_DWORD_R
   accuracy_decimals: 1
+  state_class: measurement
+  device_class: power
   filters:
     - multiply: 0.01
+    - lambda: !lambda |-
+        if (x > (60*120)) return {};
+        return x;

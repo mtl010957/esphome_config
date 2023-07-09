@@ -7,6 +7,10 @@ substitutions:
   baud_rate: "115200"
   stop_bits: "1"
   flow_control_pin: GPIO5
+  send_wait_time: "250ms"
+  command_throttle: "0ms"
+  update_interval: "60s"
+  skip_updates: "5"
   
 esphome: !include ../base/name_onboot.yaml
 esp32: !include ../esp32/wemos_d1_mini32.yaml
@@ -17,7 +21,6 @@ logger: !include ../logger/debug.yaml
 # Expose some info to HA
 text_sensor:
   - <<: !include ../text_sensor/wifi_info.yaml
-  - <<: !include ../text_sensor/epever_rtc_clock.yaml
 ota:
 # Enable remote restart from HA
 button: !include ../button/restart.yaml
@@ -28,36 +31,27 @@ uart: !include ../uart/uart_modbus.yaml
 modbus: !include ../connection/modbus1.yaml
 modbus_controller: !include ../connection/modbus1_controller_epever.yaml
 # EPEver Setup
-#switch: !include ../switch/epever_reset_to_factory_default.yaml
-binary_sensor:
-  - <<: !include ../binary_sensor/epever_charging_input_volt_failure.yaml
+# Order is important for Modbus efficiency
 sensor:
-#  - <<: !include ../sensor/epever_battery_capacity.yaml
-  - <<: !include ../sensor/epever_battery_voltage.yaml
-  - <<: !include ../sensor/epever_battery_current.yaml
-#  - <<: !include ../sensor/epever_battery_rated_voltage.yaml
-#  - <<: !include ../sensor/epever_battery_rated_current.yaml
-#  - <<: !include ../sensor/epever_battery_rated_power.yaml
-  - <<: !include ../sensor/epever_battery_status_voltage.yaml
-  - <<: !include ../sensor/epever_battery_soc.yaml
-  - <<: !include ../sensor/epever_battery_temperature.yaml
-  - <<: !include ../sensor/epever_charger_status.yaml
   - <<: !include ../sensor/epever_charging_mode.yaml
-  - <<: !include ../sensor/epever_charging_voltage.yaml
-  - <<: !include ../sensor/epever_charging_current.yaml
-  - <<: !include ../sensor/epever_charging_power.yaml
   - <<: !include ../sensor/epever_array_input_voltage.yaml
   - <<: !include ../sensor/epever_array_input_current.yaml
   - <<: !include ../sensor/epever_array_input_power.yaml
-#  - <<: !include ../sensor/epever_array_rated_voltage.yaml
-#  - <<: !include ../sensor/epever_array_rated_current.yaml
-#  - <<: !include ../sensor/epever_array_rated_power.yaml
+  - <<: !include ../sensor/epever_charging_voltage.yaml
+  - <<: !include ../sensor/epever_charging_current.yaml
+  - <<: !include ../sensor/epever_charging_power.yaml
+  - <<: !include ../sensor/epever_battery_temperature.yaml
   - <<: !include ../sensor/epever_device_temperature.yaml
+  - <<: !include ../sensor/epever_power_components_temperature.yaml
+  - <<: !include ../sensor/epever_battery_soc.yaml
+  - <<: !include ../sensor/epever_battery_status_voltage.yaml
+  - <<: !include ../sensor/epever_charger_status.yaml
   - <<: !include ../sensor/epever_max_pv_voltage_today.yaml
   - <<: !include ../sensor/epever_min_pv_voltage_today.yaml
   - <<: !include ../sensor/epever_max_battery_voltage_today.yaml
   - <<: !include ../sensor/epever_min_battery_voltage_today.yaml
   - <<: !include ../sensor/epever_generated_energy_today.yaml
-  - <<: !include ../sensor/epever_power_components_temperature.yaml
+  - <<: !include ../sensor/epever_battery_voltage.yaml
+  - <<: !include ../sensor/epever_battery_current.yaml
 
     

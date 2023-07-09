@@ -7,7 +7,13 @@
   register_type: read
   value_type: U_WORD
   accuracy_decimals: 2
+  state_class: measurement
+  device_class: current
   filters:
     - multiply: 0.01
+    - lambda: !lambda |-
+        if (x > 60) return {};
+        return x;
+
 
 

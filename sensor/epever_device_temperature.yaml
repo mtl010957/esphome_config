@@ -7,5 +7,11 @@
   register_type: read
   value_type: S_WORD
   accuracy_decimals: 1
+  state_class: measurement
+  device_class: temperature
+  skip_updates: ${skip_updates}
   filters:
     - multiply: 0.01
+    - lambda: !lambda |-
+        if (x > 100) return {};
+        return x;

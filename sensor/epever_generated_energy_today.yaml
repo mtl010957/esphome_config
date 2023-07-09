@@ -7,5 +7,11 @@
   value_type: U_DWORD_R
   accuracy_decimals: 0
   unit_of_measurement: "Wh"
+  state_class: total_increasing
+  device_class: energy
+  skip_updates: ${skip_updates}
   filters:
     - multiply: 10.0
+    - lambda: !lambda |-
+        if (x > 40*12*12) return {};
+        return x;

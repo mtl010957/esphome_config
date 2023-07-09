@@ -7,5 +7,10 @@
   value_type: U_WORD
   accuracy_decimals: 1
   unit_of_measurement: "V"
+  state_class: measurement
+  device_class: voltage
   filters:
     - multiply: 0.01
+    - lambda: !lambda |-
+        if (x > 40) return {};
+        return x;

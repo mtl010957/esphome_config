@@ -8,5 +8,10 @@
   register_count: 2
   accuracy_decimals: 2
   unit_of_measurement: "A"
+  state_class: measurement
+  device_class: current
   filters:
     - multiply: 0.01
+    - lambda: !lambda |-
+        if (x > 60) return {};
+        return x;
