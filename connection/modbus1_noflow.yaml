@@ -1,0 +1,2 @@
+id: modbus1
+send_wait_time: ${send_wait_time}
