@@ -1,2 +1,3 @@
-flow_control_pin: ${flow_control_pin}
+#flow_control_pin: ${flow_control_pin}
 id: modbus1
+send_wait_time: ${send_wait_time}
