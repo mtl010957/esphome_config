@@ -28,7 +28,7 @@ light: !include ../light/blue_led.yaml
 output: !include ../output/blue_ledc.yaml
 # Modbus setup
 uart: !include ../uart/uart_modbus.yaml
-modbus: !include ../connection/modbus1.yaml
+modbus: !include ../connection/modbus1_noflow.yaml
 modbus_controller: !include ../connection/modbus1_controller_epever.yaml
 # EPEver Setup
 # Order is important for Modbus efficiency
