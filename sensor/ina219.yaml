@@ -1,0 +1,14 @@
+- platform: ina219
+  address: 0x40
+  shunt_resistance: ${shunt_resistance}
+  current:
+    name: "${upper_devicename} Current"
+  power:
+    name: "${upper_devicename} Power"
+  bus_voltage:
+    name: "${upper_devicename} Bus Voltage"
+  shunt_voltage:
+    name: "${upper_devicename} Shunt Voltage"
+  max_voltage: ${max_voltage}
+  max_current: ${max_current}
+  update_interval: ${update_interval}
