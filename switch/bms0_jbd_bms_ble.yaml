@@ -1,6 +1,6 @@
   - platform: jbd_bms_ble
     jbd_bms_ble_id: bms0
     charging:
-      name: "${upper_devicename} ${bms0_name} Charging"
+      name: "${upper_devicename} Charging"
     discharging:
-      name: "${upper_devicename} ${bms0_name} Discharging"
+      name: "${upper_devicename} Discharging"

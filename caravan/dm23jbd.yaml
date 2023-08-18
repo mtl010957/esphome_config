@@ -5,7 +5,6 @@ substitutions:
   update_interval: "2s"
   external_components_source: github://syssi/esphome-jbd-bms@main
   bms0_mac_address: "A4:C1:37:40:2F:C8"
-  bms0_name: ""
   #bms0_mac_address: "70:3E:97:07:F9:F6"
   #bms0_name: "GJ-12V100AH-0526-161"
   # Change to ALWAYS_OFF if defining multiple BMS connections on one ESP
