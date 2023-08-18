@@ -1,0 +1,2 @@
+  - id: client0
+    mac_address: ${bms0_mac_address}

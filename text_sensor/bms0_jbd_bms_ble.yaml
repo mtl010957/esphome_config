@@ -1,8 +1,8 @@
   - platform: jbd_bms_ble
     jbd_bms_ble_id: bms0
     errors:
-      name: "${upper_devicename} Errors"
+      name: "${upper_devicename} ${bms0_name} Errors"
     operation_status:
-      name: "${upper_devicename} Operation Status"
+      name: "${upper_devicename} ${bms0_name} Operation Status"
     device_model:
-      name: "${upper_devicename} Device Model"
+      name: "${upper_devicename} ${bms0_name} Device Model"

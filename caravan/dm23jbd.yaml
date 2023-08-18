@@ -4,7 +4,12 @@ substitutions:
   led_pin: GPIO2
   update_interval: "2s"
   external_components_source: github://syssi/esphome-jbd-bms@main
-  mac_address: "A4:C1:37:40:2F:C8"
+  bms0_mac_address: "A4:C1:37:40:2F:C8"
+  bms0_name: "GJ-12V100AH-0526-048"
+  bms1_mac_address: "70:3E:97:07:F9:F6"
+  bms1_name: "GJ-12V100AH-0526-161"
+  # Change to ALWAYS_OFF if defining multiple BMS connections on one ESP
+  restore_mode: "ALWAYS_ON"
   
 esphome: !include ../base/name_onboot.yaml
 external_components: !include ../external_components/generic.yaml
@@ -24,7 +29,7 @@ light: !include ../light/blue_led.yaml
 output: !include ../output/blue_ledc.yaml
 # JBD BMS BLE Setup
 esp32_ble_tracker: !include ../bluetooth/jbd_bms.yaml
-ble_client: !include ../connection/ble_client0.yaml
+ble_client: !include ../connection/bms0_ble_client0.yaml
 jbd_bms_ble: !include ../jbd_bms_ble/bms0_client0.yaml
 binary_sensor: !include ../binary_sensor/bms0_jbd_bms_ble.yaml
 sensor: !include ../sensor/bms0_jbd_bms_ble.yaml
