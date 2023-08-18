@@ -1,10 +1,11 @@
 substitutions:
-  devicename: gj_12v100ah_0526_048
-  upper_devicename: GJ-12V100AH-0526-048
+  devicename: dm23jbd
+  upper_devicename: DM23JBD
   led_pin: GPIO2
   update_interval: "2s"
   external_components_source: github://syssi/esphome-jbd-bms@main
   bms0_mac_address: "A4:C1:37:40:2F:C8"
+  bms0_name: "GJ-12V100AH-0526-048"
   #bms0_mac_address: "70:3E:97:07:F9:F6"
   #bms0_name: "GJ-12V100AH-0526-161"
   # Change to ALWAYS_OFF if defining multiple BMS connections on one ESP
@@ -27,7 +28,7 @@ button: !include ../button/restart.yaml
 light: !include ../light/blue_led.yaml
 output: !include ../output/blue_ledc.yaml
 # JBD BMS BLE Setup
-esp32_ble_tracker: !include ../bluetooth/jbd_bms.yaml
+esp32_ble_tracker: !include ../bluetooth/GJ-12V100AH-0526-048_jbd_bms.yaml
 ble_client: !include ../connection/bms0_ble_client0.yaml
 jbd_bms_ble: !include ../jbd_bms_ble/bms0_client0.yaml
 binary_sensor: !include ../binary_sensor/bms0_jbd_bms_ble.yaml
