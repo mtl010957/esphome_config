@@ -1,5 +1,5 @@
 substitutions:
-  devicename: gj-12v100ah-0526-048
+  devicename: gj_12v100ah_0526_048
   upper_devicename: GJ-12V100AH-0526-048
   led_pin: GPIO2
   update_interval: "2s"
