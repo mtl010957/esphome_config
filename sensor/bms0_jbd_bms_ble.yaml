@@ -1,0 +1,58 @@
+  - platform: jbd_bms_ble
+    jbd_bms_ble_id: bms0
+    battery_strings:
+      name: "${upper_devicename} Battery Strings"
+    current:
+      name: "${upper_devicename} Current"
+    power:
+      name: "${upper_devicename} Power"
+    charging_power:
+      name: "${upper_devicename} Charging Power"
+    discharging_power:
+      name: "${upper_devicename} Discharging Power"
+    state_of_charge:
+      name: "${upper_devicename} State Of Charge"
+    nominal_capacity:
+      name: "${upper_devicename} Nominal Capacity"
+    charging_cycles:
+      name: "${upper_devicename} Charging Cycles"
+    capacity_remaining:
+      name: "${upper_devicename} Capacity Remaining"
+    battery_cycle_capacity:
+      name: "${upper_devicename} Battery Cycle Capacity"
+    total_voltage:
+      name: "${upper_devicename} Total Voltage"
+    average_cell_voltage:
+      name: "${upper_devicename} Average Cell Voltage"
+    delta_cell_voltage:
+      name: "${upper_devicename} Delta Cell Voltage"
+    min_cell_voltage:
+      name: "${upper_devicename} Min Cell Voltage"
+    max_cell_voltage:
+      name: "${upper_devicename} Max Cell Voltage"
+    min_voltage_cell:
+      name: "${upper_devicename} Min Voltage Cell"
+    max_voltage_cell:
+      name: "${upper_devicename} Max Voltage Cell"
+    temperature_1:
+      name: "${upper_devicename} Temperature 1"
+    temperature_2:
+      name: "${upper_devicename} Temperature 2"
+    temperature_3:
+      name: "${upper_devicename} Temperature 3"
+    cell_voltage_1:
+      name: "${upper_devicename} Cell Voltage 1"
+    cell_voltage_2:
+      name: "${upper_devicename} Cell Voltage 2"
+    cell_voltage_3:
+      name: "${upper_devicename} Cell Voltage 3"
+    cell_voltage_4:
+      name: "${upper_devicename} Cell Voltage 4"
+    operation_status_bitmask:
+      name: "${upper_devicename} Operation Status Bitmask"
+    errors_bitmask:
+      name: "${upper_devicename} Errors Bitmask"
+    balancer_status_bitmask:
+      name: "${upper_devicename} Balancer Status Bitmask"
+    software_version:
+      name: "${upper_devicename} Software Version"

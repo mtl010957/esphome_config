@@ -1,0 +1,33 @@
+substitutions:
+  devicename: dm23jbd
+  upper_devicename: DM23JBD
+  led_pin: GPIO2
+  update_interval: "2s"
+  external_components_source: github://syssi/esphome-jbd-bms@main
+  mac_address: "A4:C1:37:40:2F:C8"
+  
+esphome: !include ../base/name_onboot.yaml
+external_components: !include ../external_components/generic.yaml
+esp32: !include ../esp32/wemos_d1_mini32.yaml
+wifi: !include ../connection/wifi_caravan.yaml
+mqtt: !include ../connection/mqtt_caravan.yaml
+# Enable logging
+logger: !include ../logger/debug.yaml
+# Expose some info to HA
+text_sensor:
+  - <<: !include ../text_sensor/wifi_info.yaml
+  - <<: !include ../text_sensor/bms0_jbd_bms_ble.yaml
+ota:
+# Enable remote restart from HA
+button: !include ../button/restart.yaml
+light: !include ../light/blue_led.yaml
+output: !include ../output/blue_ledc.yaml
+# JBD BMS BLE Setup
+esp32_ble_tracker: !include ../bluetooth/jbd_bms.yaml
+ble_client: !include ../connection/ble_client0.yaml
+jbd_bms_ble: !include ../jbd_bms_ble/bms0_client0.yaml
+binary_sensor: !include ../binary_sensor/bms0_jbd_bms_ble.yaml
+sensor: !include ../sensor/bms0_jbd_bms_ble.yaml
+switch:
+  - <<: !include ../switch/client0_ble_client.yaml
+  - <<: !include ../switch/bms0_jbd_bms_ble.yaml

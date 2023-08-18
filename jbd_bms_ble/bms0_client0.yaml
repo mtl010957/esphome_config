@@ -1,0 +1,3 @@
+  - id: bms0
+    ble_client_id: client0
+    update_interval: ${update_interval}

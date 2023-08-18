@@ -1,0 +1,8 @@
+  - platform: jbd_bms_ble
+    jbd_bms_ble_id: bms0
+    errors:
+      name: "${upper_devicename} Errors"
+    operation_status:
+      name: "${upper_devicename} Operation Status"
+    device_model:
+      name: "${upper_devicename} Device Model"

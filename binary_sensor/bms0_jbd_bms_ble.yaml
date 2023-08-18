@@ -1,0 +1,10 @@
+  - platform: jbd_bms_ble
+    jbd_bms_ble_id: bms0
+    balancing:
+      name: "${upper_devicename} Balancing"
+    charging:
+      name: "${upper_devicename} Charging"
+    discharging:
+      name: "${upper_devicename} Discharging"
+    online_status:
+      name: "${upper_devicename} Online Status"
