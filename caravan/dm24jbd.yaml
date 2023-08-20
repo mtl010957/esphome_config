@@ -33,7 +33,9 @@ esp32_ble_tracker: !include ../bluetooth/jbd_bms.yaml
 ble_client: !include ../connection/bms0_ble_client0.yaml
 jbd_bms_ble: !include ../jbd_bms_ble/bms0_client0.yaml
 binary_sensor: !include ../binary_sensor/bms0_jbd_bms_ble.yaml
-sensor: !include ../sensor/bms0_jbd_bms_ble.yaml
+sensor:
+  - <<: !include ../sensor/bms0_jbd_bms_ble.yaml
+  - <<: !include ../sensor/bms0_ble_rssi.yaml
 switch:
   - <<: !include ../switch/client0_ble_client.yaml
   - <<: !include ../switch/bms0_jbd_bms_ble.yaml
