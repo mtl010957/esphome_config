@@ -1,6 +1,6 @@
 - platform: adc
   pin: A0
-  name: "${upper_devicename} Pressure Sensor"
+  name: "Pressure Sensor"
   unit_of_measurement: psi
   device_class: pressure
   update_interval: ${update_interval}

@@ -1,5 +1,5 @@
 - platform: template
-  name: "${upper_devicename} Fan Remote Stop"
+  name: "Fan Remote Stop"
   turn_on_action:
     - remote_transmitter.transmit_rc_switch_raw:
         code: "01001011110101011010011000000001"
@@ -7,7 +7,7 @@
         repeat:
           times: 6
 - platform: template
-  name: "${upper_devicename} Fan Remote Hi"
+  name: "Fan Remote Hi"
   turn_on_action:
     - remote_transmitter.transmit_rc_switch_raw:
         code: "01001011110101011010100101101000"
@@ -15,7 +15,7 @@
         repeat:
           times: 6
 - platform: template
-  name: "${upper_devicename} Fan Remote Med"
+  name: "Fan Remote Med"
   turn_on_action:
     - remote_transmitter.transmit_rc_switch_raw:
         code: "01001011110101011010001101110011"
@@ -23,7 +23,7 @@
         repeat:
           times: 6
 - platform: template
-  name: "${upper_devicename} Fan Remote Low"
+  name: "Fan Remote Low"
   turn_on_action:
     - remote_transmitter.transmit_rc_switch_raw:
         code: "01001011110101011010001000000101"
@@ -31,7 +31,7 @@
         repeat:
           times: 6
 - platform: template
-  name: "${upper_devicename} Fan Remote Light"
+  name: "Fan Remote Light"
   turn_on_action:
     - remote_transmitter.transmit_rc_switch_raw:
         code: "01001011110101011010100000011110"
@@ -39,7 +39,7 @@
         repeat:
           times: 6
 - platform: template
-  name: "${upper_devicename} Fan Remote 1H"
+  name: "Fan Remote 1H"
   turn_on_action:
     - remote_transmitter.transmit_rc_switch_raw:
         code: "01001011110101011010000100110101"
@@ -47,7 +47,7 @@
         repeat:
           times: 6
 - platform: template
-  name: "${upper_devicename} Fan Remote 2H"
+  name: "Fan Remote 2H"
   turn_on_action:
     - remote_transmitter.transmit_rc_switch_raw:
         code: "01001011110101011010011100100010"
@@ -55,7 +55,7 @@
         repeat:
           times: 6
 - platform: template
-  name: "${upper_devicename} Fan Remote 4H"
+  name: "Fan Remote 4H"
   turn_on_action:
     - remote_transmitter.transmit_rc_switch_raw:
         code: "01001011110101011010010101000110"
@@ -63,7 +63,7 @@
         repeat:
           times: 6
 - platform: template
-  name: "${upper_devicename} Fan Remote 8H"
+  name: "Fan Remote 8H"
   turn_on_action:
     - remote_transmitter.transmit_rc_switch_raw:
         code: "01001011110101011010101001011000"

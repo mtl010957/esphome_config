@@ -1,6 +1,6 @@
 - platform: bme280
   temperature:
-    name: "${upper_devicename} Temperature"
+    name: "Temperature"
     oversampling: 1x
     unit_of_measurement: "°C"
     device_class: temperature
@@ -12,7 +12,7 @@
         - delta: 0.5
         - heartbeat: 300s
   pressure:
-    name: "${upper_devicename} Pressure"
+    name: "Pressure"
     oversampling: 1x
     unit_of_measurement: "hPa"
     device_class: pressure
@@ -24,7 +24,7 @@
         - delta: 1
         - heartbeat: 300s
   humidity:
-    name: "${upper_devicename} Humidity"
+    name: "Humidity"
     oversampling: 1x
     unit_of_measurement: "%"
     device_class: humidity

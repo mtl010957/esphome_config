@@ -1,5 +1,5 @@
 - platform: template
-  name: "${upper_devicename} Latch Servo"
+  name: "Latch Servo"
   id: latch_servo_switch
   optimistic: true
   turn_on_action:

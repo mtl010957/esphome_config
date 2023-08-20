@@ -1,4 +1,4 @@
-- name: "${upper_devicename} Real Time Clock"
+- name: "Real Time Clock"
   platform: modbus_controller
   modbus_controller_id: epever
   id: rtc_clock

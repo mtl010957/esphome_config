@@ -1,7 +1,7 @@
 - platform: modbus_controller
   modbus_controller_id: epever
   id: charging_power
-  name: "${upper_devicename} Charging Power"
+  name: "Charging Power"
   address: 0x3106
   unit_of_measurement: "W"
   register_type: read

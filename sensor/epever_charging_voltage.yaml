@@ -1,7 +1,7 @@
 - platform: modbus_controller
   modbus_controller_id: epever
   id: charging_voltage
-  name: "${upper_devicename} Charging Voltage"
+  name: "Charging Voltage"
   address: 0x3104
   unit_of_measurement: "V"
   register_type: read

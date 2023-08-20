@@ -1,6 +1,6 @@
 - platform: adc
   pin: A0
-  name: "${upper_devicename} TEMT6000 Light Sensor"
+  name: "TEMT6000 Light Sensor"
   update_interval: 10s
   expire_after: 60s
   unit_of_measurement: lx

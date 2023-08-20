@@ -1,7 +1,7 @@
 - platform: modbus_controller
   modbus_controller_id: epever
   id: power_components_temperature
-  name: "${upper_devicename} Power Components Temperature"
+  name: "Power Components Temperature"
   address: 0x3112
   unit_of_measurement: °C
   register_type: read

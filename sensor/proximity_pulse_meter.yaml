@@ -1,13 +1,13 @@
   - platform: pulse_meter
     pin: "${sensor_pin}"
-    name: "${upper_devicename} Pulses/Minute"
+    name: "Pulses/Minute"
     internal_filter: 100ms
     accuracy_decimals: 0
     filters:
       - multiply: 1.0
       
     total:
-      name: "${upper_devicename} Total Pulses"
+      name: "Total Pulses"
       accuracy_decimals: 0
       filters:
         - multiply: 1.0

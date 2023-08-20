@@ -3,5 +3,5 @@
     number: ${sensor_pin}
     inverted: True
     mode: INPUT_PULLUP
-  name: "${upper_devicename} Proximity Sensor"
+  name: "Proximity Sensor"
 

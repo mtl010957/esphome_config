@@ -1,5 +1,5 @@
 - platform: rotary_encoder
-  name: "${upper_devicename} Rotary Encoder"
+  name: "Rotary Encoder"
   id: encoder
   pin_a:
     number: ${encoder_pin_a}
@@ -10,7 +10,7 @@
   min_value: ${encoder_min_value}
   max_value: ${encoder_max_value}
 - platform: mqtt_subscribe
-  name: "${upper_devicename} Set Rotary Encoder"
+  name: "Set Rotary Encoder"
   topic: ${set_rotary_encoder_topic}
   accuracy_decimals: 0
   on_value:

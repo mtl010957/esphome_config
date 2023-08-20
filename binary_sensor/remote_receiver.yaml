@@ -1,45 +1,45 @@
 - platform: remote_receiver
-  name: "${upper_devicename} Fan Remote Stop"
+  name: "Fan Remote Stop"
   rc_switch_raw:
     code: "0100101111010101101001100xxxxxxx"
     protocol: 1
 - platform: remote_receiver
-  name: "${upper_devicename} Fan Remote Hi"
+  name: "Fan Remote Hi"
   rc_switch_raw:
     code: "0100101111010101101010010xxxxxxx"
     protocol: 1
 - platform: remote_receiver
-  name: "${upper_devicename} Fan Remote Med"
+  name: "Fan Remote Med"
   rc_switch_raw:
     code: "0100101111010101101000110xxxxxxx"
     protocol: 1
 - platform: remote_receiver
-  name: "${upper_devicename} Fan Remote Low"
+  name: "Fan Remote Low"
   rc_switch_raw:
     code: "0100101111010101101000100xxxxxxx"
     protocol: 1
 - platform: remote_receiver
-  name: "${upper_devicename} Fan Remote Light"
+  name: "Fan Remote Light"
   rc_switch_raw:
     code: "0100101111010101101010000xxxxxxx"
     protocol: 1
 - platform: remote_receiver
-  name: "${upper_devicename} Fan Remote 1H"
+  name: "Fan Remote 1H"
   rc_switch_raw:
     code: "0100101111010101101000010xxxxxxx"
     protocol: 1
 - platform: remote_receiver
-  name: "${upper_devicename} Fan Remote 2H"
+  name: "Fan Remote 2H"
   rc_switch_raw:
     code: "0100101111010101101001110xxxxxxx"
     protocol: 1
 - platform: remote_receiver
-  name: "${upper_devicename} Fan Remote 4H"
+  name: "Fan Remote 4H"
   rc_switch_raw:
     code: "0100101111010101101001010xxxxxxx"
     protocol: 1
 - platform: remote_receiver
-  name: "${upper_devicename} Fan Remote 8H"
+  name: "Fan Remote 8H"
   rc_switch_raw:
     code: "0100101111010101101010100xxxxxxx"
     protocol: 1

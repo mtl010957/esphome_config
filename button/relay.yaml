@@ -1,4 +1,4 @@
 - platform: output
-  name: "${upper_devicename} Water Pump Toggle"
+  name: "Water Pump Toggle"
   output: relay
   duration: 1s

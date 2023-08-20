@@ -1,5 +1,5 @@
 - platform: gpio
   pin:
     number: ${pir_pin}
-  name: "${upper_devicename} PIR Sensor"
+  name: "PIR Sensor"
   device_class: motion

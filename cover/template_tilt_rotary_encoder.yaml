@@ -1,5 +1,5 @@
 - platform: template
-  name: "${upper_devicename} Cover"
+  name: "Cover"
   id: ${devicename}
   mqtt_id: ${devicename}_cover
   device_class: ${device_class}

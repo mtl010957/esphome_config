@@ -1,6 +1,6 @@
 - platform: modbus_controller
   modbus_controller_id: epever
-  name: "${upper_devicename} Battery Capacity"
+  name: "Battery Capacity"
   id: battery_capacity
   register_type: holding
   address: 0x9001

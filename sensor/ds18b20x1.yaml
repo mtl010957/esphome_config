@@ -1,7 +1,7 @@
 - platform: dallas
   id: "probe_${probe_number}"
   address: ${probe_addr}
-  name: "${upper_devicename} ${probe_addr}"
+  name: "${probe_addr}"
   unit_of_measurement: °C
   device_class: temperature
   accuracy_decimals: 1

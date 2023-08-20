@@ -1,7 +1,7 @@
   - platform: template
     unit_of_measurement: 'gpm'
     icon: "mdi:water"
-    name: "${upper_devicename} Water Flow"
+    name: "Water Flow"
     lambda: |-
       float temp = id(water_use);
       id(water_use) -= temp;

@@ -1,7 +1,7 @@
 - platform: modbus_controller
   modbus_controller_id: epever
   id: array_input_power
-  name: "${upper_devicename} Array Input Power"
+  name: "Array Input Power"
   address: 0x3102
   unit_of_measurement: "W" ## for any other unit the value is returned in minutes
   register_type: read

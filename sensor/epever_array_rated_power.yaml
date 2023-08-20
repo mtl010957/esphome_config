@@ -1,7 +1,7 @@
 - platform: modbus_controller
   modbus_controller_id: epever
   id: array_rated_power
-  name: "${upper_devicename} Array Rated Power"
+  name: "Array Rated Power"
   address: 0x3002
   unit_of_measurement: "W"
   register_type: read

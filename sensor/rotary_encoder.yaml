@@ -1,5 +1,5 @@
 - platform: rotary_encoder
-  name: "${upper_devicename} Rotary Encoder"
+  name: "Rotary Encoder"
   id: encoder
   pin_a:
     number: ${encoder_pin_a}

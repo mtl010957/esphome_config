@@ -1,4 +1,4 @@
   - platform: ble_client
     ble_client_id: client0
-    name: "${upper_devicename} Enable Bluetooth Connection"
+    name: "Enable Bluetooth Connection"
     restore_mode: ${restore_mode}

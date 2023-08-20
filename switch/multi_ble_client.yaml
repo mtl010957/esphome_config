@@ -1,3 +1,3 @@
   - platform: ble_client
     ble_client_id: ${ble_client_id}
-    name: "${upper_devicename} ${ble_client_name} Enable Bluetooth Connection"
+    name: "${ble_client_name} Enable Bluetooth Connection"

@@ -1,7 +1,7 @@
 - platform: modbus_controller
   modbus_controller_id: epever
   id: min_pv_voltage_today
-  name: "${upper_devicename} Minimum PV Voltage Today"
+  name: "Minimum PV Voltage Today"
   address: 0x3301
   register_type: read
   value_type: U_WORD

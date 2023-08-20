@@ -1,7 +1,7 @@
 - platform: modbus_controller
   modbus_controller_id: epever
   id: min_battery_today
-  name: "${upper_devicename} Minimum Battery Voltage Today"
+  name: "Minimum Battery Voltage Today"
   address: 0x3303
   register_type: read
   value_type: U_WORD

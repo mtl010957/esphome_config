@@ -1,6 +1,6 @@
 - platform: adc
   pin: A0
-  name: "${upper_devicename} Light Sensor"
+  name: "Light Sensor"
   update_interval: 10s
   expire_after: 60s
   filters:

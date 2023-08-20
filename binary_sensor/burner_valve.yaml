@@ -2,4 +2,4 @@
   pin:
     number: ${burner_valve_pin}
     inverted: true
-  name: "${upper_devicename} Burner Valve Sensor"
+  name: "Burner Valve Sensor"

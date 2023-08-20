@@ -2,48 +2,48 @@
   address: 0x68
   accel_x:
     id: accel_x
-    name: "${upper_devicename} Accel X"
+    name: "Accel X"
     filters:
      - sliding_window_moving_average:
         window_size: "${window_size}"
         send_every: "${send_every}"
   accel_y:
     id: accel_y
-    name: "${upper_devicename} Accel Y"
+    name: "Accel Y"
     filters:
      - sliding_window_moving_average:
         window_size: "${window_size}"
         send_every: "${send_every}"
   accel_z:
     id: accel_z
-    name: "${upper_devicename} Accel z"
+    name: "Accel z"
     filters:
      - sliding_window_moving_average:
         window_size: "${window_size}"
         send_every: "${send_every}"
   gyro_x:
-    name: "${upper_devicename} Gyro X"
+    name: "Gyro X"
     id: gyro_x
     filters:
      - sliding_window_moving_average:
         window_size: "${window_size}"
         send_every: "${send_every}"
   gyro_y:
-    name: "${upper_devicename} Gyro Y"
+    name: "Gyro Y"
     id: gyro_y
     filters:
      - sliding_window_moving_average:
         window_size: "${window_size}"
         send_every: "${send_every}"
   gyro_z:
-    name: "${upper_devicename} Gyro z"
+    name: "Gyro z"
     id: gyro_z
     filters:
      - sliding_window_moving_average:
         window_size: "${window_size}"
         send_every: "${send_every}"
   temperature:
-    name: "${upper_devicename} Temperature"
+    name: "Temperature"
     filters:
      - sliding_window_moving_average:
         window_size: "${window_size}"
@@ -52,7 +52,7 @@
 
 - platform: template
   id: roll
-  name: "${upper_devicename} Roll"
+  name: "Roll"
   accuracy_decimals: 2
   unit_of_measurement: "°"
   lambda: |-
@@ -61,7 +61,7 @@
 
 - platform: template
   id: pitch
-  name: "${upper_devicename} Pitch"
+  name: "Pitch"
   accuracy_decimals: 2
   unit_of_measurement: "°"
   lambda: |-

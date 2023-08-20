@@ -1,7 +1,7 @@
 - platform: modbus_controller
   modbus_controller_id: epever
   id: charging_current
-  name: "${upper_devicename} Charging Current"
+  name: "Charging Current"
   address: 0x3105
   unit_of_measurement: "A"
   register_type: read

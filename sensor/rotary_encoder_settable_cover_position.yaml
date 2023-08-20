@@ -1,5 +1,5 @@
 - platform: rotary_encoder
-  name: "${upper_devicename} Rotary Encoder"
+  name: "Rotary Encoder"
   id: encoder
   pin_a:
     number: ${encoder_pin_a}
@@ -20,7 +20,7 @@
             dtostrf(id(encoder).state,1,0,result);
             return result;
 - platform: mqtt_subscribe
-  name: "${upper_devicename} Set Rotary Encoder"
+  name: "Set Rotary Encoder"
   topic: ${set_rotary_encoder_topic}
   accuracy_decimals: 0
   filters:

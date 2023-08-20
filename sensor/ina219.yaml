@@ -2,13 +2,13 @@
   address: 0x40
   shunt_resistance: ${shunt_resistance}
   current:
-    name: "${upper_devicename} Current"
+    name: "Current"
   power:
-    name: "${upper_devicename} Power"
+    name: "Power"
   bus_voltage:
-    name: "${upper_devicename} Bus Voltage"
+    name: "Bus Voltage"
   shunt_voltage:
-    name: "${upper_devicename} Shunt Voltage"
+    name: "Shunt Voltage"
   max_voltage: ${max_voltage}
   max_current: ${max_current}
   update_interval: ${update_interval}

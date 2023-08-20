@@ -1,7 +1,7 @@
 - platform: modbus_controller
   modbus_controller_id: epever
   id: array_rated_voltage
-  name: "${upper_devicename} Array Rated Voltage"
+  name: "Array Rated Voltage"
   address: 0x3000
   unit_of_measurement: "V"
   register_type: read

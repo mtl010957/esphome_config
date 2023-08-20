@@ -1,58 +1,58 @@
   - platform: jbd_bms_ble
     jbd_bms_ble_id: bms1
     battery_strings:
-      name: "${upper_devicename} ${bms1_name} Battery Strings"
+      name: "${bms1_name} Battery Strings"
     current:
-      name: "${upper_devicename} ${bms1_name} Current"
+      name: "${bms1_name} Current"
     power:
-      name: "${upper_devicename} ${bms1_name} Power"
+      name: "${bms1_name} Power"
     charging_power:
-      name: "${upper_devicename} ${bms1_name} Charging Power"
+      name: "${bms1_name} Charging Power"
     discharging_power:
-      name: "${upper_devicename} ${bms1_name} Discharging Power"
+      name: "${bms1_name} Discharging Power"
     state_of_charge:
-      name: "${upper_devicename} ${bms1_name} State Of Charge"
+      name: "${bms1_name} State Of Charge"
     nominal_capacity:
-      name: "${upper_devicename} ${bms1_name} Nominal Capacity"
+      name: "${bms1_name} Nominal Capacity"
     charging_cycles:
-      name: "${upper_devicename} ${bms1_name} Charging Cycles"
+      name: "${bms1_name} Charging Cycles"
     capacity_remaining:
-      name: "${upper_devicename} ${bms1_name} Capacity Remaining"
+      name: "${bms1_name} Capacity Remaining"
     battery_cycle_capacity:
-      name: "${upper_devicename} ${bms1_name} Battery Cycle Capacity"
+      name: "${bms1_name} Battery Cycle Capacity"
     total_voltage:
-      name: "${upper_devicename} ${bms1_name} Total Voltage"
+      name: "${bms1_name} Total Voltage"
     average_cell_voltage:
-      name: "${upper_devicename} ${bms1_name} Average Cell Voltage"
+      name: "${bms1_name} Average Cell Voltage"
     delta_cell_voltage:
-      name: "${upper_devicename} ${bms1_name} Delta Cell Voltage"
+      name: "${bms1_name} Delta Cell Voltage"
     min_cell_voltage:
-      name: "${upper_devicename} ${bms1_name} Min Cell Voltage"
+      name: "${bms1_name} Min Cell Voltage"
     max_cell_voltage:
-      name: "${upper_devicename} ${bms1_name} Max Cell Voltage"
+      name: "${bms1_name} Max Cell Voltage"
     min_voltage_cell:
-      name: "${upper_devicename} ${bms1_name} Min Voltage Cell"
+      name: "${bms1_name} Min Voltage Cell"
     max_voltage_cell:
-      name: "${upper_devicename} ${bms1_name} Max Voltage Cell"
+      name: "${bms1_name} Max Voltage Cell"
     temperature_1:
-      name: "${upper_devicename} ${bms1_name} Temperature 1"
+      name: "${bms1_name} Temperature 1"
     temperature_2:
-      name: "${upper_devicename} ${bms1_name} Temperature 2"
+      name: "${bms1_name} Temperature 2"
     temperature_3:
-      name: "${upper_devicename} ${bms1_name} Temperature 3"
+      name: "${bms1_name} Temperature 3"
     cell_voltage_1:
-      name: "${upper_devicename} ${bms1_name} Cell Voltage 1"
+      name: "${bms1_name} Cell Voltage 1"
     cell_voltage_2:
-      name: "${upper_devicename} ${bms1_name} Cell Voltage 2"
+      name: "${bms1_name} Cell Voltage 2"
     cell_voltage_3:
-      name: "${upper_devicename} ${bms1_name} Cell Voltage 3"
+      name: "${bms1_name} Cell Voltage 3"
     cell_voltage_4:
-      name: "${upper_devicename} ${bms1_name} Cell Voltage 4"
+      name: "${bms1_name} Cell Voltage 4"
     operation_status_bitmask:
-      name: "${upper_devicename} ${bms1_name} Operation Status Bitmask"
+      name: "${bms1_name} Operation Status Bitmask"
     errors_bitmask:
-      name: "${upper_devicename} ${bms1_name} Errors Bitmask"
+      name: "${bms1_name} Errors Bitmask"
     balancer_status_bitmask:
-      name: "${upper_devicename} ${bms1_name} Balancer Status Bitmask"
+      name: "${bms1_name} Balancer Status Bitmask"
     software_version:
-      name: "${upper_devicename} ${bms1_name} Software Version"
+      name: "${bms1_name} Software Version"

@@ -1,5 +1,5 @@
 - platform: vl53l0x
-  name: "${upper_devicename} Fresh Tank Level Sensor"
+  name: "Fresh Tank Level Sensor"
   update_interval: "${distance_update_interval}"
   unit_of_measurement: "%"
   accuracy_decimals: 1

@@ -3,5 +3,5 @@
     number: ${binary_pin}
     inverted: True
     mode: INPUT_PULLUP
-  name: "${upper_devicename} Water Pump Signal"
+  name: "Water Pump Signal"
 

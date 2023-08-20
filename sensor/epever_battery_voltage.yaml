@@ -1,7 +1,7 @@
 - platform: modbus_controller
   modbus_controller_id: epever
   id: battery_voltage
-  name: "${upper_devicename} Battery Voltage"
+  name: "Battery Voltage"
   address: 0x331A
   register_type: read
   value_type: U_WORD

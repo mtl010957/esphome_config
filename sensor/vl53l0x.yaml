@@ -1,4 +1,4 @@
 - platform: vl53l0x
-  name: "${upper_devicename} Distance Sensor"
+  name: "Distance Sensor"
   update_interval: "${distance_update_interval}"
   unit_of_measurement: "m"

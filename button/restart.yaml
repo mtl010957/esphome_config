@@ -1,2 +1,2 @@
 - platform: restart
-  name: "${upper_devicename} Restart"
+  name: "Restart"

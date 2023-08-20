@@ -1,6 +1,6 @@
 - platform: bmp280
   temperature:
-    name: "${upper_devicename} Temperature"
+    name: "Temperature"
     oversampling: 16x
     unit_of_measurement: "°C"
     device_class: temperature
@@ -11,7 +11,7 @@
         - delta: 0.5
         - heartbeat: 300s
   pressure:
-    name: "${upper_devicename} Pressure"
+    name: "Pressure"
     oversampling: 16x
     unit_of_measurement: "hPa"
     device_class: pressure

@@ -1,7 +1,7 @@
 - platform: modbus_controller
   modbus_controller_id: epever
   id: max_battery_voltage_today
-  name: "${upper_devicename} Maximum Battery Voltage Today"
+  name: "Maximum Battery Voltage Today"
   address: 0x3302
   register_type: read
   value_type: U_WORD

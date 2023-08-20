@@ -1,5 +1,5 @@
 - platform: bang_bang
-  name: "${upper_devicename} Hot Water Recirc Control"
+  name: "Hot Water Recirc Control"
   sensor: probe_${probe_number}
   default_target_temperature_low: 32.222°C
   default_target_temperature_high: 43.333°C

@@ -1,5 +1,5 @@
   - platform: template
-    name: "${upper_devicename} Water Used"
+    name: "Water Used"
     unit_of_measurement: 'gal'
     icon: "mdi:water"
     device_class: water

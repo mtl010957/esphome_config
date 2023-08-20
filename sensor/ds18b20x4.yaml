@@ -1,6 +1,6 @@
 - platform: dallas
   address: ${probe_1_addr}
-  name: "${upper_devicename} ${probe_1_addr}"
+  name: "${probe_1_addr}"
   unit_of_measurement: "°C"
   device_class: temperature
   accuracy_decimals: 1
@@ -11,7 +11,7 @@
         - heartbeat: 300s
 - platform: dallas
   address: ${probe_2_addr}
-  name: "${upper_devicename} ${probe_2_addr}"
+  name: "${probe_2_addr}"
   unit_of_measurement: "°C"
   device_class: temperature
   accuracy_decimals: 1
@@ -22,7 +22,7 @@
         - heartbeat: 300s
 - platform: dallas
   address: ${probe_3_addr}
-  name: "${upper_devicename} ${probe_3_addr}"
+  name: "${probe_3_addr}"
   unit_of_measurement: "°C"
   device_class: temperature
   accuracy_decimals: 1
@@ -33,7 +33,7 @@
         - heartbeat: 300s
 - platform: dallas
   address: ${probe_4_addr}
-  name: "${upper_devicename} ${probe_4_addr}"
+  name: "${probe_4_addr}"
   unit_of_measurement: "°C"
   device_class: temperature
   accuracy_decimals: 1
