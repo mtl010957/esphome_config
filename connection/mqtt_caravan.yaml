@@ -1,4 +1,5 @@
 broker: !secret mqtt_caravan_broker
 username: !secret mqtt_caravan_username
 password: !secret mqtt_caravan_password
+discovery_unique_id_generator: mac
 

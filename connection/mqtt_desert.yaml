@@ -1,4 +1,5 @@
 broker: !secret mqtt_desert_broker
 username: !secret mqtt_desert_username
 password: !secret mqtt_desert_password
+discovery_unique_id_generator: mac
 
