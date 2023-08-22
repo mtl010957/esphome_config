@@ -1,3 +1,4 @@
 - platform: ble_rssi
   mac_address: ${bms0_mac_address}
   name: "RSSI"
+  entity_category: diagnostic
