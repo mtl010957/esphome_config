@@ -36,6 +36,7 @@ binary_sensor: !include ../binary_sensor/bms0_jbd_bms_ble.yaml
 sensor:
   - <<: !include ../sensor/bms0_jbd_bms_ble.yaml
   - <<: !include ../sensor/bms0_ble_rssi.yaml
+  - <<: !include ../sensor/esp32_internal_temperature.yaml
 switch:
   - <<: !include ../switch/client0_ble_client.yaml
   - <<: !include ../switch/bms0_jbd_bms_ble.yaml
