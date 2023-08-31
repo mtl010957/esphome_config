@@ -2,9 +2,9 @@ substitutions:
   devicename: dm22ina
   upper_devicename: DM22INA
   led_pin: GPIO2
-  shunt_resistance: "0.00025 ohm"
+  shunt_resistance: "0.00075 ohm"
   max_voltage: "32.0V"
-  max_current: "300A"
+  max_current: "100A"
   update_interval: "60s"
   
 esphome: !include ../base/name_onboot.yaml
