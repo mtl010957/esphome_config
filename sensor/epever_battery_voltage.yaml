@@ -12,5 +12,5 @@
   filters:
     - multiply: 0.01
     - lambda: !lambda |-
-        if (0 > x > 40) return {};
+        if ((0 > x) || (x > 40)) return {};
         return x;
