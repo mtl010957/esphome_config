@@ -12,5 +12,5 @@
   filters:
     - multiply: 0.01
     - lambda: !lambda |-
-        if (x > 60) return {};
+        if (abs(x) > 60) return {};
         return x;
