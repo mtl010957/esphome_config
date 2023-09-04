@@ -2,7 +2,7 @@
     jbd_bms_ble_id: bms0
     errors:
       name: "Errors"
-    operation_status:
-      name: "Operation Status"
-    device_model:
-      name: "Device Model"
+#    operation_status:
+#      name: "Operation Status"
+#    device_model:
+#      name: "Device Model"

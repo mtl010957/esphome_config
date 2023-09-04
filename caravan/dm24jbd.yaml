@@ -2,7 +2,7 @@ substitutions:
   devicename: dm24jbd
   upper_devicename: DM24JBD
   led_pin: GPIO2
-  update_interval: "2s"
+  update_interval: "4s"
   external_components_source: github://syssi/esphome-jbd-bms@main
   #bms0_mac_address: "A4:C1:37:40:2F:C8"
   #bms0_name: "GJ-12V100AH-0526-048"
