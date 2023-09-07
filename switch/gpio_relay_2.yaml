@@ -1,5 +1,5 @@
 - platform: gpio
-  name: "${devicename}_2"
+  name: "relay_2"
   restore_mode: RESTORE_DEFAULT_OFF
   pin:
     number: D6
