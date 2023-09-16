@@ -6,6 +6,9 @@ substitutions:
   max_voltage: "32.0V"
   max_current: "100A"
   update_interval: "60s"
+  current_offset: "-0.01221"
+  power_offset: "-0.18312"
+  shunt_offset: "-0.00001"
   
 esphome: !include ../base/name_onboot.yaml
 esp8266: !include ../esp8266/d1mini.yaml

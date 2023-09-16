@@ -3,12 +3,18 @@
   shunt_resistance: ${shunt_resistance}
   current:
     name: "Current"
+    filters:
+      - offset: ${current_offset}
   power:
     name: "Power"
+    filters:
+      - offset: ${power_offset}
   bus_voltage:
     name: "Bus Voltage"
   shunt_voltage:
     name: "Shunt Voltage"
+    filters:
+      - offset: ${shunt_offset}
   max_voltage: ${max_voltage}
   max_current: ${max_current}
   update_interval: ${update_interval}
