@@ -5,7 +5,7 @@ substitutions:
   shunt_resistance: "0.00075 ohm"
   max_voltage: "32.0V"
   max_current: "100A"
-  update_interval: "60s"
+  update_interval: "5s"
   current_offset: "-0.01221"
   power_offset: "-0.18312"
   shunt_offset: "-0.00001"
