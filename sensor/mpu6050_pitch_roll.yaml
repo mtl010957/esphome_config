@@ -1,69 +1,71 @@
 - platform: mpu6050
   address: 0x68
+  # All accel and gyro values are internal
   accel_x:
     id: accel_x
-    name: "Accel X"
     filters:
-     - sliding_window_moving_average:
-        window_size: "${window_size}"
-        send_every: "${send_every}"
+      - sliding_window_moving_average:
+          window_size: "${window_size}"
+          send_every: "${send_every}"
   accel_y:
     id: accel_y
-    name: "Accel Y"
     filters:
-     - sliding_window_moving_average:
-        window_size: "${window_size}"
-        send_every: "${send_every}"
+      - sliding_window_moving_average:
+          window_size: "${window_size}"
+          send_every: "${send_every}"
   accel_z:
     id: accel_z
-    name: "Accel z"
     filters:
-     - sliding_window_moving_average:
-        window_size: "${window_size}"
-        send_every: "${send_every}"
+      - sliding_window_moving_average:
+          window_size: "${window_size}"
+          send_every: "${send_every}"
   gyro_x:
-    name: "Gyro X"
     id: gyro_x
     filters:
-     - sliding_window_moving_average:
-        window_size: "${window_size}"
-        send_every: "${send_every}"
+      - sliding_window_moving_average:
+          window_size: "${window_size}"
+          send_every: "${send_every}"
   gyro_y:
-    name: "Gyro Y"
     id: gyro_y
     filters:
-     - sliding_window_moving_average:
-        window_size: "${window_size}"
-        send_every: "${send_every}"
+      - sliding_window_moving_average:
+          window_size: "${window_size}"
+          send_every: "${send_every}"
   gyro_z:
-    name: "Gyro z"
     id: gyro_z
     filters:
-     - sliding_window_moving_average:
-        window_size: "${window_size}"
-        send_every: "${send_every}"
+      - sliding_window_moving_average:
+          window_size: "${window_size}"
+          send_every: "${send_every}"
   temperature:
     name: "Temperature"
     filters:
-     - sliding_window_moving_average:
-        window_size: "${window_size}"
-        send_every: "${send_every}"
+      - sliding_window_moving_average:
+          window_size: "${window_size}"
+          send_every: "${send_every}"
+      - delta: "${delta}"
   update_interval: "${update_interval}"
 
 - platform: template
   id: roll
   name: "Roll"
-  accuracy_decimals: 2
+  accuracy_decimals: 1
   unit_of_measurement: "°"
   lambda: |-
     return  (atan( id(accel_y).state / sqrt( pow( id(accel_x).state , 2) + pow( id(accel_z).state , 2) ) ) * 180 / PI) ;
+  filters:
+    - delta: "${delta}"
+    - heartbeat: "${heartbeat}"
   update_interval: "${update_interval}"
 
 - platform: template
   id: pitch
   name: "Pitch"
-  accuracy_decimals: 2
+  accuracy_decimals: 1
   unit_of_measurement: "°"
   lambda: |-
     return  (atan(-1 * id(accel_x).state / sqrt(pow(id(accel_y).state, 2) + pow(id(accel_z).state, 2))) * 180 / PI);
+  filters:
+    - delta: "${delta}"
+    - heartbeat: "${heartbeat}"
   update_interval: "${update_interval}"
