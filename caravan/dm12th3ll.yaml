@@ -6,6 +6,8 @@ substitutions:
   liquid_level_1_pin: D5
   liquid_level_2_pin: D6
   liquid_level_3_pin: D7
+  time_on: "5s"
+  time_off: "5s"
 
 esphome: !include ../base/name_onboot.yaml
 esp8266: !include ../esp8266/d1mini.yaml
