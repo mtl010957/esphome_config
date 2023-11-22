@@ -1,7 +1,7 @@
 substitutions:
   devicename: dm10tr1
   upper_devicename: DM10TR1
-  led_pin: D4
+  blue_led_pin: D4
   dallas_pin: D6
   probe_number: "1"
   relay_number: "1"

@@ -1,7 +1,7 @@
 substitutions:
   devicename: dm09qmc1
   upper_devicename: DM09QMC1
-  led_pin: D4
+  blue_led_pin: D4
   gal_per_pulse: "0.0085"
   update_interval: "40ms"
   oversampling: "64x"

@@ -1,7 +1,7 @@
 substitutions:
   devicename: dm20br
   upper_devicename: DM20BR
-  led_pin: D4
+  blue_led_pin: D4
   binary_pin: D1
   relay_pin: D2
 

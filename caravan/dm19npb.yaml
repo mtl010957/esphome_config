@@ -1,7 +1,7 @@
 substitutions:
   devicename: dm19npb
   upper_devicename: DM19NPB
-  led_pin: D4
+  blue_led_pin: D4
   neopixel_pin: GPIO3
   num_leds: "63"
   neopixel_internal: "true"
