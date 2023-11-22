@@ -1,4 +1,5 @@
 - platform: monochromatic
+  id: red_led_light
   name: "Red LED"
   output: red_led
   entity_category: config

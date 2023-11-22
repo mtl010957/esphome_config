@@ -2,7 +2,7 @@ substitutions:
   devicename: sb07
   upper_devicename: SB07
   button_pin: GPIO0
-  led_pin: GPIO13
+  green_led_pin: GPIO13
   relay_pin: GPIO12
 
 esphome: !include ../base/name_onboot.yaml

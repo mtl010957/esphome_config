@@ -2,7 +2,7 @@ substitutions:
   devicename: nm08sv1
   upper_devicename: NM08SV1
   button_pin: D3
-  led_pin: D4
+  blue_led_pin: D4
   servo_pin: D5
   on_level: 70%
   off_level: 0%

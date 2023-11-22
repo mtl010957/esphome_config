@@ -1,7 +1,7 @@
 substitutions:
   devicename: dm12th3ll
   upper_devicename: DM12TH3LL
-  led_pin: D4
+  blue_led_pin: D4
   sensor_pin: D2
   liquid_level_1_pin: D5
   liquid_level_2_pin: D6

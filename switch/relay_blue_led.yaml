@@ -1,0 +1,10 @@
+- platform: gpio
+  name: "Relay"
+  pin: ${relay_pin}
+  id: relay
+  restore_mode: RESTORE_DEFAULT_OFF
+  on_turn_on:
+    - light.turn_on: blue_led_light
+  on_turn_off:
+    - light.turn_off: blue_led_light
+

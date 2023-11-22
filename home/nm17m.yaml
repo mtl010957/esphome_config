@@ -2,7 +2,7 @@ substitutions:
   devicename: nm17m
   upper_devicename: NM17M
   button_pin: D3
-  led_pin: D4
+  blue_led_pin: D4
   pir_pin: D7
 
 esphome: !include ../base/name_onboot.yaml

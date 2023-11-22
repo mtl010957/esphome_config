@@ -1,7 +1,7 @@
 substitutions:
   devicename: dm18mpu
   upper_devicename: DM18MPU
-  led_pin: D4
+  blue_led_pin: D4
   update_interval: "500ms"
   window_size: "10"
   send_every: "5"

@@ -1,6 +1,8 @@
 - platform: esp8266_pwm
-  id: blue_led
+  id: red_led
   pin:
-    number: ${blue_led_pin}
+    number: ${red_led_pin}
     inverted: True
   frequency: 1000 Hz
+
+

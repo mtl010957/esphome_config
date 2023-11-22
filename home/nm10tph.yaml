@@ -2,7 +2,7 @@ substitutions:
   devicename: nm10tph
   upper_devicename: NM10TPH
   button_pin: D3
-  led_pin: D4
+  blue_led_pin: D4
 
 esphome: !include ../base/name_onboot.yaml
 esp8266: !include ../esp8266/nodemcuv2.yaml

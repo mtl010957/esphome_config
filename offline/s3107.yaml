@@ -1,6 +1,6 @@
 substitutions:
-  devicename: s3104
-  upper_devicename: S3104
+  devicename: s3107
+  upper_devicename: S3107
   button_pin: GPIO0
   blue_led_pin: GPIO13
   relay_pin: GPIO12

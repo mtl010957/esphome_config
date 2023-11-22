@@ -1,7 +1,7 @@
 substitutions:
   devicename: dm22ina
   upper_devicename: DM22INA
-  led_pin: GPIO2
+  blue_led_pin: GPIO2
   shunt_resistance: "0.00075 ohm"
   max_voltage: "32.0V"
   max_current: "100A"
