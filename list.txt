@@ -20,6 +20,8 @@ dm13th
 dm14th
 dm16th
 dm17sht
+gw01
+gw02
 nm01sv1
 nm02sv1
 nm03sv1
