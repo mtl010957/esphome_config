@@ -1,0 +1,12 @@
+- platform: dallas
+  address: ${probe_4_addr}
+  id: "probe_4"
+  name: "Temperature Probe 4"
+  unit_of_measurement: "°C"
+  device_class: temperature
+  accuracy_decimals: 1
+  expire_after: 600s
+  filters:
+    - or:
+        - delta: 0.5
+        - heartbeat: 300s

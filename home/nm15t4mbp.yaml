@@ -40,6 +40,9 @@ output: !include ../output/blue_led.yaml
 dallas: !include ../sensor/dallas.yaml
 # Set of four DS18B20 Temperature probes
 sensor:
-  - <<: !include ../sensor/ds18b20x4.yaml
+  - <<: !include ../sensor/ds18b20p1.yaml
+  - <<: !include ../sensor/ds18b20p2.yaml
+  - <<: !include ../sensor/ds18b20p3.yaml
+  - <<: !include ../sensor/ds18b20p4.yaml
   - <<: !include ../sensor/adc_pressure_sensor.yaml
 
