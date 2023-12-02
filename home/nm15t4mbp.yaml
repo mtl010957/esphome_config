@@ -1,0 +1,45 @@
+substitutions:
+  devicename: nm15t4mbp
+  upper_devicename: NM15T4MBP
+  button_pin: D3
+  blue_led_pin: D4
+  dallas_pin: D6
+  probe_1_addr: "0xDC000008E3B1AB28"
+  # NW
+  probe_2_addr: "0xDE000008E2B6AF28"
+  # SE
+  probe_3_addr: "0xC400000A01299728"
+  # Supply
+  probe_4_addr: "0x7B00000A00BBB128"
+  # Flue
+  update_interval: "5s"
+  moisture_pin: D5
+  burner_valve_pin: D7
+  offset: "0"
+  multiplier: "30.0"
+
+esphome: !include ../base/name_onboot.yaml
+esp8266: !include ../esp8266/nodemcuv2.yaml
+wifi: !include ../connection/wifi.yaml
+mqtt: !include ../connection/mqtt.yaml
+# Enable logging
+logger: !include ../logger/debug.yaml
+# Expose some info to HA
+text_sensor: !include ../text_sensor/wifi_info.yaml
+ota:
+# Enable remote restart from HA
+button: !include ../button/restart.yaml
+# One moisture sensor
+binary_sensor:
+  - <<: !include ../binary_sensor/button.yaml
+  - <<: !include ../binary_sensor/lm393_rain.yaml
+  - <<: !include ../binary_sensor/burner_valve.yaml
+light: !include ../light/blue_led.yaml
+output: !include ../output/blue_led.yaml
+# Need Dallas for one wire sensors
+dallas: !include ../sensor/dallas.yaml
+# Set of four DS18B20 Temperature probes
+sensor:
+  - <<: !include ../sensor/ds18b20x4.yaml
+  - <<: !include ../sensor/adc_pressure_sensor.yaml
+
