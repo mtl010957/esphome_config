@@ -16,7 +16,7 @@ substitutions:
   moisture_pin: D5
   burner_valve_pin: D7
   offset: "0"
-  multiplier: "30.0"
+  multiplier: "80.0"
 
 esphome: !include ../base/name_onboot.yaml
 esp8266: !include ../esp8266/nodemcuv2.yaml
