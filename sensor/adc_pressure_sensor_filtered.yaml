@@ -8,6 +8,6 @@
   filters:
     - offset: ${offset}
     - multiply: ${multiplier}
-    - sliding_window_moving_average
+    - sliding_window_moving_average:
         window_size: "${window_size}"
         send_every: "${send_every}"
