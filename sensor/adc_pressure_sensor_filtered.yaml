@@ -4,7 +4,7 @@
   unit_of_measurement: psi
   device_class: pressure
   update_interval: ${update_interval}
-  expire_after: 60s
+  expire_after: 600s
   filters:
     - offset: ${offset}
     - multiply: ${multiplier}
