@@ -17,6 +17,8 @@ substitutions:
   burner_valve_pin: D7
   offset: "0"
   multiplier: "80.0"
+  window_size: "30"
+  send_every: "30"
 
 esphome: !include ../base/name_onboot.yaml
 esp8266: !include ../esp8266/nodemcuv2.yaml
