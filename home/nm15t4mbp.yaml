@@ -46,5 +46,5 @@ sensor:
   - <<: !include ../sensor/ds18b20p2.yaml
   - <<: !include ../sensor/ds18b20p3.yaml
   - <<: !include ../sensor/ds18b20p4.yaml
-  - <<: !include ../sensor/adc_pressure_sensor.yaml
+  - <<: !include ../sensor/adc_pressure_sensor_filtered.yaml
 
