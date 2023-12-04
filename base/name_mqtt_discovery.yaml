@@ -7,15 +7,15 @@ on_boot:
         format: "Sending MQTT Discovery Message"
         tag: "esphome"
     - mqtt.publish_json:
-        topic: "homeassistant/cover/${devicename}/${devicename}_cover/config"
+        topic: "homeassistant/cover/${devicename}/cover/config"
         retain: True
         payload: |-
           root["name"] = "${upper_devicename} Cover";
-          root["state_topic"] = "${devicename}/cover/${devicename}_cover/state";
+          root["state_topic"] = "${devicename}/cover/${cover_name}/state";
           root["availability_topic"] = "${devicename}/status";
           root["unique_id"] = "ESPcover${devicename}_cover";
-          root["tilt_status_topic"] = "${devicename}/cover/${devicename}_cover/tilt/state";
-          root["tilt_command_topic"] = "${devicename}/cover/${devicename}_cover/tilt/command";
+          root["tilt_status_topic"] = "${devicename}/cover/${cover_name}/tilt/state";
+          root["tilt_command_topic"] = "${devicename}/cover/${cover_name}/tilt/command";
           root["tilt_closed_value"] = ${tilt_closed_value};
           root["tilt_opened_value"] = ${tilt_opened_value};
           root["tilt_min"] = ${tilt_min};
