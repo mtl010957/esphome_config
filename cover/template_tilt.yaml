@@ -1,6 +1,6 @@
 - platform: template
   id: ${devicename}
-  name: "Cover"
+  name: "${cover_name}"
   device_class: ${device_class}
   optimistic: False
   discovery: False

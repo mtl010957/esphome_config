@@ -1,6 +1,7 @@
 substitutions:
   devicename: nm03sv1
   upper_devicename: NM03SV1
+  cover_name: left_pull
   tilt_closed_value: "5"
   tilt_opened_value: "60"
   tilt_min: "0"
