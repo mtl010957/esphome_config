@@ -1,7 +1,6 @@
 - platform: template
-  name: "Cover"
   id: ${devicename}
-  mqtt_id: ${devicename}_cover
+  name: "Cover"
   device_class: ${device_class}
   optimistic: False
   discovery: False
