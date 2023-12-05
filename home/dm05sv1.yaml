@@ -1,7 +1,7 @@
 substitutions:
   devicename: dm05sv1
   upper_devicename: DM05SV1
-  device_friendly_name: "DM04SV1 Blinds"
+  device_friendly_name: "DM05SV1 Blinds"
   cover_name: left_pull
   tilt_closed_value: "5"
   tilt_opened_value: "60"
