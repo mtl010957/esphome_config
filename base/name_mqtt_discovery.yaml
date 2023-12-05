@@ -10,7 +10,7 @@ on_boot:
         topic: "homeassistant/cover/${devicename}/cover/config"
         retain: True
         payload: |-
-          root["name"] = "${upper_devicename} Cover";
+          root["name"] = "";
           root["state_topic"] = "${devicename}/cover/${cover_name}/state";
           root["availability_topic"] = "${devicename}/status";
           root["unique_id"] = "ESPcover${devicename}_cover";
