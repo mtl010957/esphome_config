@@ -1,14 +1,16 @@
 substitutions:
   devicename: gw01
   upper_devicename: GW01
+  device_friendly_name: "GW01 Outlet"
   button_pin: GPIO4
   blue_led_pin: GPIO13
   red_led_pin: GPIO12
   relay_pin: GPIO14
-  switch_name: "Outlet"
+  switch_name: "None"
   switch_device_class: "outlet"
+  switch_icon: "mdi:power-socket-us"
 
-esphome: !include ../base/name_onboot.yaml
+esphome: !include ../base/device_friendly_name_onboot.yaml
 esp8266: !include ../esp8266/esp01_1m.yaml
 wifi: !include ../connection/wifi.yaml
 mqtt: !include ../connection/mqtt.yaml
