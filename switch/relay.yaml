@@ -1,5 +1,7 @@
 - platform: gpio
-  name: "Relay"
+  name: "${switch_name}"
+  device_class: "${switch_device_class}"
+  icon: "${switch_icon}"
   pin: ${relay_pin}
   id: relay
   restore_mode: RESTORE_DEFAULT_OFF
