@@ -1,6 +1,7 @@
 substitutions:
   devicename: nm08sv1
   upper_devicename: NM08SV1
+  device_friendly_name: "NM08SV1 Servo"
   button_pin: D3
   blue_led_pin: D4
   servo_pin: D5
@@ -9,7 +10,7 @@ substitutions:
   transition_length: 0s
   auto_detach_time: 0s
   
-esphome: !include ../base/name_onboot.yaml
+esphome: !include ../base/device_friendly_name_onboot.yaml
 esp8266: !include ../esp8266/nodemcuv2.yaml
 wifi: !include ../connection/wifi.yaml
 mqtt: !include ../connection/mqtt.yaml
