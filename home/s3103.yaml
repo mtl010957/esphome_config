@@ -1,7 +1,7 @@
 substitutions:
   devicename: s3103
   upper_devicename: S3103
-  device_friendly_name: "S3104 Outlet"
+  device_friendly_name: "S3103 Outlet"
   button_pin: GPIO0
   blue_led_pin: GPIO13
   relay_pin: GPIO12
