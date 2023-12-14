@@ -1,6 +1,7 @@
 substitutions:
   devicename: dm09qmc1
   upper_devicename: DM09QMC1
+  device_friendly_name: "DM09QMC1 Water Meter"
   blue_led_pin: D4
   gal_per_pulse: "0.0085"
   update_interval: "40ms"
@@ -10,7 +11,7 @@ substitutions:
   output_delta: "0.01"
   x_throttle: "60s"
   
-esphome: !include ../base/name_onboot.yaml
+esphome: !include ../base/device_friendly_name_onboot.yaml
 esp8266: !include ../esp8266/d1mini.yaml
 wifi: !include ../connection/wifi.yaml
 mqtt: !include ../connection/mqtt.yaml

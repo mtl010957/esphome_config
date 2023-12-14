@@ -1,4 +1,5 @@
 name: ${devicename}
+friendly_name: "${device_friendly_name}"
 on_boot:
   priority: -80
   then:

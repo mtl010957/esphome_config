@@ -1,11 +1,12 @@
 substitutions:
   devicename: nm17m
   upper_devicename: NM17M
+  device_friendly_name: "NM17M Motion"
   button_pin: D3
   blue_led_pin: D4
   pir_pin: D7
 
-esphome: !include ../base/name_onboot.yaml
+esphome: !include ../base/device_friendly_name_onboot.yaml
 esp8266: !include ../esp8266/nodemcuv2.yaml
 wifi: !include ../connection/wifi_ap.yaml
 mqtt: !include ../connection/mqtt.yaml

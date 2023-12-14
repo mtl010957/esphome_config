@@ -1,10 +1,11 @@
 substitutions:
   devicename: dm14th
   upper_devicename: DM14TH
+  device_friendly_name: "DM14TH Climate"
   blue_led_pin: D4
   sensor_pin: D2
 
-esphome: !include ../base/name_onboot.yaml
+esphome: !include ../base/device_friendly_name_onboot.yaml
 esp8266: !include ../esp8266/d1mini.yaml
 wifi: !include ../connection/wifi.yaml
 mqtt: !include ../connection/mqtt.yaml
