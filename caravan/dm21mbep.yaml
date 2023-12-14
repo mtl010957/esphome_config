@@ -7,7 +7,7 @@ substitutions:
   baud_rate: "115200"
   stop_bits: "1"
   flow_control_pin: GPIO5
-  send_wait_time: "250ms"
+  send_wait_time: "500ms"
   command_throttle: "0ms"
   update_interval: "60s"
   skip_updates: "5"
