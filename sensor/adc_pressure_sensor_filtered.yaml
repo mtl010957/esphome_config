@@ -2,7 +2,7 @@
   pin: A0
   name: "Pressure Sensor"
   unit_of_measurement: psi
-  accuracy_decimals: 0
+  accuracy_decimals: "${pressure_accuracy}"
   device_class: pressure
   update_interval: ${update_interval}
   expire_after: 600s
