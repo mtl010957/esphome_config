@@ -1,0 +1,15 @@
+  - platform: pulse_counter
+    pin: ${flow_meter_pin}
+    name: "Flow Rate"
+    update_interval: "${update_interval}"
+    unit_of_measurement: 'gpm'
+    filters:
+      - multiply: ${gallons_per_pulse}
+      - multiply: ${updates_per_minute}
+      
+    total:
+      unit_of_measurement: 'gal'
+      name: "Total Used"
+      filters:
+        - multiply: ${gallons_per_pulse}
+        - multiply: ${updates_per_minute}
