@@ -1,16 +1,17 @@
 substitutions:
-  devicename: dm20br
-  upper_devicename: DM20BR
+  devicename: dm26r
+  upper_devicename: DM26R
   blue_led_pin: D4
-  binary_pin: D1
-  relay_pin: D2
-  relay_name: "Water Pump Toggle"
-  relay_duration: "1s"
+  relay_pin: D1
+  relay_name: "Power Cycle"
+  relay_duration: "5s"
 
 esphome: !include ../base/name_onboot.yaml
 esp8266: !include ../esp8266/d1mini.yaml
 wifi: !include ../connection/wifi_caravan.yaml
 mqtt: !include ../connection/mqtt_caravan.yaml
+# Enable web server
+web_server:
 # Enable logging
 logger: !include ../logger/debug.yaml
 # Expose some info to HA
@@ -24,5 +25,3 @@ light: !include ../light/blue_led.yaml
 output:
   - <<: !include ../output/blue_led.yaml
   - <<: !include ../output/relay.yaml
-# Binary input for water pump signal
-binary_sensor: !include ../binary_sensor/water_pump_signal.yaml
