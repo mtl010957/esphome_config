@@ -3,12 +3,14 @@
     name: "Flow Rate"
     update_interval: "${update_interval}"
     unit_of_measurement: 'gpm'
+    accuracy_decimals: ${flow_accuracy}
     filters:
       - multiply: ${gallons_per_pulse}
       - multiply: ${updates_per_minute}
       
     total:
       unit_of_measurement: 'gal'
+      accuracy_decimals: ${total_accuracy}
       name: "Total Used"
       filters:
         - multiply: ${gallons_per_pulse}

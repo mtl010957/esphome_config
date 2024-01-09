@@ -4,10 +4,12 @@ substitutions:
   device_friendly_name: "DM25WM Water Meter"
   blue_led_pin: GPIO2
   flow_meter_pin: GPIO14
-  update_interval: "10s"
-  updates_per_minute: "6"
+  update_interval: "5s"
+  updates_per_minute: "12"
   gallons_per_pulse: "0.00841"
-  offset: "-0.1"
+  flow_accuracy: "2"
+  total_accuracy: "1"
+  offset: "-0.1533"
   multiplier: "125"
   window_size: "30"
   send_every: "5"
