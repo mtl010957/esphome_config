@@ -1,0 +1,3 @@
+ssid: !secret wifi_lakefront_ssid
+password: !secret wifi_lakefront_password
+#use_address: nm15t4mb.local
