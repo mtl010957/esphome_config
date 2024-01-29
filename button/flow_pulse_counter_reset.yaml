@@ -1,0 +1,6 @@
+- platform: template
+  name: "Flow Pulse Counter Reset"
+  on_press:
+    - pulse_counter.set_total_pulses:
+        id: flow_pulse_counter_id
+        value: 0

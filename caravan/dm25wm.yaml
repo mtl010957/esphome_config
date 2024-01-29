@@ -27,6 +27,7 @@ ota:
 # Enable remote restart from HA
 button:
   - <<: !include ../button/restart.yaml
+  - <<: !include ../button/flow_pulse_counter_reset.yaml
 light: !include ../light/blue_led.yaml
 output:
   - <<: !include ../output/blue_led.yaml

@@ -1,5 +1,6 @@
   - platform: pulse_counter
     pin: ${flow_meter_pin}
+    id: flow_pulse_counter_id
     name: "Flow Rate"
     update_interval: "${update_interval}"
     unit_of_measurement: 'gpm'
