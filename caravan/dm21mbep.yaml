@@ -1,23 +1,23 @@
 substitutions:
   devicename: dm21mbep
   upper_devicename: DM21MBEP
-  blue_led_pin: GPIO2
-  tx_pin: GPIO17
-  rx_pin: GPIO16
+  blue_led_pin: GPIO2 #D4
+  tx_pin: GPIO1 # TX
+  rx_pin: GPIO3 # RX
   baud_rate: "115200"
   stop_bits: "1"
-  flow_control_pin: GPIO5
+#  flow_control_pin: GPIO5
   send_wait_time: "500ms"
   command_throttle: "0ms"
   update_interval: "60s"
   skip_updates: "5"
   
 esphome: !include ../base/name_onboot.yaml
-esp32: !include ../esp32/wemos_d1_mini32.yaml
+esp8266: !include ../esp8266/d1mini.yaml
 wifi: !include ../connection/wifi_caravan.yaml
 mqtt: !include ../connection/mqtt_caravan.yaml
 # Enable logging
-logger: !include ../logger/debug.yaml
+logger: !include ../logger/debug_no_uart.yaml
 # Expose some info to HA
 text_sensor:
   - <<: !include ../text_sensor/wifi_info.yaml
@@ -25,7 +25,7 @@ ota:
 # Enable remote restart from HA
 button: !include ../button/restart.yaml
 light: !include ../light/blue_led.yaml
-output: !include ../output/blue_ledc.yaml
+output: !include ../output/blue_led.yaml
 # Modbus setup
 uart: !include ../uart/uart_modbus.yaml
 modbus: !include ../connection/modbus1_noflow.yaml
