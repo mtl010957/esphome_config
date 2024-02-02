@@ -1,7 +1,7 @@
 substitutions:
   devicename: dm21mbep
   upper_devicename: DM21MBEP
-  device_friendly_name: "DM21MBEP EPEver TracerAN"
+  device_friendly_name: "DM21MBEP Solar"
   blue_led_pin: GPIO2 #D4
   tx_pin: GPIO1 # TX
   rx_pin: GPIO3 # RX
