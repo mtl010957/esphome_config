@@ -14,7 +14,7 @@ substitutions:
   skip_updates: "5"
   relay_pin: GPIO12 # D6
   switch_name: "MT50 Disable"
-  switch_device_class: "None"
+  switch_device_class: "switch"
   switch_icon: "mdi:toggle-switch"
   
 esphome: !include ../base/device_friendly_name_onboot.yaml
