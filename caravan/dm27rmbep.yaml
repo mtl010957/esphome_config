@@ -33,7 +33,7 @@ light: !include ../light/blue_led.yaml
 output:
   - <<: !include ../output/blue_led.yaml
   - <<: !include ../output/relay.yaml
-switch: !include ../switch/relay.taml
+switch: !include ../switch/relay.yaml
 # Modbus setup
 uart: !include ../uart/uart_modbus.yaml
 modbus: !include ../connection/modbus1_noflow.yaml
