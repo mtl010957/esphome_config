@@ -13,6 +13,9 @@ substitutions:
   update_interval: "60s"
   skip_updates: "5"
   relay_pin: GPIO12 # D6
+  switch_name: "MT50 Disable"
+  switch_device_class: "None"
+  switch_icon: "mdi:toggle-switch"
   
 esphome: !include ../base/device_friendly_name_onboot.yaml
 esp8266: !include ../esp8266/d1mini.yaml
@@ -30,6 +33,7 @@ light: !include ../light/blue_led.yaml
 output:
   - <<: !include ../output/blue_led.yaml
   - <<: !include ../output/relay.yaml
+switch: !include ../switch/relay.taml
 # Modbus setup
 uart: !include ../uart/uart_modbus.yaml
 modbus: !include ../connection/modbus1_noflow.yaml
