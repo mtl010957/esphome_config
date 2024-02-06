@@ -10,8 +10,10 @@
   state_class: measurement
   device_class: voltage
   skip_updates: ${skip_updates}
+  expire_after: ${expire_after}
   filters:
     - multiply: 0.01
-    - lambda: !lambda |-
-        if (x > 120) return {};
-        return x;
+    - clamp:
+        max_value: 120.0 # Max rated
+        min_value: 0.0
+        ignore_out_of_range: true

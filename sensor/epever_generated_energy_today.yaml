@@ -10,8 +10,10 @@
   state_class: total_increasing
   device_class: energy
   skip_updates: ${skip_updates}
+  expire_after: ${expire_after}
   filters:
     - multiply: 10.0
-    - lambda: !lambda |-
-        if (x > 40*12*12) return {};
-        return x;
+    - clamp:
+        max_value: 5760.0 # 40x12x12
+        min_value: 0.0
+        ignore_out_of_range: true

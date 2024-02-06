@@ -6,3 +6,4 @@
   register_type: read
   value_type: U_WORD
   accuracy_decimals: 0
+  expire_after: ${expire_after}

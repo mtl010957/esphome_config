@@ -9,8 +9,10 @@
   accuracy_decimals: 1
   state_class: measurement
   device_class: power
+  expire_after: ${expire_after}
   filters:
     - multiply: 0.01
-    - lambda: !lambda |-
-        if (x > (60*120)) return {};
-        return x;
+    - clamp:
+        max_value: 7200.0 # 60x120
+        min_value: 0.0
+        ignore_out_of_range: true

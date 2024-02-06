@@ -11,7 +11,9 @@
   state_class: measurement
   device_class: battery
   skip_updates: ${skip_updates}
+  expire_after: ${expire_after}
   filters:
-    - lambda: !lambda |-
-        if (x > 100) return {};
-        return x;
+    - clamp:
+        max_value: 100.0 # Max rated
+        min_value: 0.0
+        ignore_out_of_range: true

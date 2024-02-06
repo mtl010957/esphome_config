@@ -9,10 +9,12 @@
   accuracy_decimals: 1
   state_class: measurement
   device_class: temperature
+  expire_after: ${expire_after}
   filters:
     - multiply: 0.01
-    - lambda: !lambda |-
-        if (x > 100) return {};
-        return x;
+    - clamp:
+        max_value: 100.0 # Max rated
+        min_value: -40.0
+        ignore_out_of_range: true
 
 

@@ -7,3 +7,4 @@
   value_type: U_WORD
   bitmask: 7  #(Bits 0-3)
   accuracy_decimals: 0
+  expire_after: ${expire_after}
