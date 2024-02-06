@@ -1,12 +1,13 @@
 substitutions:
   devicename: dm26r
   upper_devicename: DM26R
+  device_friendly_name: "DM26R Relay"
   blue_led_pin: D4
   relay_pin: D1
   relay_name: "Power Cycle"
   relay_duration: "5s"
 
-esphome: !include ../base/name_onboot.yaml
+esphome: !include ../base/device_friendly_name_onboot.yaml
 esp8266: !include ../esp8266/d1mini.yaml
 wifi: !include ../connection/wifi_caravan.yaml
 mqtt: !include ../connection/mqtt_caravan.yaml
