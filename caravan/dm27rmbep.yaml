@@ -12,6 +12,7 @@ substitutions:
   command_throttle: "0ms"
   update_interval: "60s"
   skip_updates: "5"
+  expire_after: "600s"
   relay_pin: GPIO12 # D6
   switch_name: "MT50 Disable"
   switch_device_class: "switch"

@@ -9,6 +9,7 @@
   accuracy_decimals: 2
   state_class: measurement
   device_class: current
+  expire_after: ${expire_after}
   filters:
     - multiply: 0.01
     - clamp:
