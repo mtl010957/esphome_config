@@ -11,9 +11,8 @@
   device_class: current
   filters:
     - multiply: 0.01
-    - lambda: !lambda |-
-        if (x > 60) return {};
-        return x;
-
-
+    - clamp:
+        max_value: 60.0
+        min_value: 0.0
+        ignore_out_of_range: true
 
