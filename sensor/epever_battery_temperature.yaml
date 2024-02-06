@@ -15,5 +15,5 @@
     - multiply: 0.01
     - clamp:
         max_value: 100.0 # Max rated
-        min_value: 0.0
+        min_value: -40.0
         ignore_out_of_range: true
