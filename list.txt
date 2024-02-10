@@ -2,12 +2,12 @@ dm12th3ll
 dm18mpu
 dm19npb
 dm20br
-dm21mbep
 dm22ina
 dm23jbd
 dm24jbd
 dm25wm
 dm26r
+dm27rmbep
 dm08tph
 s3101
 dm01sv1
@@ -49,6 +49,7 @@ sb07
 dm06reb1
 dm07reb1
 dm15th
+dm21mbep
 dm21pres
 dm22ll1
 esp32-bluetooth-proxy-d8411c

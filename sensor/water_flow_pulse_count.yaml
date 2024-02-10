@@ -4,6 +4,8 @@
     name: "Flow Rate"
     update_interval: "${update_interval}"
     unit_of_measurement: 'gpm'
+    device_class: "water"
+    state_class: "measurement"
     accuracy_decimals: ${flow_accuracy}
     filters:
       - multiply: ${gallons_per_pulse}
@@ -11,6 +13,8 @@
       
     total:
       unit_of_measurement: 'gal'
+      device_class: "water"
+      state_class: "total_increasing"
       accuracy_decimals: ${total_accuracy}
       name: "Total Used"
       filters:
