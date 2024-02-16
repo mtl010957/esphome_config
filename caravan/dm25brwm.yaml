@@ -1,12 +1,13 @@
 substitutions:
   devicename: dm25brwm
   upper_devicename: DM25BRWM
-  device_friendly_name: "DM25BRWM Water Pump Toggle Relay and Meter"
+  device_friendly_name: "DM25BRWM Water Pump"
   blue_led_pin: GPIO2 # D4
   flow_meter_pin: GPIO14 # D5
   binary_pin: GPIO5 # D1
   relay_pin: GPIO4 # D2
-  relay_name: "Water Pump Toggle"
+  binary_sensor_name: "Signal"
+  relay_name: "Toggle"
   relay_duration: "1s"
   update_interval: "5s"
   updates_per_minute: "12"
@@ -37,6 +38,8 @@ light: !include ../light/blue_led.yaml
 output:
   - <<: !include ../output/blue_led.yaml
   - <<: !include ../output/relay.yaml
+# Binary input for water pump signal
+binary_sensor: !include ../binary_sensor/signal.yaml
 # Pulse counter for water flow sensor
 sensor:
   - <<: !include ../sensor/water_flow_pulse_count.yaml

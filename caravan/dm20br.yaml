@@ -4,6 +4,7 @@ substitutions:
   blue_led_pin: GPIO2 # D4
   binary_pin: GPIO5 # D1
   relay_pin: GPIO4 # D2
+  binary_sensor_name: "Water Pump Signal"
   relay_name: "Water Pump Toggle"
   relay_duration: "1s"
 
@@ -25,4 +26,4 @@ output:
   - <<: !include ../output/blue_led.yaml
   - <<: !include ../output/relay.yaml
 # Binary input for water pump signal
-binary_sensor: !include ../binary_sensor/water_pump_signal.yaml
+binary_sensor: !include ../binary_sensor/signal.yaml
