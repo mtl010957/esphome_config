@@ -1,5 +1,7 @@
   - platform: template
-    unit_of_measurement: 'gpm'
+    unit_of_measurement: 'gal/min'
+    device_class: "volume_flow_rate"
+    state_class: "measurement"
     icon: "mdi:water"
     name: "Water Flow"
     lambda: |-
