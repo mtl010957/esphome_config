@@ -4,7 +4,7 @@
     name: "Flow Rate"
     update_interval: "${update_interval}"
     unit_of_measurement: 'gpm'
-    device_class: "water"
+    device_class: "volume_flow_rate"
     state_class: "measurement"
     accuracy_decimals: ${flow_accuracy}
     filters:
