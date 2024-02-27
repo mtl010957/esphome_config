@@ -2,10 +2,12 @@ substitutions:
   devicename: dm28rsht
   upper_devicename: DM28RSHT
   device_friendly_name: "DM28RSHT Relay and Climate"
-  blue_led_pin: D4
-  relay_pin: D1
+  blue_led_pin: D4 # GPIO2
+  relay_pin: D1 # GPIO5
   relay_name: "Power Cycle"
   relay_duration: "5s"
+  sda_pin: D5 # GPIO14
+  scl_pin: D6 # GPIO12
 
 esphome: !include ../base/device_friendly_name_onboot.yaml
 esp8266: !include ../esp8266/d1mini.yaml
@@ -28,6 +30,6 @@ output:
   - <<: !include ../output/relay.yaml
 # SHT4X Temperature and Humidity
 # Requires I2C
-i2c:
+i2c: !include ../connection/i2c_sub_pins.yaml
 sensor: !include ../sensor/sht4x.yaml
 
