@@ -4,13 +4,21 @@
       state_class: measurement
       device_class: current
       unit_of_measurement: A
-      accuracy_decimals: 1    
+      accuracy_decimals: 1
+      filters:
+        - or:
+          - throttle_average: ${update_interval}
+          - heartbeat: ${heartbeat_interval}
     voltage:
       name: "Voltage"
       state_class: measurement
       device_class: voltage
       unit_of_measurement: V
       accuracy_decimals: 1
+      filters:
+        - or:
+          - throttle_average: ${update_interval}
+          - heartbeat: ${heartbeat_interval}
     power:
       name: "Power"
       id: "${devicename}_power"
@@ -18,12 +26,19 @@
       device_class: power
       unit_of_measurement: W
       accuracy_decimals: 1
+      filters:
+        - or:
+          - throttle_average: ${update_interval}
+          - heartbeat: ${heartbeat_interval}
   - platform: total_daily_energy
     name: "Daily Energy"
     power_id: "${devicename}_power"
     filters:
       # Multiplication factor from W to kW is 0.001
       - multiply: 0.001
+      - or:
+        - throttle: ${update_interval}
+        - heartbeat: ${heartbeat_interval}
     unit_of_measurement: kWh
     state_class: total_increasing
     device_class: energy
