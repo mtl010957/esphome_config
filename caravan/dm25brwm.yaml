@@ -14,7 +14,7 @@ substitutions:
   gallons_per_pulse: "0.00841"
   flow_accuracy: "2"
   total_accuracy: "1"
-  offset: "-0.1533"
+  offset: "-0.148"
   multiplier: "125"
   window_size: "30"
   send_every: "5"
