@@ -16,12 +16,12 @@ substitutions:
   total_accuracy: "1"
   offset: "-0.148"
   multiplier: "125"
-  window_size: "30"
-  send_every: "5"
+  window_size: "12"
+  send_every: "3"
   pressure_accuracy: "1"
   
 esphome: !include ../base/device_friendly_name_onboot.yaml
-esp8266: !include ../esp8266/d1mini.yaml
+esp8266: !include ../esp8266/d1mini_restore.yaml
 wifi: !include ../connection/wifi_caravan.yaml
 mqtt: !include ../connection/mqtt_caravan.yaml
 # Enable logging
@@ -29,11 +29,14 @@ logger: !include ../logger/debug.yaml
 # Expose some info to HA
 text_sensor: !include ../text_sensor/wifi_info.yaml
 ota:
+# Persist calibration of pressure
+globals: !include ../globals/pressure_offset.yaml
 # Enable remote restart from HA
 button:
   - <<: !include ../button/restart.yaml
   - <<: !include ../button/flow_pulse_counter_reset.yaml
   - <<: !include ../button/relay.yaml
+  - <<: !include ../button/set_pressure_offset.yaml
 light: !include ../light/blue_led.yaml
 output:
   - <<: !include ../output/blue_led.yaml
@@ -43,5 +46,5 @@ binary_sensor: !include ../binary_sensor/signal.yaml
 # Pulse counter for water flow sensor
 sensor:
   - <<: !include ../sensor/water_flow_pulse_count.yaml
-  - <<: !include ../sensor/adc_pressure_sensor_filtered.yaml
+  - <<: !include ../sensor/adc_pressure_sensor_filtered_offset.yaml
 

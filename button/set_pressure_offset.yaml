@@ -1,0 +1,8 @@
+- platform: template
+  name: "Set Pressure Offset"
+  on_press:
+    - globals.set:
+        id: pressure_offset
+        value: !lambda |-
+          ESP_LOGI("main", "Set Offset to Raw Value of Pressure Sensor: %f", 0.0 - id(pressure_sensor).raw_state);
+          return 0.0 - id(pressure_sensor).raw_state;

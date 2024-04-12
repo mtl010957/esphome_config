@@ -8,7 +8,7 @@
   update_interval: ${update_interval}
   expire_after: 600s
   filters:
-    - offset: ${offset}
+    - lambda: return x + id(pressure_offset);
     - multiply: ${multiplier}
     - sliding_window_moving_average:
         window_size: "${window_size}"
