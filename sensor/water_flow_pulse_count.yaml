@@ -9,8 +9,7 @@
     accuracy_decimals: ${flow_accuracy}
     filters:
       - multiply: ${gallons_per_pulse}
-      - multiply: ${updates_per_minute}
-      
+
     total:
       unit_of_measurement: 'gal'
       device_class: "water"
@@ -19,4 +18,3 @@
       name: "Total Used"
       filters:
         - multiply: ${gallons_per_pulse}
-        - multiply: ${updates_per_minute}
