@@ -1,7 +1,7 @@
 substitutions:
   devicename: dm22ina
   upper_devicename: DM22INA
-  device_friendly_name: "DM25BRWM Water Pump"
+  device_friendly_name: "DM22INA Converter"
   blue_led_pin: GPIO2
   shunt_resistance: "0.00075 ohm"
   max_voltage: "32.0V"
