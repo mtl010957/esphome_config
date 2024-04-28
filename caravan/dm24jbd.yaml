@@ -1,6 +1,7 @@
 substitutions:
   devicename: dm24jbd
   upper_devicename: DM24JBD
+  device_friendly_name: "DM24JBD BMS GJ-12V100AH-0526-161"
   blue_led_pin: GPIO2
   update_interval: "4s"
   external_components_source: github://syssi/esphome-jbd-bms@main
@@ -12,7 +13,7 @@ substitutions:
   #  or use as backup for HA based BMS addon
   restore_mode: "ALWAYS_OFF"
   
-esphome: !include ../base/name_onboot.yaml
+esphome: !include ../base/device_friendly_name_onboot.yaml
 external_components: !include ../external_components/generic.yaml
 esp32: !include ../esp32/wemos_d1_mini32.yaml
 wifi: !include ../connection/wifi_caravan.yaml
