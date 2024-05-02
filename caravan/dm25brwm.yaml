@@ -14,7 +14,7 @@ substitutions:
   flow_accuracy: "2"
   total_accuracy: "1"
   offset: "-0.148"
-  multiplier: "125"
+  multiplier: "104.17"
   window_size: "12"
   send_every: "3"
   pressure_accuracy: "1"
