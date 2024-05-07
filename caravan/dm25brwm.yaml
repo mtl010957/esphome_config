@@ -10,7 +10,7 @@ substitutions:
   relay_name: "Toggle"
   relay_duration: "1s"
   update_interval: "5s"
-  gallons_per_pulse: "0.000587"
+  gallons_per_pulse: "0.0005336"
   flow_accuracy: "2"
   total_accuracy: "1"
   offset: "-0.148"
