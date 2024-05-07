@@ -1,0 +1,4 @@
+  - id: pressure_offset
+    type: float
+    restore_value: true
+    initial_value: "${offset}"
