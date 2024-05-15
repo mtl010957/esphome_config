@@ -1,0 +1,11 @@
+- platform: template
+  name: "ENS160 Air Quality Rating"
+  lambda: |-
+    switch ( (int) (id(${id_air_quality_index}).state) ) {
+      case 1: return {"Excellent"};
+      case 2: return {"Good"};
+      case 3: return {"Moderate"};
+      case 4: return {"Poor"};
+      case 5: return {"Unhealthy"};
+      default: return {"Not Available"};
+    }

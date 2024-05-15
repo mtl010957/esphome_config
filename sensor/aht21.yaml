@@ -1,0 +1,29 @@
+- platform: aht10
+  temperature:
+    name: "Temperature"
+    id: ${id_temperature_sensor}
+    unit_of_measurement: "°C"
+    device_class: temperature
+    icon: mdi:thermometer
+    accuracy_decimals: 1
+    expire_after: 600s
+    filters:
+      - or:
+        - delta: 0.5
+        - heartbeat: 300s
+  humidity:
+    name: "Humidity"
+    id: ${id_humidity_sensor}
+    unit_of_measurement: "%"
+    device_class: humidity
+    icon: mdi:water-percent
+    accuracy_decimals: 1
+    expire_after: 600s
+    filters:
+      - or:
+        - delta: 0.5
+        - heartbeat: 300s
+  variant: AHT20
+  update_interval: 10s
+
+

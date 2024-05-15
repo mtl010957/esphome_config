@@ -1,0 +1,9 @@
+- platform: pmsx003
+  type: PMSX003
+  pm_1_0:
+    name: "Particulate Matter <1.0µm Concentration"
+  pm_2_5:
+    name: "Particulate Matter <2.5µm Concentration"
+  pm_10_0:
+    name: "Particulate Matter <10.0µm Concentration"
+  update_interval: ${update_interval}

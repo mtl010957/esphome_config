@@ -1,7 +1,7 @@
 substitutions:
-  devicename: dm28rth
-  upper_devicename: DM28RTH
-  device_friendly_name: "DM28RTH Relay and Climate"
+  devicename: dm29rth
+  upper_devicename: DM29RTH
+  device_friendly_name: "DM29RTH Relay and Climate"
   blue_led_pin: D4
   sensor_pin: D2
   relay_pin: D1

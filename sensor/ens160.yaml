@@ -1,0 +1,13 @@
+- platform: ens160
+  eco2:
+    name: "ENS160 eCO2"
+  tvoc:
+    name: "ENS160 Total Volatile Organic Compounds"
+  aqi:
+    name: "ENS160 Air Quality Index"
+    id: ${id_air_quality_index}
+  update_interval: ${update_interval}
+  address: 0x53
+  compensation:
+    temperature: ${id_temperature_sensor}
+    humidity: ${id_humidity_sensor}

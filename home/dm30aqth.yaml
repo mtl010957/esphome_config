@@ -1,0 +1,39 @@
+substitutions:
+  devicename: dm30aqth
+  upper_devicename: DM30AQTH
+  device_friendly_name: "DM30AQTH Air Quality and Climate"
+  blue_led_pin: D4
+  update_interval: "60s"
+  id_air_quality_index: "ens160_air_quality_index"
+  id_temperature_sensor: "aht21_temperature_sensor"
+  id_humidity_sensor: "aht21_humidity_sensor"
+
+esphome: !include ../base/device_friendly_name_onboot.yaml
+esp8266: !include ../esp8266/d1mini.yaml
+wifi: !include ../connection/wifi.yaml
+mqtt: !include ../connection/mqtt.yaml
+# Enable web server
+web_server:
+# Enable logging
+logger: !include ../logger/debug_no_uart.yaml
+# Expose some info to HA
+text_sensor:
+  - <<: !include ../text_sensor/wifi_info.yaml
+  - <<: !include ../text_sensor/aqi.yaml
+ota:
+# I2C needed for AHT21 and ENS160
+i2c: !include ../connection/i2c.yaml
+# UART needed for PMS7003
+uart: !include ../uart/default_9600baud.yaml
+# Enable remote restart from HA
+button:
+  - <<: !include ../button/restart.yaml
+light: !include ../light/blue_led.yaml
+output:
+  - <<: !include ../output/blue_led.yaml
+# DHT22 Temperature and Humidity
+sensor:
+  - <<: !include ../sensor/aht21.yaml
+  - <<: !include ../sensor/ens160.yaml
+  - <<: !include ../sensor/pmsx003.yaml
+
