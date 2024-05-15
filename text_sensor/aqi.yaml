@@ -1,5 +1,5 @@
 - platform: template
-  name: "ENS160 Air Quality Rating"
+  name: "Air Quality Rating"
   lambda: |-
     switch ( (int) (id(${id_air_quality_index}).state) ) {
       case 1: return {"Excellent"};
