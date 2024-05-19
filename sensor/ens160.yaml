@@ -1,4 +1,4 @@
-- platform: ens160
+- platform: ens160_i2c
   eco2:
     name: "eCO2"
   tvoc:
