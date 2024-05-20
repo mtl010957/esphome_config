@@ -15,12 +15,13 @@ mqtt: !include ../connection/mqtt.yaml
 # Enable web server
 web_server:
 # Enable logging
-logger: !include ../logger/debug_no_uart.yaml
+logger: !include ../logger/verbose_no_uart.yaml
 # Expose some info to HA
 text_sensor:
   - <<: !include ../text_sensor/wifi_info.yaml
   - <<: !include ../text_sensor/aqi.yaml
 ota:
+  - platform: esphome
 # I2C needed for AHT21 and ENS160
 i2c: !include ../connection/i2c.yaml
 # UART needed for PMS7003
