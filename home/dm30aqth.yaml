@@ -19,7 +19,7 @@ mqtt: !include ../connection/mqtt.yaml
 # Enable web server
 web_server:
 # Enable logging
-logger: !include ../logger/verbose_no_uart.yaml
+logger: !include ../logger/debug_no_uart.yaml
 # Expose some info to HA
 text_sensor:
   - <<: !include ../text_sensor/wifi_info.yaml
