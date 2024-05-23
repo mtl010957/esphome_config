@@ -1,0 +1,4 @@
+- platform: output
+  name: "Reset"
+  output: reset
+  duration: ${reset_duration}
