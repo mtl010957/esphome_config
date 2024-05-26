@@ -15,3 +15,6 @@
   compensation:
     temperature_source: ${id_temperature_sensor}
     humidity_source: ${id_humidity_sensor}
+  baseline:
+    eco2_baseline: 0x8B6B
+    tvoc_baseline: 0x91C0
