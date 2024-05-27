@@ -1,0 +1,5 @@
+- platform: ld2410
+  engineering_mode:
+    name: "Engineering Mode"
+  bluetooth:
+    name: "Bluetooth Enable"
