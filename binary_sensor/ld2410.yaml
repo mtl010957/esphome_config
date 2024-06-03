@@ -5,5 +5,5 @@
     name: "Moving Target"
   has_still_target:
     name: "Still Target"
-  out_pin_presence_status:
-    name: "Out Pin Presence Status"
+#  out_pin_presence_status:
+#    name: "Out Pin Presence Status"

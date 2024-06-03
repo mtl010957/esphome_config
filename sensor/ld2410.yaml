@@ -1,6 +1,6 @@
 - platform: ld2410
-  light:
-    name: Light
+#  light:
+#    name: Light
   moving_distance:
     name : "Moving Distance"
   still_distance:

@@ -23,8 +23,7 @@ logger: !include ../logger/debug_no_uart.yaml
 # Expose some info to HA
 text_sensor:
   - <<: !include ../text_sensor/wifi_info.yaml
-ota:
-  - platform: esphome
+ota: !include ../ota/esphome.yaml
 # I2C needed for AHT21 and ENS160
 i2c: !include ../connection/i2c.yaml
 # UART needed for PMS7003

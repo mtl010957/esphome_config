@@ -2,9 +2,19 @@
   eco2:
     name: "eCO2"
     accuracy_decimals: ${eco2_accuracy_decimals}
+    filters:
+      - sliding_window_moving_average:
+          window_size: 15
+          send_every: 15
+          send_first_at: 1
   tvoc:
     name: "Total Volatile Organic Compounds"
     accuracy_decimals: ${tvoc_accuracy_decimals}
+    filters:
+      - sliding_window_moving_average:
+          window_size: 15
+          send_every: 15
+          send_first_at: 1
   update_interval: 1s # Fast for this sensor
   address: 0x58
   store_baseline: yes

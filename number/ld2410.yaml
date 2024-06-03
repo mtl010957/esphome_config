@@ -1,8 +1,8 @@
 - platform: ld2410
   timeout:
     name: Timeout
-  light_threshold:
-    name: "Light Threshold"
+#  light_threshold:
+#    name: "Light Threshold"
   max_move_distance_gate:
     name: "Max Move Distance Gate"
   max_still_distance_gate:
