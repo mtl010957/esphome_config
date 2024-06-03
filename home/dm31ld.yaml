@@ -15,8 +15,7 @@ logger: !include ../logger/debug_no_uart.yaml
 text_sensor:
   - <<: !include ../text_sensor/wifi_info.yaml
   - <<: !include ../text_sensor/ld2410.yaml
-ota:
-  - platform: esphome
+ota: !include ../ota/esphome.yaml
 # Enable remote restart from HA
 button:
   - <<: !include ../button/restart.yaml
