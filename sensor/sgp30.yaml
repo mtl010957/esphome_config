@@ -1,0 +1,30 @@
+- platform: sgp30
+  eco2:
+    name: "eCO2"
+    accuracy_decimals: ${eco2_accuracy_decimals}
+    filters:
+      - sliding_window_moving_average:
+          window_size: 15
+          send_every: 15
+          send_first_at: 1
+  tvoc:
+    name: "Total Volatile Organic Compounds"
+    accuracy_decimals: ${tvoc_accuracy_decimals}
+    filters:
+      - sliding_window_moving_average:
+          window_size: 15
+          send_every: 15
+          send_first_at: 1
+  update_interval: 1s # Fast for this sensor
+  address: 0x58
+  store_baseline: yes
+  eco2_baseline:
+    name: "eCO2 Baseline"
+  tvoc_baseline:
+    name: "TVOC Baseline"
+  compensation:
+    temperature_source: ${id_temperature_sensor}
+    humidity_source: ${id_humidity_sensor}
+  baseline:
+    eco2_baseline: 0x8B6B
+    tvoc_baseline: 0x91C0

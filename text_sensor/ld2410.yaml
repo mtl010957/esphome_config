@@ -1,0 +1,5 @@
+- platform: ld2410
+  version:
+    name: "Firmware Version"
+  mac_address:
+    name: "MAC Address"

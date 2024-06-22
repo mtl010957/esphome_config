@@ -20,7 +20,7 @@ logger: !include ../logger/debug.yaml
 text_sensor: !include ../text_sensor/wifi_info.yaml
 # Enable Home Assistant API
 #api: (broken with MQTT for now)
-ota:
+ota: !include ../ota/esphome.yaml
 # Enable remote restart from HA
 button:
   - <<: !include ../button/restart.yaml

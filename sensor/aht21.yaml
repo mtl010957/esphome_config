@@ -1,4 +1,4 @@
-- platform: sht4x
+- platform: aht10
   temperature:
     name: "Temperature"
     id: ${id_temperature_sensor}
@@ -23,11 +23,7 @@
       - or:
         - delta: 0.5
         - heartbeat: 300s
-  precision: High
-  heater_max_duty: 0.01
-  heater_power: High
-  heater_time: Long
-  address: 0x44
+  variant: AHT20
   update_interval: 10s
 
 

@@ -1,0 +1,5 @@
+- platform: gpio
+  id: reset
+  pin:
+    number: ${reset_pin}
+    inverted: True

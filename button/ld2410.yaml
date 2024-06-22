@@ -1,0 +1,7 @@
+- platform: ld2410
+  factory_reset:
+    name: "Factory Reset"
+  restart:
+    name: "Sensor Restart"
+  query_params:
+    name: "Query Params"

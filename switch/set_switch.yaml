@@ -1,0 +1,6 @@
+- platform: gpio
+  id: "switch_set"
+  name: "Set"
+  pin:
+    number: ${set_switch_pin}
+    inverted: no

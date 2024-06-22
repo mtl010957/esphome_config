@@ -30,7 +30,7 @@ mqtt: !include ../connection/mqtt.yaml
 logger: !include ../logger/debug.yaml
 # Expose some info to HA
 text_sensor: !include ../text_sensor/wifi_info.yaml
-ota:
+ota: !include ../ota/esphome.yaml
 # Enable remote restart from HA
 button: !include ../button/restart.yaml
 # One moisture sensor

@@ -1,0 +1,13 @@
+- platform: ens160_i2c
+  eco2:
+    name: "eCO2"
+  tvoc:
+    name: "Total Volatile Organic Compounds"
+  aqi:
+    name: "Air Quality Index"
+    id: ${id_air_quality_index}
+  update_interval: ${update_interval}
+  address: 0x53
+  compensation:
+    temperature: ${id_temperature_sensor}
+    humidity: ${id_humidity_sensor}

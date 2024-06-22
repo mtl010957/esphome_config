@@ -1,0 +1,8 @@
+- platform: gpio
+  pin:
+    number: ${sensor_pin}
+    inverted: False
+    mode: INPUT
+  name: "Proximity Sensor"
+  device_class: presence
+
