@@ -8,6 +8,9 @@ substitutions:
   tvoc_accuracy_decimals: "1"
   id_temperature_sensor: "sht4x_temperature_sensor"
   id_humidity_sensor: "sht4x_humidity_sensor"
+  heater_max_duty: "0.0"
+  heater_power: "Low"
+  heater_time: "Short"
   reset_duration: "1s"
   reset_pin: GPIO12 # D6
   set_switch_pin: GPIO14 # D5

@@ -24,9 +24,9 @@
         - delta: 0.5
         - heartbeat: 300s
   precision: High
-  heater_max_duty: 0.01
-  heater_power: High
-  heater_time: Long
+  heater_max_duty: ${heater_max_duty}
+  heater_power: ${heater_power}
+  heater_time: ${heater_time}
   address: 0x44
   update_interval: 10s
 
