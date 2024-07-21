@@ -8,10 +8,10 @@
     oversampling: 1x
     expire_after: 600s
     filters:
+      - offset: "${temp_offset}"
       - or:
         - delta: 0.5
         - heartbeat: 300s
-        - offset: "${temp_offset}"
   pressure:
     name: "Pressure"
     unit_of_measurement: "hPa"

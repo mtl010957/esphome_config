@@ -11,6 +11,7 @@ substitutions:
   heater_max_duty: "0.0"
   heater_power: "Low"
   heater_time: "Short"
+  temp_offset: "-10.0"
   reset_duration: "1s"
   reset_pin: GPIO12 # D6
   set_switch_pin: GPIO14 # D5
