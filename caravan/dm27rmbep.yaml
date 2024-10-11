@@ -10,7 +10,7 @@ substitutions:
 #  flow_control_pin: GPIO5
   send_wait_time: "500ms"
   command_throttle: "0ms"
-  update_interval: "60s"
+  update_interval: "12s"
   skip_updates: "5"
   expire_after: "600s"
   relay_pin: GPIO12 # D6
@@ -27,7 +27,7 @@ logger: !include ../logger/debug_no_uart.yaml
 # Expose some info to HA
 text_sensor:
   - <<: !include ../text_sensor/wifi_info.yaml
-ota:
+ota: !include ../ota/esphome.yaml
 # Enable remote restart from HA
 button: !include ../button/restart.yaml
 light: !include ../light/blue_led.yaml
