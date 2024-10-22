@@ -27,7 +27,7 @@ mqtt: !include ../connection/mqtt_caravan.yaml
 logger: !include ../logger/debug.yaml
 # Expose some info to HA
 text_sensor: !include ../text_sensor/wifi_info.yaml
-ota:
+ota: !include ../ota/esphome.yaml
 # Persist calibration of pressure
 globals: !include ../globals/pressure_offset.yaml
 # Enable remote restart from HA
