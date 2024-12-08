@@ -1,12 +1,12 @@
 substitutions:
   devicename: dm20br
   upper_devicename: DM20BR
-  device_friendly_name: "DM20BR Inverter Control"
+  device_friendly_name: "DM20BR Inverter"
   blue_led_pin: GPIO2 # D4
   binary_pin: GPIO4 # D2
   relay_pin: GPIO5 # D1
-  binary_sensor_name: "Inverter On Signal"
-  relay_name: "Inverter Toggle"
+  binary_sensor_name: "Signal"
+  relay_name: "Toggle"
   relay_duration: "5s"
 
 esphome: !include ../base/device_friendly_name_onboot.yaml
