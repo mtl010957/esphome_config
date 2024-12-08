@@ -1,0 +1,42 @@
+substitutions:
+  devicename: dm26rina
+  upper_devicename: DM26RINA
+  device_friendly_name: "DM26RINA Relay and INA219"
+  blue_led_pin: D4 # GPIO2
+  relay_pin: D1 #GPIO5
+  relay_name: "Toggle"
+  relay_duration: "5s"
+  sda_pin: D5 # GPIO14
+  scl_pin: D6 # GPIO12
+  shunt_resistance: "0.00075 ohm"
+  max_voltage: "32.0V"
+  max_current: "100A"
+  update_interval: "5s"
+  current_offset: "-0.01221"
+  power_offset: "-0.18312"
+  shunt_offset: "-0.00001"
+  binary_pin: D7 # GPIO13
+  binary_sensor_name: "Signal"
+
+esphome: !include ../base/device_friendly_name_onboot.yaml
+esp8266: !include ../esp8266/d1mini.yaml
+wifi: !include ../connection/wifi_caravan.yaml
+mqtt: !include ../connection/mqtt_caravan.yaml
+# Enable logging
+logger: !include ../logger/debug.yaml
+# Expose some info to HA
+text_sensor: !include ../text_sensor/wifi_info.yaml
+ota: !include ../ota/esphome.yaml
+# Enable remote restart from HA
+button:
+  - <<: !include ../button/restart.yaml
+  - <<: !include ../button/relay.yaml
+light: !include ../light/blue_led.yaml
+output:
+  - <<: !include ../output/blue_led.yaml
+  - <<: !include ../output/relay.yaml
+binary_sensor: !include ../binary_sensor/signal.yaml
+# Enable I2C for the INA219 device
+i2c: !include ../connection/i2c_sub_pins.yaml
+# INA219 on default pins
+sensor: !include ../sensor/ina219.yaml
