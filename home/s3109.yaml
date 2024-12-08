@@ -1,11 +1,17 @@
 substitutions:
   devicename: s3109
   upper_devicename: S3109
+  device_friendly_name: "S3109 Outlet"
   button_pin: GPIO0
   blue_led_pin: GPIO13
   relay_pin: GPIO12
+  switch_name: "None"
+  switch_device_class: "outlet"
+  switch_icon: "mdi:power-socket-us"
+  update_interval: 60s
+  heartbeat_interval: 300s
 
-esphome: !include ../base/name_onboot.yaml
+esphome: !include ../base/device_friendly_name_onboot.yaml
 esp8266: !include ../esp8266/esp01_1m.yaml
 wifi: !include ../connection/wifi.yaml
 mqtt: !include ../connection/mqtt.yaml
@@ -15,7 +21,7 @@ uart: !include ../uart/uart_s31.yaml
 time: !include ../time/sntp.yaml
 # Expose some info to HA
 text_sensor: !include ../text_sensor/wifi_info.yaml
-ota:
+ota: !include ../ota/esphome.yaml
 binary_sensor: !include ../binary_sensor/button_toggle_relay.yaml
 switch: !include ../switch/relay_restore_default_on.yaml
 button: !include ../button/restart.yaml
