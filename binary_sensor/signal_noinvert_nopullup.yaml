@@ -1,0 +1,7 @@
+- platform: gpio
+  pin:
+    number: ${binary_pin}
+    inverted: False
+    mode: INPUT
+  name: "${binary_sensor_name}"
+

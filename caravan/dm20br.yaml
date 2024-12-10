@@ -27,4 +27,4 @@ output:
   - <<: !include ../output/blue_led.yaml
   - <<: !include ../output/relay.yaml
 # Binary input for water pump signal
-binary_sensor: !include ../binary_sensor/signal.yaml
+binary_sensor: !include ../binary_sensor/signal_noinvert_nopullup.yaml
