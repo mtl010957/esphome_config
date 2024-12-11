@@ -3,9 +3,11 @@ substitutions:
   upper_devicename: DM20BR
   device_friendly_name: "DM20BR Inverter"
   blue_led_pin: GPIO2 # D4
-  binary_pin: GPIO4 # D2
   relay_pin: GPIO5 # D1
-  binary_sensor_name: "Signal"
+  threshold_sensor_name: "Signal"
+  threshold_sensor_id: "signal_in"
+  threshold_value: "1.0"
+  threshold_update_interval: "10s"
   relay_name: "Toggle"
   relay_duration: "5s"
 
@@ -26,5 +28,6 @@ light: !include ../light/blue_led.yaml
 output:
   - <<: !include ../output/blue_led.yaml
   - <<: !include ../output/relay.yaml
-# Binary input for water pump signal
-binary_sensor: !include ../binary_sensor/signal_noinvert_nopullup.yaml
+# Binary threshold sensor for analog signal in
+sensor: !include ../sensor/adc_for_threshold.yaml
+binary_sensor: !include ../binary_sensor/analog_threshold.yaml
