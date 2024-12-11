@@ -1,0 +1,4 @@
+- platform: adc
+  pin: A0
+  id: "$threshold_sensor_id"
+  update_interval: $threshold_update_interval
