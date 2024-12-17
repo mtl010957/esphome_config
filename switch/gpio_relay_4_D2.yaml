@@ -1,0 +1,7 @@
+- platform: gpio
+  name: "Relay 4"
+  restore_mode: RESTORE_DEFAULT_OFF
+  pin:
+    number: D2
+    inverted: yes
+

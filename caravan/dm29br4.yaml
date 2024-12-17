@@ -3,7 +3,7 @@ substitutions:
   upper_devicename: DM29BR4
   device_friendly_name: "DM29BR4 Binary and Four Relays"
   blue_led_pin: D4
-  binary_pin: D2
+  binary_pin: D1
   binary_sensor_name: "Signal"
 
 esphome: !include ../base/device_friendly_name_onboot.yaml
@@ -29,5 +29,5 @@ switch:
   - <<: !include ../switch/gpio_relay_1.yaml
   - <<: !include ../switch/gpio_relay_2.yaml
   - <<: !include ../switch/gpio_relay_3.yaml
-  - <<: !include ../switch/gpio_relay_4.yaml
+  - <<: !include ../switch/gpio_relay_4_D2.yaml
 
