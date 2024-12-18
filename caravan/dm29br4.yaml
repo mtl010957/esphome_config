@@ -25,9 +25,9 @@ substitutions:
   relay4_button_name: "Relay 4"
   relay4_button_output_id: "${gpio4_id}"
   relay4_button_duration: "1s"
-  relay4_button_name: "Relay 4 Long Press"
-  relay4_button_output_id: "${gpio4_id}"
-  relay4_button_duration: "4s"
+  relay0_button_name: "Relay 4 Long Press"
+  relay0_button_output_id: "${gpio4_id}"
+  relay0_button_duration: "4s"
 
 esphome: !include ../base/device_friendly_name_onboot.yaml
 esp8266: !include ../esp8266/d1mini.yaml
