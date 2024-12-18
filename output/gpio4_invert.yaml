@@ -1,5 +1,0 @@
-- platform: gpio
-  id: "${gpio4_invert_id}"
-  pin:
-    number: GPIO4 # D2
-    inverted: True

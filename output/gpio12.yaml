@@ -1,0 +1,5 @@
+- platform: gpio
+  id: "${gpio12_invert_id}"
+  pin:
+    number: GPIO12 # D6
+    inverted: True
