@@ -1,0 +1,4 @@
+- platform: output
+  name: "${relay2_button_name}"
+  output: "${relay2_button_output_id}"
+  duration: ${relay2_button_duration}
