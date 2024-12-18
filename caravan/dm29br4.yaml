@@ -2,8 +2,8 @@ substitutions:
   devicename: dm29br4
   upper_devicename: DM29BR4
   device_friendly_name: "DM29BR4 Binary and Four Relays"
-  blue_led_pin: D4
-  binary_pin: D1
+  blue_led_pin: GPIO2 # D4
+  binary_pin: GPIO14 # D5
   binary_sensor_name: "Signal"
   gpio1_id: "gpio1_output"
   gpio1_invert: "True"
