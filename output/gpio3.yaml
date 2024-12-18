@@ -2,4 +2,4 @@
   id: "${gpio3_id}"
   pin:
     number: GPIO3 # RX
-    inverted: True
+    inverted: "${gpio3_invert}"
