@@ -1,5 +1,5 @@
 - platform: gpio
-  id: "${gpio13_invert_id}"
+  id: "${gpio13_id}"
   pin:
     number: GPIO13 # D7
     inverted: True
