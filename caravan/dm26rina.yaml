@@ -6,16 +6,16 @@ substitutions:
   relay_pin: D1 #GPIO5
   relay_name: "Toggle"
   relay_duration: "5s"
-  sda_pin: D5 # GPIO14
-  scl_pin: D6 # GPIO12
-  shunt_resistance: "0.00075 ohm"
+  sda_pin: GPIO13 # D7
+  scl_pin: GPIO12 # D6
+  shunt_resistance: "0.0075 ohm"
   max_voltage: "32.0V"
-  max_current: "100A"
+  max_current: "10A"
   update_interval: "5s"
-  current_offset: "-0.01221"
-  power_offset: "-0.18312"
-  shunt_offset: "-0.00001"
-  binary_pin: D7 # GPIO13
+  current_offset: "-0.00000"
+  power_offset: "-0.00000"
+  shunt_offset: "-0.00000"
+  binary_pin: GPIO14 # D5
   binary_sensor_name: "Signal"
 
 esphome: !include ../base/device_friendly_name_onboot.yaml
