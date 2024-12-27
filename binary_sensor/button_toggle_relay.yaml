@@ -3,7 +3,7 @@
     number: ${button_pin}
     mode: INPUT_PULLUP
     inverted: True
-  name: "Button"
+  name: "${button_name}"
   on_press:
     - switch.toggle: relay
 
