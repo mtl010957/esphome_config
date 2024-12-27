@@ -7,8 +7,8 @@ substitutions:
   switch_name: "Relay"
   switch_device_class: "switch"
   switch_icon: "mdi:toggle-switch"
-  sda_pin: GPIO13 # D7
-  scl_pin: GPIO12 # D6
+  sda_pin: GPIO12 # D6
+  scl_pin: GPIO13 # D7
   shunt_resistance: "0.0075 ohm"
   max_voltage: "32.0V"
   max_current: "10A"
