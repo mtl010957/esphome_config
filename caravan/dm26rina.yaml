@@ -4,8 +4,9 @@ substitutions:
   device_friendly_name: "DM26RINA Relay and INA219"
   blue_led_pin: D4 # GPIO2
   relay_pin: D1 #GPIO5
-  relay_name: "Toggle"
-  relay_duration: "5s"
+  switch_name: "Relay"
+  switch_device_class: "switch"
+  switch_icon: "mdi:toggle-switch"
   sda_pin: GPIO13 # D7
   scl_pin: GPIO12 # D6
   shunt_resistance: "0.0075 ohm"
@@ -30,11 +31,12 @@ ota: !include ../ota/esphome.yaml
 # Enable remote restart from HA
 button:
   - <<: !include ../button/restart.yaml
-  - <<: !include ../button/relay.yaml
 light: !include ../light/blue_led.yaml
 output:
   - <<: !include ../output/blue_led.yaml
   - <<: !include ../output/relay.yaml
+switch:
+  - <<: !include ../switch/relay.yaml
 binary_sensor: !include ../binary_sensor/signal.yaml
 # Enable I2C for the INA219 device
 i2c: !include ../connection/i2c_sub_pins.yaml
