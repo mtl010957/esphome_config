@@ -34,7 +34,6 @@ button:
 light: !include ../light/blue_led.yaml
 output:
   - <<: !include ../output/blue_led.yaml
-  - <<: !include ../output/relay.yaml
 switch:
   - <<: !include ../switch/relay.yaml
 binary_sensor: !include ../binary_sensor/signal.yaml
