@@ -1,0 +1,71 @@
+substitutions:
+  devicename: dm29br4ina
+  upper_devicename: DM29BR4INA
+  device_friendly_name: "DM29BR4 Binary, Four Relays and INA219"
+  blue_led_pin: GPIO2 # D4
+  binary_pin: GPIO14 # D5
+  binary_sensor_name: "Signal"
+  gpio1_id: "gpio1_output"
+  gpio1_invert: "False"
+  relay1_button_name: "Relay 1"
+  relay1_button_output_id: "${gpio1_id}"
+  relay1_button_duration: "250ms"
+  gpio3_id: "gpio3_output"
+  gpio3_invert: "False"
+  relay2_button_name: "Relay 2"
+  relay2_button_output_id: "${gpio3_id}"
+  relay2_button_duration: "250ms"
+  gpio5_id: "gpio5_output"
+  gpio5_invert: "False"
+  relay3_button_name: "Relay 3"
+  relay3_button_output_id: "${gpio5_id}"
+  relay3_button_duration: "250ms"
+  gpio4_id: "gpio4_output"
+  gpio4_invert: "False"
+  relay4_button_name: "Relay 4"
+  relay4_button_output_id: "${gpio4_id}"
+  relay4_button_duration: "250ms"
+  relay0_button_name: "Relay 4 Long"
+  relay0_button_output_id: "${gpio4_id}"
+  relay0_button_duration: "4s"
+  sda_pin: GPIO12 # D6
+  scl_pin: GPIO13 # D7
+  shunt_resistance: "0.0075 ohm"
+  max_voltage: "32.0V"
+  max_current: "10A"
+  update_interval: "5s"
+  current_offset: "0.00000"
+  power_offset: "0.00000"
+  shunt_offset: "0.00000"
+
+esphome: !include ../base/device_friendly_name_onboot.yaml
+esp8266: !include ../esp8266/d1mini.yaml
+wifi: !include ../connection/wifi_caravan.yaml
+mqtt: !include ../connection/mqtt_caravan.yaml
+# Enable web server
+web_server:
+# Enable logging
+logger: !include ../logger/debug.yaml
+# Expose some info to HA
+text_sensor: !include ../text_sensor/wifi_info.yaml
+ota: !include ../ota/esphome.yaml
+# Enable remote restart from HA
+button:
+  - <<: !include ../button/restart.yaml
+  - <<: !include ../button/relay0.yaml
+  - <<: !include ../button/relay1.yaml
+  - <<: !include ../button/relay2.yaml
+  - <<: !include ../button/relay3.yaml
+  - <<: !include ../button/relay4.yaml
+light: !include ../light/blue_led.yaml
+output:
+  - <<: !include ../output/blue_led.yaml
+  - <<: !include ../output/gpio1.yaml
+  - <<: !include ../output/gpio3.yaml
+  - <<: !include ../output/gpio5.yaml
+  - <<: !include ../output/gpio4.yaml
+binary_sensor: !include ../binary_sensor/signal.yaml
+# Enable I2C for the INA219 device
+i2c: !include ../connection/i2c_sub_pins.yaml
+# INA219
+sensor: !include ../sensor/ina219.yaml

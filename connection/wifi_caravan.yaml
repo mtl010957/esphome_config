@@ -1,4 +1,4 @@
 ssid: !secret wifi_caravan_ssid
 password: !secret wifi_caravan_password
-#use_address: dm26rina.local
+#use_address: dm29br4.local
 
