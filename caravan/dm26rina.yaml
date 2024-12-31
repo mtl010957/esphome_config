@@ -13,9 +13,9 @@ substitutions:
   max_voltage: "32.0V"
   max_current: "10A"
   update_interval: "5s"
-  current_offset: "-0.00000"
-  power_offset: "-0.00000"
-  shunt_offset: "-0.00000"
+  current_offset: "0.00000"
+  power_offset: "0.00000"
+  shunt_offset: "0.00000"
   button_pin: GPIO14 # D5
   button_name: "Button"
 
@@ -40,5 +40,5 @@ binary_sensor:
   - <<: !include ../binary_sensor/button_toggle_relay.yaml
 # Enable I2C for the INA219 device
 i2c: !include ../connection/i2c_sub_pins.yaml
-# INA219 on default pins
+# INA219
 sensor: !include ../sensor/ina219.yaml
