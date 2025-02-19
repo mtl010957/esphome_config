@@ -3,6 +3,7 @@ substitutions:
   upper_devicename: GW02
   device_friendly_name: "GW02 Outlet"
   button_pin: GPIO4
+  button_name: "Button"
   blue_led_pin: GPIO13
   red_led_pin: GPIO12
   relay_pin: GPIO14
