@@ -1,4 +1,4 @@
-- platform: dallas
+- platform: one_wire
   address: ${probe_4_addr}
   id: "probe_4"
   name: "Temperature Probe 4"

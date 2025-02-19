@@ -1,4 +1,4 @@
-- platform: dallas
+- platform: one_wire
   address: ${probe_1_addr}
   name: "${probe_1_addr}"
   unit_of_measurement: "°C"
@@ -9,7 +9,7 @@
     - or:
         - delta: 0.5
         - heartbeat: 300s
-- platform: dallas
+- platform: one_wire
   address: ${probe_2_addr}
   name: "${probe_2_addr}"
   unit_of_measurement: "°C"
@@ -20,7 +20,7 @@
     - or:
         - delta: 0.5
         - heartbeat: 300s
-- platform: dallas
+- platform: one_wire
   address: ${probe_3_addr}
   name: "${probe_3_addr}"
   unit_of_measurement: "°C"
@@ -31,7 +31,7 @@
     - or:
         - delta: 0.5
         - heartbeat: 300s
-- platform: dallas
+- platform: one_wire
   address: ${probe_4_addr}
   name: "${probe_4_addr}"
   unit_of_measurement: "°C"

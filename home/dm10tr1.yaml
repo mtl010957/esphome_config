@@ -3,7 +3,7 @@ substitutions:
   upper_devicename: DM10TR1
   device_friendly_name: "DM10TR1 Hot Water Recirc"
   blue_led_pin: D4
-  dallas_pin: D6
+  one_wire_pin: D6
   probe_number: "1"
   relay_number: "1"
   relay_pin: D5
@@ -24,8 +24,8 @@ button:
   - <<: !include ../button/restart.yaml
 light: !include ../light/blue_led.yaml
 output: !include ../output/blue_led.yaml
-# Need Dallas for one wire sensors
-dallas: !include ../sensor/dallas.yaml
+# Need for one wire sensors
+one_wire: !include ../sensor/one_wire.yaml
 # Single relay to run the pump and valve
 switch:
   - <<: !include ../switch/gpio_relay.yaml

@@ -4,7 +4,7 @@ substitutions:
   device_friendly_name: "NM15T4MBP Furnace"
   button_pin: D3
   blue_led_pin: D4
-  dallas_pin: D6
+  one_wire_pin: D6
   probe_1_addr: "0xDC000008E3B1AB28"
   # NW
   probe_2_addr: "0xDE000008E2B6AF28"
@@ -40,8 +40,8 @@ binary_sensor:
   - <<: !include ../binary_sensor/burner_valve.yaml
 light: !include ../light/blue_led.yaml
 output: !include ../output/blue_led.yaml
-# Need Dallas for one wire sensors
-dallas: !include ../sensor/dallas.yaml
+# Need for one wire sensors
+one_wire: !include ../sensor/one_wire.yaml
 # Set of four DS18B20 Temperature probes
 sensor:
   - <<: !include ../sensor/ds18b20p1.yaml
