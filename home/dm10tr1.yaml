@@ -25,7 +25,7 @@ button:
 light: !include ../light/blue_led.yaml
 output: !include ../output/blue_led.yaml
 # Need for one wire sensors
-one_wire: !include ../sensor/one_wire.yaml
+one_wire: !include ../connection/one_wire.yaml
 # Single relay to run the pump and valve
 switch:
   - <<: !include ../switch/gpio_relay.yaml

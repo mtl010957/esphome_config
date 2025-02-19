@@ -1,9 +1,10 @@
-- platform: one_wire
+- platform: dallas_temp
   address: ${probe_1_addr}
   id: "probe_1"
   name: "Temperature Probe 1"
   unit_of_measurement: "°C"
   device_class: temperature
+  update_interval: ${update_interval}
   accuracy_decimals: 1
   expire_after: 600s
   filters:

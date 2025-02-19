@@ -1,0 +1,2 @@
+- platform: gpio
+  pin: ${one_wire_pin}

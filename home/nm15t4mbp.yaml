@@ -41,7 +41,7 @@ binary_sensor:
 light: !include ../light/blue_led.yaml
 output: !include ../output/blue_led.yaml
 # Need for one wire sensors
-one_wire: !include ../sensor/one_wire.yaml
+one_wire: !include ../connection/one_wire.yaml
 # Set of four DS18B20 Temperature probes
 sensor:
   - <<: !include ../sensor/ds18b20p1.yaml

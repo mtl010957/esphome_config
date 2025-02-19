@@ -1,42 +1,46 @@
-- platform: one_wire
+- platform: dallas_temp
   address: ${probe_1_addr}
   name: "${probe_1_addr}"
   unit_of_measurement: "°C"
   device_class: temperature
   accuracy_decimals: 1
+  update_interval: ${update_interval}
   expire_after: 600s
   filters:
     - or:
         - delta: 0.5
         - heartbeat: 300s
-- platform: one_wire
+- platform: dallas_temp
   address: ${probe_2_addr}
   name: "${probe_2_addr}"
   unit_of_measurement: "°C"
   device_class: temperature
   accuracy_decimals: 1
+  update_interval: ${update_interval}
   expire_after: 600s
   filters:
     - or:
         - delta: 0.5
         - heartbeat: 300s
-- platform: one_wire
+- platform: dallas_temp
   address: ${probe_3_addr}
   name: "${probe_3_addr}"
   unit_of_measurement: "°C"
   device_class: temperature
   accuracy_decimals: 1
+  update_interval: ${update_interval}
   expire_after: 600s
   filters:
     - or:
         - delta: 0.5
         - heartbeat: 300s
-- platform: one_wire
+- platform: dallas_temp
   address: ${probe_4_addr}
   name: "${probe_4_addr}"
   unit_of_measurement: "°C"
   device_class: temperature
   accuracy_decimals: 1
+  update_interval: ${update_interval}
   expire_after: 600s
   filters:
     - or:
