@@ -3,6 +3,7 @@ substitutions:
   upper_devicename: S3106
   device_friendly_name: "S3106 Outlet"
   button_pin: GPIO0
+  button_name: "Button"
   blue_led_pin: GPIO13
   relay_pin: GPIO12
   switch_name: "None"
