@@ -10,6 +10,10 @@ substitutions:
   scl_pin: D6 # GPIO12
   id_temperature_sensor: "sht4x_temperature_sensor"
   id_humidity_sensor: "sht4x_humidity_sensor"
+  heater_max_duty: "0.01"
+  heater_power: "High"
+  heater_time: "Long"
+  temp_offset: "0.0"
 
 esphome: !include ../base/device_friendly_name_onboot.yaml
 esp8266: !include ../esp8266/d1mini.yaml
