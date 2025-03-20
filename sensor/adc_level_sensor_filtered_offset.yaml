@@ -1,0 +1,14 @@
+- platform: adc
+  pin: A0
+  name: "Level Sensor"
+  id: level_sensor
+  unit_of_measurement: '%'
+  accuracy_decimals: "${level_accuracy}"
+  update_interval: ${update_interval}
+  expire_after: 600s
+  filters:
+    - lambda: return ${level_offset} - x;
+    - multiply: ${multiplier}
+    - sliding_window_moving_average:
+        window_size: "${window_size}"
+        send_every: "${send_every}"

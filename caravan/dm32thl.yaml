@@ -1,0 +1,31 @@
+substitutions:
+  devicename: dm32thl
+  upper_devicename: DM32THL
+  device_friendly_name: "DM32THL Fresh Tank Climate and Level"
+  blue_led_pin: D4
+  sensor_pin: D2
+  update_interval: "5s"
+  level_offset: "0.755"
+  multiplier: "203"
+  window_size: "3"
+  send_every: "3"
+  level_accuracy: "1"
+
+esphome: !include ../base/device_friendly_name_onboot.yaml
+esp8266: !include ../esp8266/d1mini.yaml
+wifi: !include ../connection/wifi_caravan.yaml
+mqtt: !include ../connection/mqtt_caravan.yaml
+# Enable logging
+logger: !include ../logger/debug.yaml
+# Expose some info to HA
+text_sensor: !include ../text_sensor/wifi_info.yaml
+ota: !include ../ota/esphome.yaml
+# Enable remote restart from HA
+button: !include ../button/restart.yaml
+light: !include ../light/blue_led.yaml
+output: !include ../output/blue_led.yaml
+# DHT22 Temperature and Humidity
+sensor:
+  - <<: !include ../sensor/dht22.yaml
+  - <<: !include ../sensor/adc_level_sensor_filtered_offset.yaml
+
