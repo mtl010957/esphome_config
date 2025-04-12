@@ -8,7 +8,6 @@ substitutions:
   green_led_inverted: "true"
   blue_led_pin: GPIO17
   blue_led_inverted: "true"
-  interval: "15s"
   buffer_size: "25%"
   home_page_id: "battery_voltage_page"
 
