@@ -8,24 +8,6 @@ substitutions:
   green_led_inverted: "true"
   blue_led_pin: GPIO17
   blue_led_inverted: "true"
-  show_test_card: "false"
-  button_a_max_width: "120"
-  button_a_max_height: "120"
-  button_a_x1: "20"
-  # button_a_x1 + button_a_max_width
-  button_a_x2: "140"
-  button_a_y1: "60"
-  # button_a_y1 + button_a_max_height
-  button_a_y2: "180"
-
-  button_b_max_width: "120"
-  button_b_max_height: "120"
-  button_b_x1: "180"
-  # button_b_x1 + button_b_max_width
-  button_b_x2: "300"
-  button_b_y1: "60"
-  # button_b_y1 + button_b_max_height
-  button_b_y2: "180"
   interval: "15s"
   buffer_size: "25%"
   home_page_id: "battery_voltage_page"
@@ -39,17 +21,6 @@ logger: !include ../logger/debug.yaml
 # Expose some info to HA
 text_sensor: !include ../text_sensor/wifi_info.yaml
 ota: !include ../ota/esphome.yaml
-# Create a font to use, add and remove glyphs as needed. 
-font:
-  - <<: !include ../font/arimo12.yaml
-  - <<: !include ../font/arimo24.yaml
-color:
-  - <<: !include ../color/ha_blue.yaml
-  - <<: !include ../color/aquamarina.yaml
-  - <<: !include ../color/red_color.yaml
-  - <<: !include ../color/green_color.yaml
-  - <<: !include ../color/blue_color.yaml
-  - <<: !include ../color/yellow_color.yaml
 # Enable remote restart from HA
 button: 
   - <<: !include ../button/restart.yaml
