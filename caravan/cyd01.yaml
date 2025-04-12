@@ -1,0 +1,91 @@
+substitutions:
+  devicename: cyd01
+  upper_devicename: CYD01
+  device_friendly_name: "CYD01 Cheap Yellow Display ESP32-2432S028R"
+  red_led_pin: GPIO4
+  red_led_inverted: "true"
+  green_led_pin: GPIO16
+  green_led_inverted: "true"
+  blue_led_pin: GPIO17
+  blue_led_inverted: "true"
+  show_test_card: "false"
+  button_a_max_width: "120"
+  button_a_max_height: "120"
+  button_a_x1: "20"
+  # button_a_x1 + button_a_max_width
+  button_a_x2: "140"
+  button_a_y1: "60"
+  # button_a_y1 + button_a_max_height
+  button_a_y2: "180"
+
+  button_b_max_width: "120"
+  button_b_max_height: "120"
+  button_b_x1: "180"
+  # button_b_x1 + button_b_max_width
+  button_b_x2: "300"
+  button_b_y1: "60"
+  # button_b_y1 + button_b_max_height
+  button_b_y2: "180"
+  interval: "15s"
+  buffer_size: "25%"
+  home_page_id: "battery_voltage_page"
+
+esphome: !include ../base/device_friendly_name_onboot.yaml
+esp32: !include ../esp32/esp32dev.yaml
+wifi: !include ../connection/wifi_caravan.yaml
+mqtt: !include ../connection/mqtt_caravan.yaml
+# Enable logging
+logger: !include ../logger/debug.yaml
+# Expose some info to HA
+text_sensor: !include ../text_sensor/wifi_info.yaml
+ota: !include ../ota/esphome.yaml
+# Create a font to use, add and remove glyphs as needed. 
+font:
+  - <<: !include ../font/arimo12.yaml
+  - <<: !include ../font/arimo24.yaml
+color:
+  - <<: !include ../color/ha_blue.yaml
+  - <<: !include ../color/aquamarina.yaml
+  - <<: !include ../color/red_color.yaml
+  - <<: !include ../color/green_color.yaml
+  - <<: !include ../color/blue_color.yaml
+  - <<: !include ../color/yellow_color.yaml
+# Enable remote restart from HA
+button: 
+  - <<: !include ../button/restart.yaml
+  - <<: !include ../button/shutdown.yaml
+  - <<: !include ../button/safe_mode.yaml
+light:
+  - <<: !include ../light/display_backlight.yaml
+  - <<: !include ../light/rgb.yaml
+# Setup SPI for the display. The ESP32-2432S028R uses separate SPI buses for display and touch
+spi:
+  - <<: !include ../connection/spi_tft.yaml
+  - <<: !include ../connection/spi_touch.yaml
+output:
+  - <<: !include ../output/backlight_ledc.yaml
+  - <<: !include ../output/red_ledc.yaml
+  - <<: !include ../output/green_ledc.yaml
+  - <<: !include ../output/blue_ledc.yaml
+sensor:
+  - <<: !include ../sensor/cyd_board_ldr.yaml
+  - <<: !include ../sensor/mqtt_dm27rmbep_battery_voltage_lvgl.yaml
+  - <<: !include ../sensor/mqtt_dm27rmbep_array_voltage_lvgl.yaml
+#  - <<: !include ../sensor/mqtt_dm08tph_humidity_lvgl.yaml
+#  - <<: !include ../sensor/mqtt_s3101_power.yaml
+lvgl:
+  - <<: !include ../lvgl/buffer_size.yaml
+    <<: !include ../lvgl/style_definitions.yaml
+    <<: !include ../lvgl/nav_footer.yaml
+    pages:
+      - <<: !include ../lvgl/battery_voltage_page.yaml
+      - <<: !include ../lvgl/array_voltage_page.yaml
+#      - <<: !include ../lvgl/humidity_page.yaml
+#      - <<: !include ../lvgl/power_page.yaml
+# Setup the ili9xxx platform
+display:
+  - <<: !include ../display/ili9342_lvgl.yaml
+# Set up the xpt2046 touch platform
+touchscreen:
+  - <<: !include ../touchscreen/xpt2046.yaml
+

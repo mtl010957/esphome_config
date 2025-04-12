@@ -1,0 +1,15 @@
+  - platform: mqtt_subscribe
+    id: dm27rmbep_battery_voltage
+    internal: true
+    topic: dm27rmbep/sensor/battery_voltage/state
+    unit_of_measurement: V
+    on_value:
+      - lvgl.indicator.update:
+          id: battery_voltage_needle
+          value: !lambda return x * 10;
+      - lvgl.label.update:
+          id: battery_voltage_text
+          text:
+            format: "%.1fV"
+            args: [ 'x' ]
+

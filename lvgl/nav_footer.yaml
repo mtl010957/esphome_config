@@ -19,7 +19,7 @@
                 text: "\uF015"
                 on_press:
                   then:
-                    lvgl.page.show: temperature_page
+                    lvgl.page.show: ${home_page_id}
               - id: page_next
                 text: "\uF054"
                 on_press:
