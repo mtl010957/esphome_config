@@ -1,0 +1,4 @@
+  - platform: ledc
+    pin: GPIO21
+    id: backlight_pwm
+

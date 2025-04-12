@@ -1,0 +1,3 @@
+  - platform: sntp
+    id: home_time
+    timezone: America/New_York

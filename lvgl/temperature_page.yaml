@@ -1,0 +1,58 @@
+      - id: temperature_page
+        widgets:
+          - obj:
+              align: TOP_MID
+              styles: header_footer
+              widgets:
+                - label:
+                    text: "Temperature"
+                    align: CENTER
+                    text_align: CENTER
+                    text_color: 0xFFFFFF
+          - meter:
+              align: CENTER
+              height: 180
+              width: 180
+              scales:
+                - range_from: 400 # scale for the needle value
+                  range_to: 1200
+                  angle_range: 240
+                  rotation: 150
+                  indicators:
+                    - line:
+                        id: temperature_needle
+                        width: 2
+                        color: 0xFF0000
+                        r_mod: -4
+                    - tick_style:
+                        start_value: 40
+                        end_value: 120
+                        color_start: 0x0000bd
+                        color_end: 0xbd0000
+                        width: 1
+                - range_from: 40 # scale for the value labels
+                  range_to: 120
+                  angle_range: 240
+                  rotation: 150
+                  ticks:
+                    width: 1
+                    count: 41
+                    length: 10
+                    color: 0x000000
+                    major:
+                      stride: 5
+                      width: 2
+                      length: 10
+                      color: 0x404040
+                      label_gap: 10
+              widgets:
+                - label:
+                    id: temperature_text
+                    text: "-.-°F"
+                    align: CENTER
+                    y: 45
+                - label:
+                    text: "Livingroom"
+                    align: CENTER
+                    y: 65
+

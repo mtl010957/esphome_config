@@ -1,0 +1,68 @@
+  - platform: ili9xxx
+    id: esp_display
+    model: ili9342
+    invert_colors: false
+    color_palette: 8BIT
+    color_order: rgb
+    spi_id: tft
+    cs_pin: GPIO15
+    dc_pin: GPIO2
+#    rotation: 90
+    pages:
+      - id: page1
+        lambda: |-
+          it.fill(id(ha_blue));
+          it.print(0, 10, id(arimo24), "This is page 1!");
+          it.filled_rectangle(${button_a_x1}, ${button_a_y1}, ${button_a_max_width}, ${button_a_max_height}, id(aquamarina));
+          it.filled_rectangle(${button_b_x1}, ${button_b_y1}, ${button_b_max_width}, ${button_b_max_height}, id(aquamarina));
+          it.print(80, 120, id(arimo24), TextAlign::CENTER, "<");
+          it.print(240, 120, id(arimo24), TextAlign::CENTER, ">");
+      - id: page2
+        lambda: |-
+          it.fill(id(ha_blue));
+          it.print(0, 10, id(arimo24), "This is page 2!");
+          it.filled_rectangle(${button_a_x1}, ${button_a_y1}, ${button_a_max_width}, ${button_a_max_height}, id(aquamarina));
+          it.filled_rectangle(${button_b_x1}, ${button_b_y1}, ${button_b_max_width}, ${button_b_max_height}, id(aquamarina));
+          it.print(80, 120, id(arimo24), TextAlign::CENTER, "<");
+          it.print(240, 120, id(arimo24), TextAlign::CENTER, ">");
+      - id: page3
+        lambda: |-
+          it.fill(id(ha_blue));
+          it.print(0, 10, id(arimo24), "This is page 3!");
+          it.image(200, 5, id(esphome_image));
+          it.strftime(100, 200, id(arimo12), "%Y-%m-%d", id(sntp_time).now());
+          it.strftime(40, 220, id(arimo12), "%H:%M", id(sntp_time).now());
+          it.filled_rectangle(${button_a_x1}, ${button_a_y1}, ${button_a_max_width}, ${button_a_max_height}, id(aquamarina));
+          it.filled_rectangle(${button_b_x1}, ${button_b_y1}, ${button_b_max_width}, ${button_b_max_height}, id(aquamarina));
+          it.print(80, 120, id(arimo24), TextAlign::CENTER, "<");
+          it.print(240, 120, id(arimo24), TextAlign::CENTER, ">");
+      - id: page4
+        lambda: |-
+          int shift_x = (it.get_width()-310)/2;
+          int shift_y = (it.get_height()-256)/2;
+          for(auto i = 0; i<256; i++) {
+            it.horizontal_line(shift_x+  0,i+shift_y,50, red_color.fade_to_white(i));
+            it.horizontal_line(shift_x+ 50,i+shift_y,50, red_color.fade_to_black(i));
+
+            it.horizontal_line(shift_x+105,i+shift_y,50, green_color.fade_to_white(i));
+            it.horizontal_line(shift_x+155,i+shift_y,50, green_color.fade_to_black(i));
+
+            it.horizontal_line(shift_x+210,i+shift_y,50, blue_color.fade_to_white(i));
+            it.horizontal_line(shift_x+260,i+shift_y,50, blue_color.fade_to_black(i));
+          }
+          it.rectangle(shift_x+ 0, 0+shift_y, shift_x+ 310, 256+shift_y, yellow_color);
+          it.print(0, 10, id(arimo24), "This is page 4!");
+          it.filled_rectangle(${button_a_x1}, ${button_a_y1}, ${button_a_max_width}, ${button_a_max_height}, id(aquamarina));
+          it.filled_rectangle(${button_b_x1}, ${button_b_y1}, ${button_b_max_width}, ${button_b_max_height}, id(aquamarina));
+          it.print(80, 120, id(arimo24), TextAlign::CENTER, "<");
+          it.print(240, 120, id(arimo24), TextAlign::CENTER, ">");
+      - id: page5
+        lambda: |-
+          it.fill(id(red_color));
+          it.print(0, 10, id(arimo24), "This is page 5!");
+          it.print(0, 30, id(arimo24), "Background in Red");
+          it.filled_rectangle(${button_a_x1}, ${button_a_y1}, ${button_a_max_width}, ${button_a_max_height}, id(blue_color));
+          it.filled_rectangle(${button_b_x1}, ${button_b_y1}, ${button_b_max_width}, ${button_b_max_height}, id(green_color));
+          it.print(80, 120, id(arimo24), TextAlign::CENTER, "Blue");
+          it.print(240, 120, id(arimo24), TextAlign::CENTER, "Green");
+

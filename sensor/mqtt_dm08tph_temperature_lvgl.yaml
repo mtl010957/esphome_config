@@ -1,0 +1,15 @@
+  - platform: mqtt_subscribe
+    id: dm08tph_temperature
+    internal: true
+    topic: dm08tph/sensor/temperature/state
+    unit_of_measurement: °C
+    on_value:
+      - lvgl.indicator.update:
+          id: temperature_needle
+          value: !lambda return (x * (9.0 / 5.0) + 40.0) * 10;
+      - lvgl.label.update:
+          id: temperature_text
+          text:
+            format: "%.1f°F"
+            args: [ '(x * (9.0 / 5.0) + 40.0)' ]
+

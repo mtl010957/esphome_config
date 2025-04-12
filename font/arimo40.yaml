@@ -1,0 +1,5 @@
+  - file: '../font/Arimo-Regular.ttf'
+    id: arimo40
+    size: 40
+    glyphs: "!\"%()+=,-_.:°0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ abcdefghijklmnopqrstuvwxyzåäö"
+

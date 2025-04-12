@@ -1,0 +1,15 @@
+  - platform: mqtt_subscribe
+    id: dm08tph_humidity
+    internal: true
+    topic: dm08tph/sensor/humidity/state
+    unit_of_measurement: "%"
+    on_value:
+      - lvgl.indicator.update:
+          id: humidity_needle
+          value: !lambda return x * 10;
+      - lvgl.label.update:
+          id: humidity_text
+          text:
+            format: "%.1f%%"
+            args: [ 'x' ]
+

@@ -1,0 +1,7 @@
+  pages:
+    - id: main_page
+      widgets:
+        - label:
+            align: CENTER
+            text: 'Hello World!'
+

@@ -1,0 +1,4 @@
+  - interval: ${interval}
+    then:
+      - display.page.show_next: esp_display
+      - component.update: esp_display

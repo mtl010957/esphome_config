@@ -1,0 +1,5 @@
+  - platform: adc
+    pin: GPIO34
+    name: "Board LDR"
+    update_interval: 1500ms
+

@@ -1,4 +1,4 @@
 - platform: ledc
   id: blue_led
-  pin:
-    number: ${blue_led_pin}
+  pin: ${blue_led_pin}
+  inverted: ${blue_led_inverted}

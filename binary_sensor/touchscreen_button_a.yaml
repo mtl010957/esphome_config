@@ -1,0 +1,10 @@
+  - platform: touchscreen
+    name: Button A
+    x_min: ${button_a_x1}
+    x_max: ${button_a_x2}
+    y_min: ${button_a_y1}
+    y_max: ${button_a_y2}
+    on_press:
+      - display.page.show_previous: esp_display
+      - component.update: esp_display
+

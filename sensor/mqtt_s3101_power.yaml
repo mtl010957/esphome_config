@@ -1,0 +1,15 @@
+  - platform: mqtt_subscribe
+    id: s3101_power
+    internal: true
+    topic: s3101/sensor/power/state
+    unit_of_measurement: "W"
+    on_value:
+      - lvgl.indicator.update:
+          id: power_needle
+          value: !lambda return x * 10;
+      - lvgl.label.update:
+          id: power_text
+          text:
+            format: "%.1fW"
+            args: [ 'x' ]
+

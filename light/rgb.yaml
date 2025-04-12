@@ -1,0 +1,8 @@
+  - platform: rgb
+    name: RGB
+    id: led
+    red: red_led
+    green: green_led
+    blue: blue_led
+    restore_mode: ALWAYS_OFF
+

@@ -1,0 +1,26 @@
+  platform: xpt2046
+  id: esp_touchscreen
+  spi_id: touch
+  cs_pin: GPIO33
+  interrupt_pin: GPIO36
+  threshold: 400
+  calibration:
+    x_min: 280
+    x_max: 3860
+    y_min: 340
+    y_max: 3860
+  transform:
+    swap_xy: true
+    mirror_x: true
+    # Set false if not using LVGL
+    mirror_y: true
+  # Calibration for the display
+  # on_touch:
+  #   - lambda: |-
+  #         ESP_LOGI("cal", "x=%d, y=%d, x_raw=%d, y_raw=%0d",
+  #             id(esp_touchscreen).x,
+  #             id(esp_touchscreen).y,
+  #             id(esp_touchscreen).x_raw,
+  #             id(esp_touchscreen).y_raw
+  #             ); 
+

@@ -1,0 +1,4 @@
+  - file: "../image/esphome.png"
+    id: esphome_image
+    type: RGB
+

@@ -1,0 +1,13 @@
+  - platform: ili9xxx
+    model: ili9342
+    invert_colors: false
+    color_palette: 8BIT
+    color_order: rgb
+    spi_id: tft
+    cs_pin: GPIO15
+    dc_pin: GPIO2
+#    rotation: 90
+    lambda: |-
+      it.print(160, 140, id(arimo40), id(ha_blue), TextAlign::BOTTOM_CENTER, "Hello World!");
+      it.rectangle(0, 0, 320, 240, id(ha_blue));
+    show_test_card: ${show_test_card}
