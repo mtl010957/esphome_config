@@ -1,0 +1,6 @@
+  - platform: monochromatic
+    output: backlight_pwm
+    name: Backlight
+    id: backlight
+    restore_mode: ALWAYS_ON
+

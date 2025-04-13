@@ -26,7 +26,7 @@ button:
   - <<: !include ../button/shutdown.yaml
   - <<: !include ../button/safe_mode.yaml
 light:
-  - <<: !include ../light/display_backlight.yaml
+  - <<: !include ../light/backlight.yaml
   - <<: !include ../light/rgb.yaml
 # Setup SPI for the display. The ESP32-2432S028R uses separate SPI buses for display and touch
 spi:
