@@ -21,7 +21,6 @@
                   indicators:
                     - line:
                         id: battery_voltage_needle
-                        width: 2
                         color: 0xFF0000
                         r_mod: -4
                     - tick_style:
@@ -48,6 +47,7 @@
               widgets:
                 - label:
                     id: battery_voltage_text
+                    styles: meter_value
                     text: "-.-V"
                     align: CENTER
                     y: 45
@@ -55,4 +55,5 @@
                     text: "House Battery"
                     align: CENTER
                     y: 65
-
+              indicator:
+                styles: meter_indicator

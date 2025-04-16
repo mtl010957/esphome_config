@@ -1,0 +1,14 @@
+  - platform: mqtt_subscribe
+    id: dm18mpu_level_sensor_pitch_trimmed
+    internal: true
+    topic: dm18mpu/sensor/pitch/trimmed
+    unit_of_measurement: °
+    on_value:
+      - lvgl.indicator.update:
+          id: pitch_needle
+          value: !lambda return x * 10;
+      - lvgl.label.update:
+          id: pitch_text
+          text:
+            format: "%.1f°"
+            args: [ 'x' ]

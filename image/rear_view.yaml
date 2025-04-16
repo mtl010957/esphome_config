@@ -1,0 +1,4 @@
+  - file: "../image/rear_view.png"
+    id: rear_view_image
+    type: RGB565
+    transparency: alpha_channel

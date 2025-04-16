@@ -1,0 +1,4 @@
+  - file: "../image/left_side_view.png"
+    id: left_side_view_image
+    type: RGB565
+    transparency: alpha_channel

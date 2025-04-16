@@ -1,4 +1,5 @@
   - file: "../image/esphome.png"
     id: esphome_image
-    type: RGB
+    type: RGB565
+    resize: 40x40
 

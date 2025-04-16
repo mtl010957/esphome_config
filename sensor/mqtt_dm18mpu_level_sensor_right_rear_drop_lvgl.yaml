@@ -1,0 +1,11 @@
+  - platform: mqtt_subscribe
+    id: dm18mpu_level_sensor_right_rear_drop
+    internal: true
+    topic: dm18mpu/sensor/drop/rear/right
+    unit_of_measurement: in
+    on_value:
+      - lvgl.label.update:
+          id: right_rear_drop_text
+          text:
+            format: "%.1f\""
+            args: [ 'x' ]

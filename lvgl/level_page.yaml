@@ -1,0 +1,160 @@
+      - id: level_page
+        widgets:
+          - obj:
+              align: TOP_MID
+              styles: header_footer
+              widgets:
+                - label:
+                    text: "Level"
+                    align: CENTER
+                    text_align: CENTER
+                    text_color: 0xFFFFFF
+          - meter:
+              border_width: 0
+              x: 0
+              y: 50
+              height: 160
+              width: 160
+              bg_opa: TRANSP
+              scales:
+                - range_from: -50
+                  range_to: 50
+                  angle_range: 120
+                  ticks:
+                    count: 0
+                  indicators:
+                    - image:
+                        id: roll_needle
+                        pivot_x: 3
+                        pivot_y: 32
+                        src: rear_view_image
+                    - arc: # left fifth of the scale background
+                        color: 0xFF0000
+                        r_mod: 10 # radius difference from the scale default radius
+                        width: 31
+                        start_value: -50
+                        end_value: -30
+                    - arc: # second left fifth of the scale background
+                        color: 0xFFFF00
+                        r_mod: 10
+                        width: 31
+                        start_value: -30
+                        end_value: -10
+                    - arc: # middle fifth of the scale background
+                        color: 0x00FF00
+                        r_mod: 10
+                        width: 31
+                        start_value: -10
+                        end_value: 10
+                    - arc: # second right fifth of the scale background
+                        color: 0xFFFF00
+                        r_mod: 10
+                        width: 31
+                        start_value: 10
+                        end_value: 30
+                    - arc: # right fifth of the scale background
+                        color: 0xFF0000
+                        r_mod: 10
+                        width: 31
+                        start_value: 30
+                        end_value: 50
+              widgets:
+                - label:
+                    id: roll_text
+                    text: "--.-°"
+                    align: CENTER
+                    styles: meter_value
+                    y: 40
+                - label:
+                    text: "Roll"
+                    align: CENTER
+                    y: 60
+          - meter:
+              border_width: 0
+              x: 160
+              y: 50
+              height: 160
+              width: 160
+              bg_opa: TRANSP
+              scales:
+                - range_from: -50
+                  range_to: 50
+                  angle_range: 120
+                  rotation: 120
+                  ticks:
+                    count: 0
+                  indicators:
+                    - image:
+                        id: pitch_needle
+                        pivot_x: 2
+                        pivot_y: 59
+                        src: right_side_view_image
+                    - arc: # left fifth of the scale background
+                        color: 0xFF0000
+                        r_mod: 10 # radius difference from the scale default radius
+                        width: 31
+                        start_value: -50
+                        end_value: -30
+                    - arc: # second left fifth of the scale background
+                        color: 0xFFFF00
+                        r_mod: 10
+                        width: 31
+                        start_value: -30
+                        end_value: -10
+                    - arc: # middle fifth of the scale background
+                        color: 0x00FF00
+                        r_mod: 10
+                        width: 31
+                        start_value: -10
+                        end_value: 10
+                    - arc: # second right fifth of the scale background
+                        color: 0xFFFF00
+                        r_mod: 10
+                        width: 31
+                        start_value: 10
+                        end_value: 30
+                    - arc: # right fifth of the scale background
+                        color: 0xFF0000
+                        r_mod: 10
+                        width: 31
+                        start_value: 30
+                        end_value: 50
+              widgets:
+                - label:
+                    id: pitch_text
+                    text: "--.-°"
+                    align: CENTER
+                    styles: meter_value
+                    x: 40
+                    y: 0
+                - label:
+                    text: "Pitch"
+                    align: CENTER
+                    x: 40
+                    y: 20
+          - label:
+              id: left_front_drop_text
+              x: 0
+              y: 30
+              text: "--.-\""
+              styles: label_value
+          - label:
+              id: left_rear_drop_text
+              x: 0
+              y: 180
+              text: "--.-\""
+              styles: label_value
+          - label:
+              id: right_front_drop_text
+              x: 260
+              y: 30
+              text: "--.-\""
+              styles: label_value
+          - label:
+              id: right_rear_drop_text
+              x: 260
+              y: 180
+              text: "--.-\""
+              styles: label_value
+                    
+                    

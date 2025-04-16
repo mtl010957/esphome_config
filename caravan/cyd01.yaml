@@ -41,8 +41,15 @@ sensor:
   - <<: !include ../sensor/cyd_board_ldr.yaml
   - <<: !include ../sensor/mqtt_dm27rmbep_battery_voltage_lvgl.yaml
   - <<: !include ../sensor/mqtt_dm27rmbep_array_voltage_lvgl.yaml
-#  - <<: !include ../sensor/mqtt_dm08tph_humidity_lvgl.yaml
-#  - <<: !include ../sensor/mqtt_s3101_power.yaml
+  - <<: !include ../sensor/mqtt_dm18mpu_level_sensor_roll_trimmed_lvgl.yaml
+  - <<: !include ../sensor/mqtt_dm18mpu_level_sensor_pitch_trimmed_lvgl.yaml
+  - <<: !include ../sensor/mqtt_dm18mpu_level_sensor_left_front_drop_lvgl.yaml
+  - <<: !include ../sensor/mqtt_dm18mpu_level_sensor_left_rear_drop_lvgl.yaml
+  - <<: !include ../sensor/mqtt_dm18mpu_level_sensor_right_front_drop_lvgl.yaml
+  - <<: !include ../sensor/mqtt_dm18mpu_level_sensor_right_rear_drop_lvgl.yaml
+image:
+  - <<: !include ../image/rear_view.yaml
+  - <<: !include ../image/right_side_view.yaml
 lvgl:
   - <<: !include ../lvgl/buffer_size.yaml
     <<: !include ../lvgl/style_definitions.yaml
@@ -50,8 +57,7 @@ lvgl:
     pages:
       - <<: !include ../lvgl/battery_voltage_page.yaml
       - <<: !include ../lvgl/array_voltage_page.yaml
-#      - <<: !include ../lvgl/humidity_page.yaml
-#      - <<: !include ../lvgl/power_page.yaml
+      - <<: !include ../lvgl/level_page.yaml
 # Setup the ili9xxx platform
 display:
   - <<: !include ../display/ili9342_lvgl.yaml
