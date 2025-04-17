@@ -8,3 +8,7 @@
       name: "Discharging"
     online_status:
       name: "Online Status"
+    limiting:
+      name: "Current Limiting"
+    heating:
+      name: "Heating"
