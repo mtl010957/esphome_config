@@ -48,8 +48,8 @@
       name: "Cell Voltage 3"
     cell_voltage_4:
       name: "Cell Voltage 4"
-#    operation_status_bitmask:
-#      name: "Operation Status Bitmask"
+    operation_status_bitmask:
+      name: "Operation Status Bitmask"
 #    errors_bitmask:
 #      name: "Errors Bitmask"
 #    balancer_status_bitmask:
