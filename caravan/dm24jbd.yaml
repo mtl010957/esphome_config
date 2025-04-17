@@ -4,7 +4,7 @@ substitutions:
   device_friendly_name: "DM24JBD BMS GJ-12V100AH-0526-161"
   blue_led_pin: GPIO2
   update_interval: "4s"
-  external_components_source: github://syssi/esphome-jbd-bms@main
+  external_components_source: github://mtl010957/esphome-jbd-bms@add-limiting-and-heating
   #bms0_mac_address: "A4:C1:37:40:2F:C8"
   #bms0_name: "GJ-12V100AH-0526-048"
   bms0_mac_address: "70:3E:97:07:F9:F6"
