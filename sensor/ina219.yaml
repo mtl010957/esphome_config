@@ -13,6 +13,7 @@
     name: "Bus Voltage"
   shunt_voltage:
     name: "Shunt Voltage"
+    accuracy_decimals: 4
     filters:
       - offset: ${shunt_offset}
   max_voltage: ${max_voltage}
