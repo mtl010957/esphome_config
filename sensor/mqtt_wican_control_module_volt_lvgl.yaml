@@ -1,0 +1,11 @@
+  - platform: mqtt_subscribe
+    id: wican_control_module_volt
+    internal: true
+    topic: wican/dc06753cc7d1/can/42_controlmodulevolt
+    unit_of_measurement: V
+    on_value:
+      - lvgl.label.update:
+          id: control_module_volt_text
+          text:
+            format: "%.1fV"
+            args: [ x ]

@@ -1,0 +1,11 @@
+  - platform: mqtt_subscribe
+    id: wican_throttle_position
+    internal: true
+    topic: wican/dc06753cc7d1/can/11_throttleposition
+    unit_of_measurement: "%"
+    on_value:
+      - lvgl.label.update:
+          id: throttle_position_text
+          text:
+            format: "%.1f%%"
+            args: [ x ]

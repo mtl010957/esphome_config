@@ -1,0 +1,11 @@
+  - platform: mqtt_subscribe
+    id: wican_ambient_air_temp
+    internal: true
+    topic: wican/dc06753cc7d1/can/46_ambientairtemp
+    unit_of_measurement: °C
+    on_value:
+      - lvgl.label.update:
+          id: ambient_air_temp_text
+          text:
+            format: "%.1f°F"
+            args: [ '(x * (9.0 / 5.0) + 32.0)' ]

@@ -9,7 +9,7 @@ substitutions:
   blue_led_pin: GPIO17
   blue_led_inverted: "true"
   buffer_size: "25%"
-  home_page_id: "battery_voltage_page"
+  home_page_id: "engine_sensors_page"
 
 esphome: !include ../base/device_friendly_name_onboot.yaml
 esp32: !include ../esp32/esp32dev.yaml
@@ -18,7 +18,8 @@ mqtt: !include ../connection/mqtt_caravan.yaml
 # Enable logging
 logger: !include ../logger/debug.yaml
 # Expose some info to HA
-text_sensor: !include ../text_sensor/wifi_info.yaml
+text_sensor:
+  - <<: !include ../text_sensor/wifi_info.yaml
 ota: !include ../ota/esphome.yaml
 # Enable remote restart from HA
 button: 
@@ -39,6 +40,12 @@ output:
   - <<: !include ../output/blue_ledc.yaml
 sensor:
   - <<: !include ../sensor/cyd_board_ldr.yaml
+  - <<: !include ../sensor/mqtt_wican_engine_coolant_temp_lvgl.yaml
+  - <<: !include ../sensor/mqtt_wican_intake_air_temperature_lvgl.yaml
+  - <<: !include ../sensor/mqtt_wican_trans_temperature_lvgl.yaml
+  - <<: !include ../sensor/mqtt_wican_calc_engine_load_lvgl.yaml
+  - <<: !include ../sensor/mqtt_wican_throttle_position_lvgl.yaml
+  - <<: !include ../sensor/mqtt_wican_control_module_volt_lvgl.yaml
   - <<: !include ../sensor/mqtt_dm27rmbep_battery_voltage_lvgl.yaml
   - <<: !include ../sensor/mqtt_dm27rmbep_array_voltage_lvgl.yaml
   - <<: !include ../sensor/mqtt_dm18mpu_level_sensor_roll_trimmed_lvgl.yaml
@@ -55,6 +62,7 @@ lvgl:
     <<: !include ../lvgl/style_definitions.yaml
     <<: !include ../lvgl/nav_footer.yaml
     pages:
+      - <<: !include ../lvgl/engine_sensors_page.yaml
       - <<: !include ../lvgl/battery_voltage_page.yaml
       - <<: !include ../lvgl/array_voltage_page.yaml
       - <<: !include ../lvgl/level_page.yaml

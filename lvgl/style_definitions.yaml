@@ -24,3 +24,5 @@
       radius: 4
       bg_opa: 100%
       bg_color: 0xD0D0D0
+    - id: sensor_value
+      text_font: montserrat_20

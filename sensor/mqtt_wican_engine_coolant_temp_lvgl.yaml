@@ -1,0 +1,11 @@
+  - platform: mqtt_subscribe
+    id: wican_engine_coolant_temp
+    internal: true
+    topic: wican/dc06753cc7d1/can/05_enginecoolanttemp
+    unit_of_measurement: °C
+    on_value:
+      - lvgl.label.update:
+          id: engine_coolant_temp_text
+          text:
+            format: "%.1f°F"
+            args: [ '(x * (9.0 / 5.0) + 32.0)' ]

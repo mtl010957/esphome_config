@@ -1,0 +1,11 @@
+  - platform: mqtt_subscribe
+    id: wican_calc_engine_load
+    internal: true
+    topic: wican/dc06753cc7d1/can/04_calcengineload
+    unit_of_measurement: "%"
+    on_value:
+      - lvgl.label.update:
+          id: calc_engine_load_text
+          text:
+            format: "%.1f%%"
+            args: [ x ]
