@@ -7,5 +7,5 @@
       - lvgl.label.update:
           id: throttle_position_text
           text:
-            format: "%.1f%%"
+            format: "%.1f"
             args: [ x ]

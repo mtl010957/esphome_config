@@ -7,5 +7,5 @@
       - lvgl.label.update:
           id: calc_engine_load_text
           text:
-            format: "%.1f%%"
+            format: "%.1f"
             args: [ x ]

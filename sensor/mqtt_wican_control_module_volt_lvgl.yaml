@@ -7,5 +7,27 @@
       - lvgl.label.update:
           id: control_module_volt_text
           text:
-            format: "%.1fV"
+            format: "%.1f"
             args: [ x ]
+      - if:
+          condition:
+            lambda: |-
+              return x >= 13.75 and x <= 14.7;
+          then:
+            - lvgl.led.update:
+                id: control_module_volt_led
+                color: 0x00FF00
+          else:
+            - if:
+                condition:
+                  lambda: |-
+                    return (x > 13 and x <= 13.75);
+                then:
+                  - lvgl.led.update:
+                      id: control_module_volt_led
+                      color: 0xFFFF00
+                else:
+                  - lvgl.led.update:
+                      id: control_module_volt_led
+                      color: 0xFF0000
+      

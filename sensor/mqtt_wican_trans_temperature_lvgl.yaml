@@ -7,5 +7,36 @@
       - lvgl.label.update:
           id: trans_temperature_text
           text:
-            format: "%.1f°F"
+            format: "%.0f"
             args: [ '(x * (9.0 / 5.0) + 32.0)' ]
+      - if:
+          condition:
+            lambda: |-
+              return x <= 70;
+          then:
+            - lvgl.led.update:
+                id: trans_temperature_led
+                color: 0x0000FF
+          else:
+            - if:
+                condition:
+                  lambda: |-
+                    return x > 70 and x <= 88;
+                then:
+                  - lvgl.led.update:
+                      id: trans_temperature_led
+                      color: 0x00FF00
+                else:
+                  - if:
+                      condition:
+                        lambda: |-
+                          return x > 88 and x <= 100;
+                      then:
+                        - lvgl.led.update:
+                            id: trans_temperature_led
+                            color: 0xFFFF00
+                      else:
+                        - lvgl.led.update:
+                            id: trans_temperature_led
+                            color: 0xFF0000
+      

@@ -7,5 +7,5 @@
       - lvgl.label.update:
           id: intake_air_temperature_text
           text:
-            format: "%.1f°F"
+            format: "%.0f"
             args: [ '(x * (9.0 / 5.0) + 32.0)' ]

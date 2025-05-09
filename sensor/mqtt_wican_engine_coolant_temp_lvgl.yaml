@@ -7,5 +7,36 @@
       - lvgl.label.update:
           id: engine_coolant_temp_text
           text:
-            format: "%.1f°F"
+            format: "%.0f"
             args: [ '(x * (9.0 / 5.0) + 32.0)' ]
+      - if:
+          condition:
+            lambda: |-
+              return x <= 95;
+          then:
+            - lvgl.led.update:
+                id: engine_coolant_temp_led
+                color: 0x0000FF
+          else:
+            - if:
+                condition:
+                  lambda: |-
+                    return x > 95 and x <= 105;
+                then:
+                  - lvgl.led.update:
+                      id: engine_coolant_temp_led
+                      color: 0x00FF00
+                else:
+                  - if:
+                      condition:
+                        lambda: |-
+                          return x > 105 and x <= 113;
+                      then:
+                        - lvgl.led.update:
+                            id: engine_coolant_temp_led
+                            color: 0xFFFF00
+                      else:
+                        - lvgl.led.update:
+                            id: engine_coolant_temp_led
+                            color: 0xFF0000
+      
