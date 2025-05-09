@@ -46,8 +46,6 @@ sensor:
   - <<: !include ../sensor/mqtt_wican_calc_engine_load_lvgl.yaml
   - <<: !include ../sensor/mqtt_wican_throttle_position_lvgl.yaml
   - <<: !include ../sensor/mqtt_wican_control_module_volt_lvgl.yaml
-  - <<: !include ../sensor/mqtt_dm27rmbep_battery_voltage_lvgl.yaml
-  - <<: !include ../sensor/mqtt_dm27rmbep_array_voltage_lvgl.yaml
   - <<: !include ../sensor/mqtt_dm18mpu_level_sensor_roll_trimmed_lvgl.yaml
   - <<: !include ../sensor/mqtt_dm18mpu_level_sensor_pitch_trimmed_lvgl.yaml
   - <<: !include ../sensor/mqtt_dm18mpu_level_sensor_left_front_drop_lvgl.yaml
@@ -57,14 +55,18 @@ sensor:
 image:
   - <<: !include ../image/rear_view.yaml
   - <<: !include ../image/right_side_view.yaml
+font:
+  - <<: !include ../font/montserrat_bold_22.yaml
+  - <<: !include ../font/montserrat_bold_24.yaml
+  - <<: !include ../font/montserrat_bold_26.yaml
+  - <<: !include ../font/montserrat_bold_28.yaml
+  - <<: !include ../font/montserrat_bold_30.yaml
 lvgl:
   - <<: !include ../lvgl/buffer_size.yaml
     <<: !include ../lvgl/style_definitions.yaml
     <<: !include ../lvgl/nav_footer.yaml
     pages:
       - <<: !include ../lvgl/engine_sensors_page.yaml
-      - <<: !include ../lvgl/battery_voltage_page.yaml
-      - <<: !include ../lvgl/array_voltage_page.yaml
       - <<: !include ../lvgl/level_page.yaml
 # Setup the ili9xxx platform
 display:

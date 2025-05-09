@@ -1,0 +1,6 @@
+  - file: '../font/Montserrat-Bold.ttf'
+    id: montserrat_bold_22
+    size: 22
+    bpp: 4
+    glyphs: "<>!\"%()+=,-_.:°0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+

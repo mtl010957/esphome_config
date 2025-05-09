@@ -16,13 +16,18 @@
               height: 90
               widgets:
                 - label:
-                    text: "Coolant"
+                    text: "Coolant °F"
                     align: TOP_MID
                 - label:
                     id: engine_coolant_temp_text
                     styles: sensor_value
-                    text: "-.-°F"
+                    text: "-.-"
                     align: CENTER
+                - led:
+                    id: engine_coolant_temp_led
+                    color: 0x00FF00
+                    styles: sensor_led
+                    align: BOTTOM_MID
           - obj:
               x: 107
               y: 30
@@ -30,12 +35,12 @@
               height: 90
               widgets:
                 - label:
-                    text: "Intake"
+                    text: "Intake °F"
                     align: TOP_MID
                 - label:
                     id: intake_air_temperature_text
                     styles: sensor_value
-                    text: "-.-°F"
+                    text: "-.-"
                     align: CENTER
           - obj:
               x: 214
@@ -44,13 +49,18 @@
               height: 90
               widgets:
                 - label:
-                    text: "Trans"
+                    text: "Trans °F"
                     align: TOP_MID
                 - label:
                     id: trans_temperature_text
                     styles: sensor_value
-                    text: "-.-°F"
+                    text: "-.-"
                     align: CENTER
+                - led:
+                    id: trans_temperature_led
+                    color: 0x00FF00
+                    styles: sensor_led
+                    align: BOTTOM_MID
           - obj:
               x: 0
               y: 120
@@ -58,12 +68,12 @@
               height: 90
               widgets:
                 - label:
-                    text: "Load"
+                    text: "Load %"
                     align: TOP_MID
                 - label:
                     id: calc_engine_load_text
                     styles: sensor_value
-                    text: "-.-%"
+                    text: "-.-"
                     align: CENTER
           - obj:
               x: 107
@@ -72,12 +82,12 @@
               height: 90
               widgets:
                 - label:
-                    text: "Throttle"
+                    text: "Throttle %"
                     align: TOP_MID
                 - label:
                     id: throttle_position_text
                     styles: sensor_value
-                    text: "-.-%"
+                    text: "-.-"
                     align: CENTER
           - obj:
               x: 214
@@ -86,12 +96,17 @@
               height: 90
               widgets:
                 - label:
-                    text: "Voltage"
+                    text: "Voltage V"
                     align: TOP_MID
                 - label:
                     id: control_module_volt_text
                     styles: sensor_value
-                    text: "-.-V"
+                    text: "-.-"
                     align: CENTER
+                - led:
+                    id: control_module_volt_led
+                    color: 0x00FF00
+                    styles: sensor_led
+                    align: BOTTOM_MID
               
               
