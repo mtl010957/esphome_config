@@ -61,6 +61,11 @@ font:
   - <<: !include ../font/montserrat_bold_26.yaml
   - <<: !include ../font/montserrat_bold_28.yaml
   - <<: !include ../font/montserrat_bold_30.yaml
+  - <<: !include ../font/montserrat_bold_32.yaml
+  - <<: !include ../font/montserrat_bold_34.yaml
+  - <<: !include ../font/montserrat_bold_36.yaml
+  - <<: !include ../font/montserrat_bold_38.yaml
+  - <<: !include ../font/montserrat_bold_40.yaml
 lvgl:
   - <<: !include ../lvgl/buffer_size.yaml
     <<: !include ../lvgl/style_definitions.yaml
