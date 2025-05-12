@@ -1,0 +1,2 @@
+name: ${devicename}
+friendly_name: "${device_friendly_name}"
