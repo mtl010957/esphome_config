@@ -1,0 +1,57 @@
+  top_layer:
+    widgets:
+      - button:
+          x: 0
+          y: 0
+          width: 80
+          height: 28
+          id: ${backlight_toggle_id}
+          checkable: true
+          styles: header_footer
+          widgets:
+            - label:
+                align: center
+                text: "\uF070"
+          on_click:
+            then:
+              light.toggle: ${backlight_id}
+      - button:
+          x: 240
+          y: 0
+          width: 80
+          height: 28
+          id: ${beeper_cancel_id}
+          checkable: true
+          styles: header_footer
+          widgets:
+            - label:
+                align: center
+                text: "\uF071"
+          on_click:
+            then:
+              switch.toggle: ${beeper_switch_id}
+      - buttonmatrix:
+          align: bottom_mid
+          styles: header_footer
+          pad_all: 0
+          outline_width: 0
+          id: top_layer
+          items:
+            styles: header_footer
+          rows:
+            - buttons:
+              - id: page_prev
+                text: "\uF053"
+                on_press:
+                  then:
+                    lvgl.page.previous:
+              - id: page_home
+                text: "\uF015"
+                on_press:
+                  then:
+                    lvgl.page.show: ${home_page_id}
+              - id: page_next
+                text: "\uF054"
+                on_press:
+                  then:
+                    lvgl.page.next:

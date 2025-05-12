@@ -14,8 +14,11 @@ substitutions:
   touch_clk_pin: "GPIO25"
   touch_mosi_pin: "GPIO32"
   touch_miso_pin: "GPIO39"
+  backlight_id: "backlight"
+  backlight_toggle_id: "backlight_toggle"
   buffer_size: "25%"
   home_page_id: "engine_sensors_page"
+  beeper_cancel_id: "beeper_cancel"
   beeper_pin: "GPIO26"
   beeper_id: "beeper"
   beeper_frequency: "1000Hz"
@@ -38,7 +41,7 @@ button:
   - <<: !include ../button/shutdown.yaml
   - <<: !include ../button/safe_mode.yaml
 light:
-  - <<: !include ../light/backlight.yaml
+  - <<: !include ../light/backlight_lvgl.yaml
   - <<: !include ../light/rgb.yaml
 # Setup SPI for the display. The ESP32-2432S028R uses separate SPI buses for display and touch
 spi:
@@ -51,7 +54,7 @@ output:
   - <<: !include ../output/blue_ledc.yaml
   - <<: !include ../output/beeper_ledc.yaml
 switch:
-  - <<: !include ../switch/beeper.yaml
+  - <<: !include ../switch/beeper_lvgl.yaml
 sensor:
   - <<: !include ../sensor/cyd_board_ldr.yaml
   - <<: !include ../sensor/mqtt_wican_engine_coolant_temp_lvgl.yaml
@@ -83,7 +86,7 @@ font:
 lvgl:
   - <<: !include ../lvgl/buffer_size.yaml
     <<: !include ../lvgl/style_definitions.yaml
-    <<: !include ../lvgl/nav_footer.yaml
+    <<: !include ../lvgl/button_header_nav_footer.yaml
     pages:
       - <<: !include ../lvgl/engine_sensors_page.yaml
       - <<: !include ../lvgl/level_page.yaml
