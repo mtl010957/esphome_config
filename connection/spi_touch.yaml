@@ -1,5 +1,8 @@
   - id: touch
-    clk_pin: GPIO25
-    mosi_pin: GPIO32
-    miso_pin: GPIO39
+    clk_pin: 
+      number: ${touch_clk_pin}
+    mosi_pin:
+      number: ${touch_mosi_pin}
+    miso_pin: 
+      number: ${touch_miso_pin}
 

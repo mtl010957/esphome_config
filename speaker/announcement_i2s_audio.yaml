@@ -1,0 +1,4 @@
+  - platform: i2s_audio
+    id: ${announcement_speaker_id}
+    dac_type: internal
+    mode: stereo

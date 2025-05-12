@@ -1,0 +1,11 @@
+  - platform: template
+    id: ${beeper_switch_id}
+    name: "Beeper"
+    optimistic: true
+    turn_on_action:
+      - output.turn_on: ${beeper_id}
+      - output.set_level:
+          id: ${beeper_id}
+          level: ${beeper_level}
+    turn_off_action:
+      - output.turn_off: ${beeper_id}

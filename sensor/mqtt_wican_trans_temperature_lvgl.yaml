@@ -9,10 +9,11 @@
           text:
             format: "%.0f"
             args: [ '(x * (9.0 / 5.0) + 32.0)' ]
+      - switch.turn_off: ${beeper_switch_id}
       - if:
           condition:
             lambda: |-
-              return x <= 70;
+              return x <= 70 or isnan(x);
           then:
             - lvgl.led.update:
                 id: trans_temperature_led
@@ -39,4 +40,5 @@
                         - lvgl.led.update:
                             id: trans_temperature_led
                             color: 0xFF0000
+                        - switch.turn_on: ${beeper_switch_id}
       

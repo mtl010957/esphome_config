@@ -2,17 +2,28 @@ substitutions:
   devicename: cyd01
   upper_devicename: CYD01
   device_friendly_name: "CYD01 Cheap Yellow Display ESP32-2432S028R"
-  red_led_pin: GPIO4
+  red_led_pin: "GPIO4"
   red_led_inverted: "true"
-  green_led_pin: GPIO16
+  green_led_pin: "GPIO16"
   green_led_inverted: "true"
-  blue_led_pin: GPIO17
+  blue_led_pin: "GPIO17"
   blue_led_inverted: "true"
+  tft_clk_pin: "GPIO14"
+  tft_mosi_pin: "GPIO13"
+  tft_miso_pin: "GPIO12"
+  touch_clk_pin: "GPIO25"
+  touch_mosi_pin: "GPIO32"
+  touch_miso_pin: "GPIO39"
   buffer_size: "25%"
   home_page_id: "engine_sensors_page"
+  beeper_pin: "GPIO26"
+  beeper_id: "beeper"
+  beeper_frequency: "2000Hz"
+  beeper_level: "50%"
+  beeper_switch_id: "beeper_switch"
 
-esphome: !include ../base/device_friendly_name_onboot.yaml
-esp32: !include ../esp32/esp32dev.yaml
+esphome: !include ../base/device_friendly_name.yaml
+esp32: !include ../esp32/esp32dev_idf.yaml
 wifi: !include ../connection/wifi_caravan.yaml
 mqtt: !include ../connection/mqtt_caravan.yaml
 # Enable logging
@@ -38,6 +49,9 @@ output:
   - <<: !include ../output/red_ledc.yaml
   - <<: !include ../output/green_ledc.yaml
   - <<: !include ../output/blue_ledc.yaml
+  - <<: !include ../output/beeper_ledc.yaml
+switch:
+  - <<: !include ../switch/beeper.yaml
 sensor:
   - <<: !include ../sensor/cyd_board_ldr.yaml
   - <<: !include ../sensor/mqtt_wican_engine_coolant_temp_lvgl.yaml

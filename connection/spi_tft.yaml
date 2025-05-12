@@ -1,5 +1,9 @@
   - id: tft
-    clk_pin: GPIO14
-    mosi_pin: GPIO13
-    miso_pin: GPIO12
+    clk_pin:
+      number: ${tft_clk_pin}
+    mosi_pin:
+      number: ${tft_mosi_pin}
+    miso_pin:
+      number: ${tft_miso_pin}
+      ignore_strapping_warning: true
 

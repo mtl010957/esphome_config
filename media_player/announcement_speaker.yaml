@@ -1,0 +1,6 @@
+  - platform: speaker
+    announcement_pipeline:
+      speaker: ${announcement_speaker_id}
+    files:
+      - id: ${announcement_file_id}
+        file: ${announcement_file}

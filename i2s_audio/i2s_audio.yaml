@@ -1,0 +1,4 @@
+  i2s_lrclk_pin:
+    number: ${i2s_lrclk_pin}
+  i2s_bclk_pin:
+    number: ${i2s_bclk_pin}

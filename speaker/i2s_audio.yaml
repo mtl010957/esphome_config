@@ -1,0 +1,3 @@
+  - platform: i2s_audio
+    dac_type: internal
+    mode: stereo

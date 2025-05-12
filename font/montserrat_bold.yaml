@@ -1,0 +1,49 @@
+  - file:
+      type: local
+      path: '../font/Montserrat-Bold.ttf'
+    id: montserrat_bold_22
+    size: 22
+    bpp: 4
+    glyphs: "<>!\"%()+=,-_.:°0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+  - file:
+      type: local
+      path: '../font/Montserrat-Bold.ttf'
+    id: montserrat_bold_24
+    size: 24
+    bpp: 4
+    glyphs: "<>!\"%()+=,-_.:°0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+  - file:
+      type: local
+      path: '../font/Montserrat-Bold.ttf'
+    id: montserrat_bold_26
+    size: 26
+    bpp: 4
+    glyphs: "<>!\"%()+=,-_.:°0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+  - file:
+      type: local
+      path: '../font/Montserrat-Bold.ttf'
+    id: montserrat_bold_28
+    size: 28
+    bpp: 4
+    glyphs: "<>!\"%()+=,-_.:°0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+  - file:
+      type: local
+      path: '../font/Montserrat-Bold.ttf'
+    id: montserrat_bold_30
+    size: 30
+    bpp: 4
+    glyphs: "<>!\"%()+=,-_.:°0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+  - file:
+      type: local
+      path: '../font/Montserrat-Bold.ttf'
+    id: montserrat_bold_32
+    size: 32
+    bpp: 4
+    glyphs: "<>!\"%()+=,-_.:°0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+  - file:
+      type: local
+      path: '../font/Montserrat-Bold.ttf'
+    id: montserrat_bold_34
+    size: 34
+    bpp: 4
+    glyphs: "<>!\"%()+=,-_.:°0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"

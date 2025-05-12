@@ -1,0 +1,4 @@
+  - platform: i2s_audio
+    name: I2S Media Player
+    dac_type: internal
+    mode: stereo

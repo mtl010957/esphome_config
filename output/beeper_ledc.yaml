@@ -1,0 +1,4 @@
+  - platform: ledc
+    pin: ${beeper_pin}
+    id: ${beeper_id}
+    frequency: ${beeper_frequency}

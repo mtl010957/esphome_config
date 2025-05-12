@@ -9,6 +9,7 @@
           text:
             format: "%.0f"
             args: [ '(x * (9.0 / 5.0) + 32.0)' ]
+      - switch.turn_off: ${beeper_switch_id}
       - if:
           condition:
             lambda: |-
@@ -39,4 +40,5 @@
                         - lvgl.led.update:
                             id: engine_coolant_temp_led
                             color: 0xFF0000
-      
+                        - switch.turn_on: ${beeper_switch_id}
+

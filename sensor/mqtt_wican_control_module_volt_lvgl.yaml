@@ -9,6 +9,7 @@
           text:
             format: "%.1f"
             args: [ x ]
+      - switch.turn_off: ${beeper_switch_id}
       - if:
           condition:
             lambda: |-
@@ -30,4 +31,5 @@
                   - lvgl.led.update:
                       id: control_module_volt_led
                       color: 0xFF0000
+                  - switch.turn_on: ${beeper_switch_id}
       
