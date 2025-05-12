@@ -18,7 +18,7 @@ substitutions:
   home_page_id: "engine_sensors_page"
   beeper_pin: "GPIO26"
   beeper_id: "beeper"
-  beeper_frequency: "2000Hz"
+  beeper_frequency: "1000Hz"
   beeper_level: "50%"
   beeper_switch_id: "beeper_switch"
 
