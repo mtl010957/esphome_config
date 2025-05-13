@@ -15,7 +15,7 @@ substitutions:
   touch_mosi_pin: "GPIO32"
   touch_miso_pin: "GPIO39"
   backlight_id: "backlight"
-  backlight_toggle_id: "backlight_toggle"
+  backlight_switch_id: "backlight_switch"
   buffer_size: "25%"
   home_page_id: "engine_sensors_page"
   beeper_cancel_id: "beeper_cancel"

@@ -41,4 +41,5 @@
                             id: trans_temperature_led
                             color: 0xFF0000
                         - switch.turn_on: ${beeper_switch_id}
+                        - light.turn_on: ${backlight_id}
       

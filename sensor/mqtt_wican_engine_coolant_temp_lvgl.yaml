@@ -13,7 +13,7 @@
       - if:
           condition:
             lambda: |-
-              return x <= 95;
+              return x <= 95 or isnan(x);
           then:
             - lvgl.led.update:
                 id: engine_coolant_temp_led
@@ -41,4 +41,5 @@
                             id: engine_coolant_temp_led
                             color: 0xFF0000
                         - switch.turn_on: ${beeper_switch_id}
+                        - light.turn_on: ${backlight_id}
 

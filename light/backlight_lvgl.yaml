@@ -5,6 +5,6 @@
     restore_mode: ALWAYS_ON
     on_state:
       - lvgl.widget.update:
-          id: ${backlight_toggle_id}
+          id: ${backlight_switch_id}
           state:
             checked: !lambda return (! id(${backlight_id}).current_values.is_on());

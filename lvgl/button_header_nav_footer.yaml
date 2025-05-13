@@ -5,7 +5,7 @@
           y: 0
           width: 80
           height: 28
-          id: ${backlight_toggle_id}
+          id: ${backlight_switch_id}
           checkable: true
           styles: header_footer
           widgets:
