@@ -82,10 +82,10 @@
               height: 90
               widgets:
                 - label:
-                    text: "Throttle %"
+                    text: "CmdThrot %"
                     align: TOP_MID
                 - label:
-                    id: throttle_position_text
+                    id: cmdthrottle_actuator_text
                     styles: sensor_value
                     text: "-.-"
                     align: CENTER

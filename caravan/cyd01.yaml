@@ -61,7 +61,7 @@ sensor:
   - <<: !include ../sensor/mqtt_wican_intake_air_temperature_lvgl.yaml
   - <<: !include ../sensor/mqtt_wican_trans_temperature_lvgl.yaml
   - <<: !include ../sensor/mqtt_wican_calc_engine_load_lvgl.yaml
-  - <<: !include ../sensor/mqtt_wican_throttle_position_lvgl.yaml
+  - <<: !include ../sensor/mqtt_wican_cmdthrottle_actuator_lvgl.yaml
   - <<: !include ../sensor/mqtt_wican_control_module_volt_lvgl.yaml
   - <<: !include ../sensor/mqtt_dm18mpu_level_sensor_roll_trimmed_lvgl.yaml
   - <<: !include ../sensor/mqtt_dm18mpu_level_sensor_pitch_trimmed_lvgl.yaml

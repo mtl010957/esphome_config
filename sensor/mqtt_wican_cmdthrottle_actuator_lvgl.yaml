@@ -1,0 +1,11 @@
+  - platform: mqtt_subscribe
+    id: wican_throttle_position
+    internal: true
+    topic: wican/dc06753cc7d1/can/4c_cmdthrottleact
+    unit_of_measurement: "%"
+    on_value:
+      - lvgl.label.update:
+          id: cmdthrottle_actuator_text
+          text:
+            format: "%.0f"
+            args: [ x ]
