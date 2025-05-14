@@ -13,7 +13,7 @@
       - if:
           condition:
             lambda: |-
-              return (x >= 13.75 and x <= 14.7);
+              return (x >= 13.75 and x <= 14.75);
           then:
             - lvgl.led.update:
                 id: control_module_volt_led
@@ -22,7 +22,7 @@
             - if:
                 condition:
                   lambda: |-
-                    return (x > 13 and x <= 13.75) or isnan(x);
+                    return (x > 12.25 and x <= 13.75) or isnan(x);
                 then:
                   - lvgl.led.update:
                       id: control_module_volt_led
