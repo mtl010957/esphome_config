@@ -82,7 +82,7 @@
               height: 90
               widgets:
                 - label:
-                    text: "CmdThrot %"
+                    text: "Cmnd %"
                     align: TOP_MID
                 - label:
                     id: cmdthrottle_actuator_text
