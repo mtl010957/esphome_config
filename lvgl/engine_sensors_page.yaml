@@ -35,10 +35,10 @@
               height: 90
               widgets:
                 - label:
-                    text: "Intake °F"
+                    text: "Load %"
                     align: TOP_MID
                 - label:
-                    id: intake_air_temperature_text
+                    id: calc_engine_load_text
                     styles: sensor_value
                     text: "-.-"
                     align: CENTER
@@ -68,13 +68,18 @@
               height: 90
               widgets:
                 - label:
-                    text: "Load %"
+                    text: "Oil °F"
                     align: TOP_MID
                 - label:
-                    id: calc_engine_load_text
+                    id: engine_oil_temperature_text
                     styles: sensor_value
                     text: "-.-"
                     align: CENTER
+                - led:
+                    id: engine_oil_temperature_led
+                    color: 0x00FF00
+                    styles: sensor_led
+                    align: BOTTOM_MID
           - obj:
               x: 107
               y: 120
@@ -82,10 +87,10 @@
               height: 90
               widgets:
                 - label:
-                    text: "Cmnd %"
+                    text: "Oil PSi"
                     align: TOP_MID
                 - label:
-                    id: cmdthrottle_actuator_text
+                    id: engine_oil_pressure_text
                     styles: sensor_value
                     text: "-.-"
                     align: CENTER
