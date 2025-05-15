@@ -60,8 +60,8 @@ sensor:
   - <<: !include ../sensor/mqtt_wican_engine_coolant_temp_lvgl.yaml
 #  - <<: !include ../sensor/mqtt_wican_intake_air_temperature_lvgl.yaml
   - <<: !include ../sensor/mqtt_wican_trans_temperature_lvgl.yaml
-  - <<: !include ../sensor/mqtt_wican_engine_oil_pressure_lvgl.yaml
-  - <<: !include ../sensor/mqtt_wican_engine_oil_temperature_lvgl.yaml
+  - <<: !include ../sensor/mqtt_wican_engine_oil_pres_lvgl.yaml
+  - <<: !include ../sensor/mqtt_wican_engine_oil_temp_lvgl.yaml
   - <<: !include ../sensor/mqtt_wican_calc_engine_load_lvgl.yaml
 #  - <<: !include ../sensor/mqtt_wican_cmdthrottle_actuator_lvgl.yaml
   - <<: !include ../sensor/mqtt_wican_control_module_volt_lvgl.yaml

@@ -1,0 +1,45 @@
+  - platform: mqtt_subscribe
+    id: wican_engine_oil_temp
+    internal: true
+    topic: wican/dc06753cc7d1/can/engine_oil_temp
+    unit_of_measurement: °C
+    on_value:
+      - lvgl.label.update:
+          id: engine_oil_temp_text
+          text:
+            format: "%.0f"
+            args: [ '(x * (9.0 / 5.0) + 32.0)' ]
+      - switch.turn_off: ${beeper_switch_id}
+      - if:
+          condition:
+            lambda: |-
+              return x <= 90 or isnan(x);
+          then:
+            - lvgl.led.update:
+                id: engine_oil_temp_led
+                color: 0x0000FF
+          else:
+            - if:
+                condition:
+                  lambda: |-
+                    return x > 90 and x <= 115;
+                then:
+                  - lvgl.led.update:
+                      id: engine_oil_temp_led
+                      color: 0x00FF00
+                else:
+                  - if:
+                      condition:
+                        lambda: |-
+                          return x > 115 and x <= 145;
+                      then:
+                        - lvgl.led.update:
+                            id: engine_oil_temp_led
+                            color: 0xFFFF00
+                      else:
+                        - lvgl.led.update:
+                            id: engine_oil_temp_led
+                            color: 0xFF0000
+                        - switch.turn_on: ${beeper_switch_id}
+                        - light.turn_on: ${backlight_id}
+      

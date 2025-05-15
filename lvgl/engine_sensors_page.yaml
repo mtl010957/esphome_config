@@ -71,12 +71,12 @@
                     text: "Oil °F"
                     align: TOP_MID
                 - label:
-                    id: engine_oil_temperature_text
+                    id: engine_oil_temp_text
                     styles: sensor_value
                     text: "-.-"
                     align: CENTER
                 - led:
-                    id: engine_oil_temperature_led
+                    id: engine_oil_temp_led
                     color: 0x00FF00
                     styles: sensor_led
                     align: BOTTOM_MID
@@ -90,7 +90,7 @@
                     text: "Oil PSi"
                     align: TOP_MID
                 - label:
-                    id: engine_oil_pressure_text
+                    id: engine_oil_pres_text
                     styles: sensor_value
                     text: "-.-"
                     align: CENTER
@@ -101,7 +101,7 @@
               height: 90
               widgets:
                 - label:
-                    text: "Voltage V"
+                    text: "Battery V"
                     align: TOP_MID
                 - label:
                     id: control_module_volt_text

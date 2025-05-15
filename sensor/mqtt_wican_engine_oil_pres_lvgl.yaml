@@ -1,0 +1,11 @@
+  - platform: mqtt_subscribe
+    id: wican_engine_oil_pres
+    internal: true
+    topic: wican/dc06753cc7d1/can/engine_oil_pres
+    unit_of_measurement: KPa
+    on_value:
+      - lvgl.label.update:
+          id: engine_oil_pres_text
+          text:
+            format: "%.0f"
+            args: [ '(x * 0.145)' ]
