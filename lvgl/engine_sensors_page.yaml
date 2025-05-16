@@ -1,4 +1,5 @@
       - id: engine_sensors_page
+        styles: engine_sensors_page_style
         widgets:
           - obj:
               align: TOP_MID
@@ -14,10 +15,12 @@
               y: 30
               width: 106
               height: 90
+              styles: sensor_obj
               widgets:
                 - label:
                     text: "Coolant °F"
                     align: TOP_MID
+                    styles: sensor_label
                 - label:
                     id: engine_coolant_temp_text
                     styles: sensor_value
@@ -33,10 +36,12 @@
               y: 30
               width: 106
               height: 90
+              styles: sensor_obj
               widgets:
                 - label:
                     text: "Load %"
                     align: TOP_MID
+                    styles: sensor_label
                 - label:
                     id: calc_engine_load_text
                     styles: sensor_value
@@ -47,10 +52,12 @@
               y: 30
               width: 106
               height: 90
+              styles: sensor_obj
               widgets:
                 - label:
                     text: "Trans °F"
                     align: TOP_MID
+                    styles: sensor_label
                 - label:
                     id: trans_temperature_text
                     styles: sensor_value
@@ -66,10 +73,12 @@
               y: 120
               width: 106
               height: 90
+              styles: sensor_obj
               widgets:
                 - label:
                     text: "Oil °F"
                     align: TOP_MID
+                    styles: sensor_label
                 - label:
                     id: engine_oil_temp_text
                     styles: sensor_value
@@ -85,10 +94,12 @@
               y: 120
               width: 106
               height: 90
+              styles: sensor_obj
               widgets:
                 - label:
                     text: "Oil PSi"
                     align: TOP_MID
+                    styles: sensor_label
                 - label:
                     id: engine_oil_pres_text
                     styles: sensor_value
@@ -99,10 +110,12 @@
               y: 120
               width: 106
               height: 90
+              styles: sensor_obj
               widgets:
                 - label:
                     text: "Battery V"
                     align: TOP_MID
+                    styles: sensor_label
                 - label:
                     id: control_module_volt_text
                     styles: sensor_value

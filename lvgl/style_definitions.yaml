@@ -10,21 +10,36 @@
       pad_row: 0
       pad_column: 0
       border_color: 0x0077b3
-      text_color: 0xFFFFFF
+      text_color: ${footer_text_color}
       width: 100%
       height: 30
+    - id: meter_label
+      text_font: montserrat_14
+      text_color: ${light_text_color}
     - id: meter_value
       text_font: montserrat_bold_28
+      text_color: ${light_text_color}
     - id: meter_indicator
       width: 6
-    - id: label_value
+    - id: drop_value
       text_font: montserrat_bold_22
+      text_color: ${light_text_color}
       border_width: 1
       pad_all: 2
       radius: 4
       bg_opa: 100%
-      bg_color: 0xD0D0D0
+      bg_color: ${light_drop_value_bg_color}
+    - id: sensor_obj
+      bg_color: ${light_sensor_bg_color}
+    - id: sensor_label
+      text_font: montserrat_14
+      text_color: ${light_text_color}
     - id: sensor_value
       text_font: montserrat_bold_36
+      text_color: ${light_text_color}
     - id: sensor_led
       opa: 60%
+    - id: level_page_style
+      bg_color: ${light_level_page_bg_color}
+    - id: engine_sensors_page_style
+      bg_color: ${light_engine_sensors_page_bg_color}

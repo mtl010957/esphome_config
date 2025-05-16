@@ -1,4 +1,5 @@
       - id: level_page
+        styles: level_page_style
         widgets:
           - obj:
               align: TOP_MID
@@ -68,11 +69,12 @@
                 - label:
                     text: "Roll"
                     align: CENTER
+                    styles: meter_label
                     y: 60
           - meter:
               border_width: 0
               x: 160
-              y: 50
+              y: 40
               height: 160
               width: 160
               bg_opa: TRANSP
@@ -130,6 +132,7 @@
                 - label:
                     text: "Pitch"
                     align: CENTER
+                    styles: meter_label
                     x: 40
                     y: 20
           - label:
@@ -137,24 +140,24 @@
               x: 0
               y: 30
               text: "--.-\""
-              styles: label_value
+              styles: drop_value
           - label:
               id: left_rear_drop_text
               x: 0
               y: 180
               text: "--.-\""
-              styles: label_value
+              styles: drop_value
           - label:
               id: right_front_drop_text
               x: 260
               y: 30
               text: "--.-\""
-              styles: label_value
+              styles: drop_value
           - label:
               id: right_rear_drop_text
               x: 260
               y: 180
               text: "--.-\""
-              styles: label_value
+              styles: drop_value
                     
                     
