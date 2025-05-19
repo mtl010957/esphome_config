@@ -105,6 +105,11 @@
                     styles: sensor_value
                     text: "-.-"
                     align: CENTER
+                - led:
+                    id: engine_oil_pres_led
+                    color: 0x00FF00
+                    styles: sensor_led
+                    align: BOTTOM_MID
           - obj:
               x: 214
               y: 120

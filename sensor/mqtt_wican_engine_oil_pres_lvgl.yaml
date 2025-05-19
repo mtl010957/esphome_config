@@ -9,3 +9,37 @@
           text:
             format: "%.0f"
             args: [ '(x * 0.145)' ]
+      - switch.turn_off: ${beeper_switch_id}
+      - if:
+          condition:
+            lambda: |-
+              return isnan(x);
+          then:
+            - lvgl.led.update:
+                id: engine_oil_pres_led
+                color: 0x0000FF
+          else:
+            - if:
+                condition:
+                  lambda: |-
+                    return x >= 207;
+                then:
+                  - lvgl.led.update:
+                      id: engine_oil_pres_led
+                      color: 0x00FF00
+                else:
+                  - if:
+                      condition:
+                        lambda: |-
+                          return x < 207 and x >= 103;
+                      then:
+                        - lvgl.led.update:
+                            id: engine_oil_pres_led
+                            color: 0xFFFF00
+                      else:
+                        - lvgl.led.update:
+                            id: engine_oil_pres_led
+                            color: 0xFF0000
+                        - switch.turn_on: ${beeper_switch_id}
+                        - light.turn_on: ${backlight_id}
+      
