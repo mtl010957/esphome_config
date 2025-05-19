@@ -1,7 +1,7 @@
 substitutions:
   devicename: nm08sv1
   upper_devicename: NM08SV1
-  device_friendly_name: "NM08SV1 Servo"
+  device_friendly_name: "NM08SV1 Lock Servo"
   button_pin: D3
   blue_led_pin: D4
   servo_pin: D5
@@ -26,9 +26,9 @@ button:
   - <<: !include ../button/restart.yaml
 light: !include ../light/blue_led.yaml
 binary_sensor: !include ../binary_sensor/button.yaml
-servo: !include ../servo/mg995_switch.yaml
-switch:
-  - <<: !include ../switch/servo.yaml
+servo: !include ../servo/mg995_lock.yaml
+lock:
+  - <<: !include ../lock/servo.yaml
 output:
   - <<: !include ../output/blue_led.yaml
   - <<: !include ../output/servo.yaml

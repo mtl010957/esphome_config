@@ -1,0 +1,7 @@
+- id: lock_servo
+  output: servo_output
+  min_level: 3%
+  max_level: 14%
+  idle_level: 3%
+  transition_length: ${transition_length}
+  auto_detach_time: ${auto_detach_time}

@@ -1,0 +1,12 @@
+- platform: template
+  name: "None"
+  id: servo_lock
+  optimistic: true
+  unlock_action:
+    - servo.write:
+        id: lock_servo
+        level: ${on_level}
+  lock_action:
+    - servo.write:
+        id: lock_servo
+        level: ${off_level}
