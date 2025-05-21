@@ -37,6 +37,20 @@ substitutions:
   light_sensor_bg_color: "0xFFFFFF"
   light_level_page_bg_color: "0xFFFFFF"
   light_engine_sensors_page_bg_color: "0x000000"
+  engine_oil_pres_green_kpa: "172.375" # 25 psi
+  engine_oil_pres_yellow_kpa: "103.425" # 15 psi
+  engine_oil_temp_green_C: "90" # 194 F
+  engine_oil_temp_yellow_C: "115" # 239 F
+  engine_oil_temp_red_C: "145" # 293 F
+  engine_coolant_temp_green_C: "95" # 203 F
+  engine_coolant_temp_yellow_C: "105" # 221 F
+  engine_coolant_temp_red_C: "113" # 235.4 F
+  trans_temperature_green_C: "70" # 158 F
+  trans_temperature_yellow_C: "88" # 190.4 F
+  trans_temperature_red_C: "100" # 212 F
+  control_module_voltage_yellow_low_V: "13.75"
+  control_module_voltage_red_low_V: "12.25"
+  control_module_voltage_red_high_V: "14.75"
   
 esphome: !include ../base/device_friendly_name.yaml
 esp32: !include ../esp32/esp32dev_idf.yaml
