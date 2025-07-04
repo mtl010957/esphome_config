@@ -2,7 +2,6 @@
   pin: A0
   name: "Level Sensor"
   id: level_sensor
-  unit_of_measurement: '%'
   accuracy_decimals: "${level_accuracy}"
   update_interval: ${update_interval}
   expire_after: 600s
