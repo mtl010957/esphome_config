@@ -5,9 +5,13 @@
   accuracy_decimals: "${level_accuracy}"
   update_interval: ${update_interval}
   expire_after: 600s
+  unit_of_measurement: "%"
+  device_class: ""
+  state_class: "measurement"
   filters:
     - lambda: return ${level_offset} - x;
     - multiply: ${multiplier}
+    - <<: !include calibrate_linear.yaml
     - sliding_window_moving_average:
         window_size: "${window_size}"
         send_every: "${send_every}"
