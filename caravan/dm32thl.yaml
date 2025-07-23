@@ -6,7 +6,7 @@ substitutions:
   sensor_pin: D2
   update_interval: "5s"
   level_offset: "0.668"
-  multiplier: "210"
+  multiplier: "238"
   window_size: "3"
   send_every: "3"
   level_accuracy: "1"
