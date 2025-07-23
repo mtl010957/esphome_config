@@ -20,7 +20,7 @@ logger: !include ../logger/debug.yaml
 text_sensor: !include ../text_sensor/wifi_info.yaml
 ota: !include ../ota/esphome.yaml
 binary_sensor: !include ../binary_sensor/button_toggle_relay.yaml
-switch: !include ../switch/relay.yaml
+switch: !include ../switch/relay_restore_default_on.yaml
 button: !include ../button/restart.yaml
 output: !include ../output/green_led.yaml
 light: !include ../light/green_led.yaml
