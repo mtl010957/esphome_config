@@ -2,6 +2,7 @@
   name: "None"
   id: servo_lock
   optimistic: true
+  retain: true
   unlock_action:
     - servo.write:
         id: lock_servo
