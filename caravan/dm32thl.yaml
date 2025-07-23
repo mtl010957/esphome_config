@@ -5,7 +5,7 @@ substitutions:
   blue_led_pin: D4
   sensor_pin: D2
   update_interval: "5s"
-  level_offset: "0.755"
+  level_offset: "0.668"
   multiplier: "210"
   window_size: "3"
   send_every: "3"
