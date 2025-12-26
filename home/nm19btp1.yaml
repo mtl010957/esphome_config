@@ -1,0 +1,25 @@
+substitutions:
+  devicename: nm19btp1
+  upper_devicename: NM19BTP1
+  device_friendly_name: "NM19BTP1 Bluetooth Proxy"
+  button_pin: GPIO0
+  blue_led_pin: GPIO2
+  blue_led_inverted: false
+
+esphome: !include ../base/device_friendly_name.yaml
+esp32: !include ../esp32/nodemcu-32s_idf.yaml
+wifi: !include ../connection/wifi.yaml
+#mqtt: !include ../connection/mqtt.yaml
+api:
+# Enable logging
+logger: !include ../logger/verbose.yaml
+# Expose some info to HA
+text_sensor: !include ../text_sensor/wifi_info.yaml
+ota: !include ../ota/esphome.yaml
+# Enable remote restart from HA
+button: !include ../button/restart.yaml
+light: !include ../light/blue_led.yaml
+output: !include ../output/blue_ledc.yaml
+# BLE
+esp32_ble_tracker: !include ../bluetooth/proxy_scan.yaml
+bluetooth_proxy: !include ../bluetooth/proxy_active.yaml
