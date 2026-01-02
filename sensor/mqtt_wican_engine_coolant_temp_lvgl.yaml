@@ -13,7 +13,7 @@
       - if:
           condition:
             lambda: |-
-              return x <= 95 or isnan(x);
+              return x <= ${engine_coolant_temp_green_C} or isnan(x);
           then:
             - lvgl.led.update:
                 id: engine_coolant_temp_led
@@ -22,7 +22,7 @@
             - if:
                 condition:
                   lambda: |-
-                    return x > 95 and x <= 105;
+                    return x > ${engine_coolant_temp_green_C} and x <= ${engine_coolant_temp_yellow_C};
                 then:
                   - lvgl.led.update:
                       id: engine_coolant_temp_led
@@ -31,7 +31,7 @@
                   - if:
                       condition:
                         lambda: |-
-                          return x > 105 and x <= 113;
+                          return x > ${engine_coolant_temp_yellow_C} and x <= ${engine_coolant_temp_red_C};
                       then:
                         - lvgl.led.update:
                             id: engine_coolant_temp_led
