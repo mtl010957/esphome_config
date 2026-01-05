@@ -1,0 +1,3 @@
+  id: ${deep_sleep_id}
+  run_duration: ${run_duration}
+  sleep_duration: ${sleep_duration}

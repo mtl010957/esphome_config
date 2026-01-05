@@ -1,0 +1,33 @@
+- platform: ina219
+  address: 0x40
+  shunt_resistance: ${shunt_resistance}
+  current:
+    name: "Current"
+    filters:
+      - offset: ${current_offset}
+    on_value_range:
+      - below: ${sleep_below_current}
+        then:
+          - deep_sleep.allow: ${deep_sleep_id}
+      - above: ${prevent_sleep_above_current}
+        then:
+          - deep_sleep.prevent: ${deep_sleep_id}
+    retain: true
+  power:
+    name: "Power"
+    filters:
+      - offset: ${power_offset}
+    retain: true
+  bus_voltage:
+    name: "Bus Voltage"
+    retain: true
+  shunt_voltage:
+    name: "Shunt Voltage"
+    accuracy_decimals: 4
+    filters:
+      - offset: ${shunt_offset}
+    retain: true
+  max_voltage: ${max_voltage}
+  max_current: ${max_current}
+  update_interval: ${update_interval}
+

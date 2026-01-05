@@ -1,0 +1,12 @@
+broker: !secret mqtt_broker
+username: !secret mqtt_username
+password: !secret mqtt_password
+discovery_unique_id_generator: mac
+birth_message:
+  topic: ${devicename}/status
+  payload: online
+will_message:
+  topic: ${devicename}/status
+  # keep HA from showing unavailable
+  payload: online
+
