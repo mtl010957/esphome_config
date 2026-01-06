@@ -1,4 +1,5 @@
 ssid: !secret wifi_caravan_ssid
 password: !secret wifi_caravan_password
+min_auth_mode: WPA2
 #use_address: dm29br4.local
 

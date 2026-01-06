@@ -2,4 +2,5 @@ ssid: !secret wifi_ssid
 password: !secret wifi_password
 ap:
   ssid: "${upper_devicename}"
+min_auth_mode: WPA2
 #use_address: nm17_m.local

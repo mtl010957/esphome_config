@@ -1,3 +1,4 @@
 ssid: !secret wifi_lakefront_ssid
 password: !secret wifi_lakefront_password
-#use_address: dm28rth.local
+min_auth_mode: WPA2
+#use_address: 192.168.14.170
