@@ -1,13 +1,13 @@
 - platform: template
   name: "None"
-  id: servo_lock
+  id: ${lock_id}
   optimistic: true
   retain: true
   unlock_action:
     - servo.write:
-        id: lock_servo
+        id: ${servo_id}
         level: ${on_level}
   lock_action:
     - servo.write:
-        id: lock_servo
+        id: ${servo_id}
         level: ${off_level}

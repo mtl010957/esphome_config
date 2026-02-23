@@ -1,0 +1,5 @@
+on_connect:
+- lock.template.publish:
+      id: ${lock_id}
+      state: ${on_connect_lock_state}
+

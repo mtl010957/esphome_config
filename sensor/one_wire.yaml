@@ -1,2 +1,0 @@
-- pin: ${one_wire_pin}
-  update_interval: ${update_interval}
