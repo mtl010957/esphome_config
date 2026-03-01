@@ -1,7 +1,7 @@
 substitutions:
-  devicename: dm33ina
-  upper_devicename: DM33INA
-  device_friendly_name: "DM33INA INA219"
+  devicename: dm34ina
+  upper_devicename: DM34INA
+  device_friendly_name: "DM34INA INA219"
   blue_led_pin: GPIO2 # D4
   sda_pin: GPIO12 # D6
   scl_pin: GPIO13 # D7
@@ -22,8 +22,8 @@ substitutions:
 
 esphome: !include ../base/device_friendly_name.yaml
 esp8266: !include ../esp8266/d1mini.yaml
-wifi: !include ../connection/wifi.yaml
-mqtt: !include ../connection/mqtt.yaml
+wifi: !include ../connection/wifi_desert.yaml
+mqtt: !include ../connection/mqtt_desert.yaml
 # Enable logging
 logger: !include ../logger/debug.yaml
 # Expose some info to HA
