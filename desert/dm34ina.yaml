@@ -43,4 +43,5 @@ binary_sensor:
 i2c: !include ../connection/i2c_sub_pins.yaml
 # INA219
 sensor: !include ../sensor/ina219_deep_sleep.yaml
+#sensor: !include ../sensor/ina219.yaml
 
