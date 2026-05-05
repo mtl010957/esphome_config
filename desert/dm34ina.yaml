@@ -22,7 +22,7 @@ substitutions:
 
 esphome: !include ../base/device_friendly_name.yaml
 esp8266: !include ../esp8266/d1mini.yaml
-wifi: !include ../connection/wifi_desert.yaml
+wifi: !include ../connection/wifi_desert_static_35.yaml
 mqtt: !include ../connection/mqtt_desert.yaml
 # Enable logging
 logger: !include ../logger/debug.yaml

@@ -1,0 +1,11 @@
+ssid: !secret wifi_desert_ssid
+password: !secret wifi_desert_password
+min_auth_mode: WPA2
+manual_ip:
+  static_ip: 192.168.12.35
+  gateway: 192.168.12.1
+  subnet: 255.255.255.0
+  dns1: 75.75.75.75
+  dns2: 8.8.8.8
+#use_address: dm08_tph.local
+
