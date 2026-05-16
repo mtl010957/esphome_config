@@ -3,3 +3,6 @@
   pin:
     number: GPIO5 # D1
     inverted: "${gpio5_invert}"
+    mode:
+      output: true
+      open_drain: "${gpio5_open_drain}"

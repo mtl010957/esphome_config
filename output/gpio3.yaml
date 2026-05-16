@@ -3,3 +3,6 @@
   pin:
     number: GPIO3 # RX
     inverted: "${gpio3_invert}"
+    mode:
+      output: true
+      open_drain: "${gpio3_open_drain}"

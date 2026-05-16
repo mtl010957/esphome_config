@@ -3,3 +3,6 @@
   pin:
     number: GPIO1 # TX
     inverted: "${gpio1_invert}"
+    mode:
+      output: true
+      open_drain: "${gpio1_open_drain}"
