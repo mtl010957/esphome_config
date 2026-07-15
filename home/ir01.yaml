@@ -3,7 +3,7 @@ substitutions:
   upper_devicename: IR01
   device_friendly_name: "IR01 Midea AC"
   ir_transmitter_id: "ir_transmitter"
-  ir_transmit_pin: GPIO14
+  ir_transmit_pin: GPIO4
 
 esphome: !include ../base/device_friendly_name.yaml
 esp8266: !include ../esp8266/esp8285.yaml
