@@ -1,0 +1,4 @@
+id: "${ir_transmitter_id}"
+pin:
+  number: ${ir_transmit_pin}
+carrier_duty_percent: 50%

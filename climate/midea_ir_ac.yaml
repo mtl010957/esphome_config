@@ -1,0 +1,6 @@
+  - platform: midea_ir
+    name: "${device_friendly_name}"
+    use_fahrenheit: true
+    supports_cool: true
+    supports_heat: false
+    transmitter_id: "${ir_transmitter_id}"
