@@ -2,6 +2,8 @@ substitutions:
   devicename: ir01
   upper_devicename: IR01
   device_friendly_name: "IR01 Midea A/C"
+  ir_transmitter_id: "ir_transmitter"
+  ir_transmit_pin: GPIO14
 
 esphome: !include ../base/device_friendly_name.yaml
 esp8266: !include ../esp8266/esp8285.yaml
@@ -12,4 +14,5 @@ logger: !include ../logger/debug.yaml
 # Expose some info to HA
 text_sensor: !include ../text_sensor/wifi_info.yaml
 ota: !include ../ota/esphome.yaml
+remote_transmitter: ../remote_transmitter/ir.yaml
 climate: !include ../climate/midea_ir_ac.yaml
