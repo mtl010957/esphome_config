@@ -1,4 +1,4 @@
-- id: lock_servo
+- id: ${servo_id}
   output: servo_output
   min_level: 3%
   max_level: 14%
