@@ -53,7 +53,8 @@ interval:
           condition:
             mqtt.connected:
           else:
-            script.execute: turn_on_inverter
+            - script.execute: turn_on_inverter
+            - switch.turn_on: "relay_1"
             
     
 
