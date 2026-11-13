@@ -9,14 +9,12 @@ substitutions:
   threshold_update_interval: "500ms"
   threshold_sensor_name: "Inverter"
   threshold_value: "0.45"
-  disconnect_script: "turn_on_inverter"
 
 esphome: !include ../base/device_friendly_name.yaml
 esp8266: !include ../esp8266/d1mini.yaml
 wifi: !include ../connection/wifi.yaml
 mqtt:
     <<: !include ../connection/mqtt.yaml
-    <<: !include ../connection/on_disconnect_run_script.yaml
 # Enable logging
 logger: !include ../logger/debug.yaml
 # Expose some info to HA
@@ -36,7 +34,7 @@ switch:
   - <<: !include ../switch/gpio5_relay_1.yaml
   - <<: !include ../switch/gpio4_relay_2.yaml
 script:
-  - id: ${disconnect_script}
+  - id: turn_on_inverter
     then:
       - if:
           condition:
@@ -48,6 +46,14 @@ script:
       - switch.turn_on: "relay_2"
       - delay: 1s
       - switch.turn_off: "relay_2"
+interval:
+  - interval: 1min
+    then:
+      - if:
+          condition:
+            mqtt.connected:
+          else:
+            script.execute: turn_on_inverter
             
     
 
