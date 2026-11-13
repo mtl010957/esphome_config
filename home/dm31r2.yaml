@@ -4,15 +4,19 @@ substitutions:
   device_friendly_name: "DM31R2 2 Relays"
   blue_led_pin: D4
   sensor_pin: D2
+  binary_sensor_id: "inverter"
   threshold_sensor_id: "adc0"
   threshold_update_interval: "500ms"
   threshold_sensor_name: "Inverter"
   threshold_value: "0.45"
+  disconnect_script: "turn_on_inverter"
 
 esphome: !include ../base/device_friendly_name.yaml
 esp8266: !include ../esp8266/d1mini.yaml
 wifi: !include ../connection/wifi.yaml
-mqtt: !include ../connection/mqtt.yaml
+mqtt:
+    <<: !include ../connection/mqtt.yaml
+    <<: !include ../connection/on_disconnect_run_script.yaml
 # Enable logging
 logger: !include ../logger/debug.yaml
 # Expose some info to HA
@@ -31,4 +35,19 @@ binary_sensor:
 switch:
   - <<: !include ../switch/gpio5_relay_1.yaml
   - <<: !include ../switch/gpio4_relay_2.yaml
+script:
+  - id: ${disconnect_script}
+    then:
+      - if:
+          condition:
+            binary_sensor.is_off: ${binary_sensor_id}
+          then:
+            script.execute: toggle_inverter
+  - id: toggle_inverter
+    then:
+      - switch.turn_on: "relay_2"
+      - delay: 1s
+      - switch.turn_off: "relay_2"
+            
+    
 

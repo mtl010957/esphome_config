@@ -1,0 +1,4 @@
+on_disconnect:
+  - script.execute:
+      id: ${disconnect_script}
+

@@ -1,4 +1,5 @@
 - platform: analog_threshold
   name: "$threshold_sensor_name"
+  id: "$binary_sensor_id"
   sensor_id: $threshold_sensor_id
   threshold: $threshold_value

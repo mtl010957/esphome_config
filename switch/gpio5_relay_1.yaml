@@ -1,5 +1,6 @@
 - platform: gpio
   name: "Relay 1"
+  id: "relay_1"
   restore_mode: RESTORE_DEFAULT_OFF
   pin:
     number: GPIO5 # D1
