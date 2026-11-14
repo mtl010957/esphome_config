@@ -51,8 +51,12 @@ interval:
     then:
       - if:
           condition:
-            mqtt.connected:
-          else:
+            for:
+              time: 10min
+              condition:
+                not:
+                  - mqtt.connected:
+          then:
             - script.execute: turn_on_inverter
             - switch.turn_on: "relay_1"
             
